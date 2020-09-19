@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4249854686377324}
   - component: {fileID: 114313138666966074}
   m_Layer: 10
-  m_Name: LegRoot
+  m_Name: Default_Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

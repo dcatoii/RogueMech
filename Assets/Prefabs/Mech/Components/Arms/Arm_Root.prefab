@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4218373256522834}
   - component: {fileID: 114160557148486736}
   m_Layer: 10
-  m_Name: Arm_Root
+  m_Name: Default_Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4504156882366474}
   - component: {fileID: 114457154181320302}
   m_Layer: 10
-  m_Name: Thruster
+  m_Name: Default_Thruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
