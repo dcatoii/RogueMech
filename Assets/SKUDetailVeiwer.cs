@@ -5,6 +5,7 @@ using UnityEngine;
 public class SKUDetailVeiwer : MonoBehaviour {
 
     public PartPreviewer Preview;
+    public TMPro.TMP_Text NameText;
     public RectTransform AttributeRoot;
     public RectTransform DetailRoot;
     public GameObject AttributeTextPrefab;
@@ -34,6 +35,9 @@ public class SKUDetailVeiwer : MonoBehaviour {
             GameObject newDet = GameObject.Instantiate(AttributeTextPrefab, AttributeRoot);
             newDet.GetComponent<TMPro.TMP_Text>().text = detail;
         }
+
+        //update name
+        NameText.text = SKU.SkuID;
 
         //update previewer
         Preview.ChangePreviewObject(SKU.partPrefab.gameObject);

@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour {
     public List<InventoryCatalogue> Catalogues;
     public ScrollRect InventoryScroller;
 
+    public SKUDetailVeiwer DetailViewer;
+
     Dictionary<string, InventoryCatalogue> SortedInventory;
 
     private void Start()
@@ -39,4 +41,10 @@ public class Inventory : MonoBehaviour {
                 catalogue.gameObject.SetActive(false);
         }
     }
+
+    void SelectedKUChanged(InventorySKU newSKU)
+    {
+        DetailViewer.UpdateSKUDetails(newSKU);
+    }
+
 }
