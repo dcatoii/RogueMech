@@ -30,9 +30,9 @@ public class SKUDetailVeiwer : MonoBehaviour {
             newAtt.GetComponent<TMPro.TMP_Text>().text = attribute;
         }
 
-        foreach (string detail in SKU.partPrefab.GetAttributeNamesForStore())
+        foreach (string detail in SKU.partPrefab.GetAttributeValuesForStore())
         {
-            GameObject newDet = GameObject.Instantiate(AttributeTextPrefab, AttributeRoot);
+            GameObject newDet = GameObject.Instantiate(DetailTextPrefab, DetailRoot);
             newDet.GetComponent<TMPro.TMP_Text>().text = detail;
         }
 
