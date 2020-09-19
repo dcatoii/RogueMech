@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114989175328307402}
   - component: {fileID: 114367328134246866}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,9 +74,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkuID: 
-  componentPrefab: {fileID: 0}
+  partPrefab: {fileID: 0}
   StoreImage: {fileID: 0}
   PreviewModel: {fileID: 0}
+  isLocked: 1
   StoreCard: {fileID: 114840296931635100}
   toggle: {fileID: 114367328134246866}
 --- !u!114 &114367328134246866
@@ -120,7 +121,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114295310875595386}
+        m_MethodName: OnToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
