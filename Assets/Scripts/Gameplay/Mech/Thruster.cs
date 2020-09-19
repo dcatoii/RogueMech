@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thruster : MonoBehaviour {
+public class Thruster : FrameAccessory {
 
     public ParticleSystem FwdThruster;
     public ParticleSystem UpThruster;

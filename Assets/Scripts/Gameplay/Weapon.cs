@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour {
+public class Weapon : FrameAccessory {
 
     public GameObject ProjectilePrefab;
     public GameObject FirePoint;
