@@ -15,6 +15,11 @@ public class InventorySKU : MonoBehaviour {
     public Image StoreCard;
     public Toggle toggle;
 
+    private void Start()
+    {
+        StoreCard.sprite = StoreImage;
+    }
+
     public void OnToggle()
     {
         if(toggle.isOn)
