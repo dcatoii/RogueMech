@@ -18,6 +18,8 @@ public class MechConstructor : MonoBehaviour {
 
     public void ConstructMech(string mechData, Transform location)
     {
+        CustomData.LoadMechData();
+
         ConstructLegs(CustomData.GetLegs);
         ConstructCore(CustomData.GetCore);
         ConstructArms(CustomData.GetArms);
@@ -26,20 +28,21 @@ public class MechConstructor : MonoBehaviour {
         ConstructRightWeapon(CustomData.GetRightWeapon);
     }
 
-	public void SwapHead(FrameHead newHead)
+	public void SwapHead(int HeadID)
     {
-        GameObject newHeadObj = GameObject.Instantiate(newHead.gameObject, Mech.Core.HeadSocket.transform);
+        GameObject newHeadObj = GameObject.Instantiate(PartLibrary.Heads[HeadID].gameObject, Mech.Core.HeadSocket.transform);
         newHeadObj.transform.localPosition = Vector3.zero;
         GameObject.Destroy(Mech.Head.gameObject);
         Mech.Head = newHeadObj.GetComponent<FrameHead>();
         RecalculateDerivedStats();
 
-        CustomData.CustomHead = newHead;
+        CustomData.PlayerMechData.Head = HeadID;
+        CustomData.SaveMechData();
     }
 
-    public void SwapCore(FrameCore newCore)
+    public void SwapCore(int CoreID)
     {
-        GameObject newCoreObj = GameObject.Instantiate(newCore.gameObject, Mech.Legs.CoreSocket.transform);
+        GameObject newCoreObj = GameObject.Instantiate(PartLibrary.Cores[CoreID].gameObject, Mech.Legs.CoreSocket.transform);
         newCoreObj.transform.localPosition = Vector3.zero;
         FrameCore newCoreComponent = newCoreObj.GetComponent<FrameCore>();
         
@@ -65,12 +68,14 @@ public class MechConstructor : MonoBehaviour {
         Mech.Core = newCoreComponent;
 
         RecalculateDerivedStats();
-        CustomData.CustomCore = newCore;
+
+        CustomData.PlayerMechData.Core = CoreID;
+        CustomData.SaveMechData();
     }
 
-    public void SwapLegs (FrameLegs newLegs)
+    public void SwapLegs (int LegID)
     {
-        GameObject newLegsObj = GameObject.Instantiate(newLegs.gameObject, Mech.MechRoot);
+        GameObject newLegsObj = GameObject.Instantiate(PartLibrary.Legs[LegID].gameObject, Mech.MechRoot);
         newLegsObj.transform.localPosition = Vector3.zero;
         FrameLegs newLegsComponent = newLegsObj.GetComponent<FrameLegs>();
 
@@ -81,12 +86,13 @@ public class MechConstructor : MonoBehaviour {
         Mech.Legs = newLegsComponent;
 
         RecalculateDerivedStats();
-        CustomData.CustomLegs = newLegs;
+        CustomData.PlayerMechData.Legs = LegID;
+        CustomData.SaveMechData();
     }
 
-    public void SwapArms (FrameArms newArms)
+    public void SwapArms (int  ArmID)
     {
-        GameObject newArmsObj = GameObject.Instantiate(newArms.gameObject, Mech.Core.transform);
+        GameObject newArmsObj = GameObject.Instantiate(PartLibrary.Arms[ArmID].gameObject, Mech.Core.transform);
         newArmsObj.transform.localPosition = Vector3.zero;
         FrameArms newArmsComponent = newArmsObj.GetComponent<FrameArms>();
 
@@ -106,7 +112,8 @@ public class MechConstructor : MonoBehaviour {
 
         RecalculateDerivedStats();
 
-        CustomData.CustomArms = newArms;
+        CustomData.PlayerMechData.Arms = ArmID;
+        CustomData.SaveMechData();
     }
 
     void RecalculateDerivedStats()

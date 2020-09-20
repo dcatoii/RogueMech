@@ -19,10 +19,10 @@ public class MechCustomizationData : ScriptableObject {
 
 
 
-    public FrameCore CustomCore;
-    public FrameLegs CustomLegs;
-    public FrameArms CustomArms;
-    public FrameHead CustomHead;
+    public FrameCore CustomCore { get { return Library.Cores[PlayerMechData.Core]; } }
+    public FrameLegs CustomLegs { get { return Library.Legs[PlayerMechData.Legs]; } }
+    public FrameArms CustomArms { get { return Library.Arms[PlayerMechData.Arms]; } }
+    public FrameHead CustomHead { get { return Library.Heads[PlayerMechData.Head]; } }
 
     public Thruster CustomThruster;
     public Weapon CustomRightWeapon;
@@ -31,17 +31,7 @@ public class MechCustomizationData : ScriptableObject {
     public Thruster GetThruster { get { return CustomThruster == null ? DefaultThruster : CustomThruster; } }
     public Weapon GetRightWeapon { get { return CustomRightWeapon == null ? DefaultRightWeapon : CustomRightWeapon; } }
 
-    public class MechData
-    {
-        public int Core = 0;
-        public int Legs = 0;
-        public int Arms= 0;
-        public int Head= 0;
-        public int Thruster = 0;
-        public int RightWeapon = 0;
-    }
-
-    MechData PlayerMechData = new MechData();
+    public MechData PlayerMechData = new MechData();
 
     public FrameCore GetCore { get { return CustomCore == null ? DefaultCore : CustomCore; } }
     public FrameLegs GetLegs { get { return CustomLegs == null ? DefaultLegs : CustomLegs; } }
@@ -56,8 +46,20 @@ public class MechCustomizationData : ScriptableObject {
     public void LoadMechData()
     {
         PlayerMechData = JsonConvert.DeserializeObject<MechData>(PlayerData.CustomMechData);
+        if (PlayerMechData == null)
+            PlayerMechData = new MechData();
     }
 
     
+}
+
+public class MechData
+{
+    public int Core = 0;
+    public int Legs = 0;
+    public int Arms = 0;
+    public int Head = 0;
+    public int Thruster = 0;
+    public int RightWeapon = 0;
 }
 
