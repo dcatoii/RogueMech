@@ -15,6 +15,8 @@ public class InventorySKU : MonoBehaviour {
     public Image StoreCard;
     public Toggle toggle;
 
+    public InventoryCatalogue Catalogue;
+
     private void Start()
     {
         StoreCard.sprite = StoreImage;

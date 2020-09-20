@@ -11,16 +11,16 @@ public class Inventory : MonoBehaviour {
 
     public SKUDetailVeiwer DetailViewer;
 
-    Dictionary<string, InventoryCatalogue> SortedInventory;
+    Dictionary<InventoryCatalogue.PartCategory, InventoryCatalogue> SortedInventory;
 
     private void Start()
     {
-        SortedInventory = new Dictionary<string, InventoryCatalogue>();
+        SortedInventory = new Dictionary<InventoryCatalogue.PartCategory, InventoryCatalogue>();
         CategoryDropdown.options.Clear();
         foreach (InventoryCatalogue catalogue in Catalogues)
         {
             SortedInventory.Add(catalogue.Category, catalogue);
-            CategoryDropdown.options.Add(new TMPro.TMP_Dropdown.OptionData(catalogue.Category));
+            CategoryDropdown.options.Add(new TMPro.TMP_Dropdown.OptionData(catalogue.Category.ToString()));
         }
 
         //this terrible code is intended to force a refresh of the values on startup
@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour {
     {
         foreach (InventoryCatalogue catalogue in Catalogues)
         {
-            if (catalogue.Category == CategoryDropdown.options[CategoryDropdown.value].text)
+            if (catalogue.Category.ToString() == CategoryDropdown.options[CategoryDropdown.value].text)
             {
                 catalogue.gameObject.SetActive(true);
                 InventoryScroller.content = catalogue.GetComponent<RectTransform>();

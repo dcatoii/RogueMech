@@ -11,6 +11,11 @@ public class SKUDetailVeiwer : MonoBehaviour {
     public GameObject AttributeTextPrefab;
     public GameObject DetailTextPrefab;
 
+    public GameObject EquipButton;
+    public GameObject PurchaseButton;
+
+    InventorySKU currentSKU = null;
+
     public void UpdateSKUDetails(InventorySKU SKU)
     {
         //clean up old attributes
@@ -41,5 +46,24 @@ public class SKUDetailVeiwer : MonoBehaviour {
 
         //update previewer
         Preview.ChangePreviewObject(SKU.partPrefab.gameObject);
+
+        currentSKU = SKU;
+    }
+
+    public void PurchaseButtonPressed()
+    {
+
+    }
+
+    public void EquipButtonPressed()
+    {
+        switch(currentSKU.Catalogue.Category)
+        {
+            case (InventoryCatalogue.PartCategory.Head):
+                {
+                    MechConstructor.instance.SwapHead(currentSKU.partPrefab as FrameHead);
+                    break;
+                }
+        }
     }
 }
