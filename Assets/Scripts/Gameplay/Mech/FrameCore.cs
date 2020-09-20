@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class FrameCore : FrameComponent {
 
+
+    public GameObject RightArmSocket;
+    public GameObject LeftArmSocket;
+    public GameObject HeadSocket;
+    public GameObject ThrusterSocket;
+
     public Thruster thruster;
     public float Energy;
     public float MaxEnergy;

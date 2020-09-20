@@ -162,6 +162,10 @@ MonoBehaviour:
   Manufacturer: GeneriCon
   MaxArmor: 2500
   ArmorPoints: 2500
+  RightArm_Root: {fileID: 0}
+  LeftArm_Root: {fileID: 0}
+  RightHand: {fileID: 0}
+  LeftHand: {fileID: 0}
 --- !u!1 &25155675
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000084899275}
+  m_AnchoredPosition: {x: 0, y: 0.000010644663}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &107496395
@@ -2485,13 +2489,13 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 114935373929757954, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 114005925156612200, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1281956329399712, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 1338990702240990, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
@@ -3158,12 +3162,14 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 1964465495}
+      objectReference: {fileID: 114975940203049238, guid: 11d4881f0eba6c34c88967e4b1795e6b,
+        type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1964465493}
+      objectReference: {fileID: 1512098547004860, guid: 11d4881f0eba6c34c88967e4b1795e6b,
+        type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: StoreImage
@@ -3394,6 +3400,7 @@ MonoBehaviour:
   Manufacturer: GeneriCon
   MaxArmor: 3000
   ArmorPoints: 3000
+  CoreSocket: {fileID: 0}
 --- !u!224 &710594158 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224738057726491534, guid: 71c68fa3311dc0f4281acc734fc80f9a,
@@ -9025,13 +9032,13 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 114935373929757954, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 114005925156612200, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1281956329399712, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 1338990702240990, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
@@ -9802,6 +9809,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c68fa3311dc0f4281acc734fc80f9a, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &986943920
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -39.572258
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.25680077
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.07809874
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9969456
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 8.959001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1004131306
 GameObject:
@@ -15670,7 +15723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158e263725cde1742860587546f07e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mech: {fileID: 0}
+  Mech: {fileID: 1154611259}
 --- !u!4 &1276480478
 Transform:
   m_ObjectHideFlags: 0
@@ -16062,8 +16115,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 905657923}
   m_HandleRect: {fileID: 905657922}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.92450047
+  m_Value: 0.99999857
+  m_Size: 0.9240675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -21206,12 +21259,14 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 1964465495}
+      objectReference: {fileID: 114975940203049238, guid: 11d4881f0eba6c34c88967e4b1795e6b,
+        type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1964465493}
+      objectReference: {fileID: 1512098547004860, guid: 11d4881f0eba6c34c88967e4b1795e6b,
+        type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: StoreImage
@@ -26793,12 +26848,14 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 1964465495}
+      objectReference: {fileID: 114975940203049238, guid: 11d4881f0eba6c34c88967e4b1795e6b,
+        type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1964465493}
+      objectReference: {fileID: 1512098547004860, guid: 11d4881f0eba6c34c88967e4b1795e6b,
+        type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: StoreImage
@@ -27422,13 +27479,13 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 114935373929757954, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 114005925156612200, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1281956329399712, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 1338990702240990, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
@@ -27896,6 +27953,10 @@ MonoBehaviour:
   Manufacturer: GeneriCon
   MaxArmor: 15000
   ArmorPoints: 15000
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
   thruster: {fileID: 2011515758}
   Energy: 1000
   MaxEnergy: 1000
@@ -28036,13 +28097,13 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 114935373929757954, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 114005925156612200, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1281956329399712, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 1338990702240990, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
@@ -28590,13 +28651,13 @@ Prefab:
         type: 2}
       propertyPath: partPrefab
       value: 
-      objectReference: {fileID: 114935373929757954, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 114005925156612200, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}
       propertyPath: PreviewModel
       value: 
-      objectReference: {fileID: 1281956329399712, guid: c8321293657faf546a52080bf972919d,
+      objectReference: {fileID: 1338990702240990, guid: 0671c1dd1578f1b46bff6d20f5806baa,
         type: 2}
     - target: {fileID: 114295310875595386, guid: 71c68fa3311dc0f4281acc734fc80f9a,
         type: 2}

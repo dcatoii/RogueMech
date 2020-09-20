@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FrameLegs : FrameComponent {
 
+    public GameObject CoreSocket;
+
     public override void OnHit(Projectile projectile)
     {
         base.OnHit(projectile);
