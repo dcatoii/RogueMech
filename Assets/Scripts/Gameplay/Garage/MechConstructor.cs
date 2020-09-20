@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MechConstructor : MonoBehaviour {
 
-    public MechFrame Mech;
     public static MechConstructor instance;
+
+    public MechFrame Mech;
+    public MechCustomizationData CustomData;
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class MechConstructor : MonoBehaviour {
         Mech.Head = newHeadObj.GetComponent<FrameHead>();
         RecalculateDerivedStats();
 
+        CustomData.CustomHead = newHead;
     }
 
     public void SwapCore(FrameCore newCore)
@@ -55,6 +58,7 @@ public class MechConstructor : MonoBehaviour {
         Mech.Core = newCoreComponent;
 
         RecalculateDerivedStats();
+        CustomData.CustomCore = newCore;
     }
 
     public void SwapLegs (FrameLegs newLegs)
@@ -70,6 +74,7 @@ public class MechConstructor : MonoBehaviour {
         Mech.Legs = newLegsComponent;
 
         RecalculateDerivedStats();
+        CustomData.CustomLegs = newLegs;
     }
 
     public void SwapArms (FrameArms newArms)
@@ -93,6 +98,8 @@ public class MechConstructor : MonoBehaviour {
         Mech.Arms = newArmsComponent;
 
         RecalculateDerivedStats();
+
+        CustomData.CustomArms = newArms;
     }
 
     void RecalculateDerivedStats()
