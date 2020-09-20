@@ -29,7 +29,32 @@ public class MechConstructor : MonoBehaviour {
 
     public void SwapCore(FrameCore newCore)
     {
+        GameObject newCoreObj = GameObject.Instantiate(newCore.gameObject, Mech.Legs.CoreSocket.transform);
+        newCoreObj.transform.localPosition = Vector3.zero;
+        FrameCore newCoreComponent = newCoreObj.GetComponent<FrameCore>();
+        
+        //update arms
+        Mech.Arms.transform.parent = newCoreObj.transform;
 
+        Mech.Arms.RightArm_Root.transform.parent = newCoreComponent.RightArmSocket.transform;
+        Mech.Arms.RightArm_Root.transform.localPosition = Vector3.zero;
+
+        Mech.Arms.LeftArm_Root.transform.parent = newCoreComponent.LeftArmSocket.transform;
+        Mech.Arms.LeftArm_Root.transform.localPosition = Vector3.zero;
+
+        //update thruster 
+        Mech.Core.thruster.transform.parent = newCoreComponent.ThrusterSocket.transform;
+        Mech.Core.thruster.transform.localPosition = Vector3.zero;
+        newCoreComponent.thruster = Mech.Core.thruster;
+
+        //update head
+        Mech.Head.transform.parent = newCoreComponent.HeadSocket.transform;
+        Mech.Head.transform.localPosition = Vector3.zero;
+
+        GameObject.Destroy(Mech.Core.gameObject);
+        Mech.Core = newCoreComponent;
+
+        RecalculateDerivedStats();
     }
 
     public void SwapLegs (FrameLegs newLegs)
