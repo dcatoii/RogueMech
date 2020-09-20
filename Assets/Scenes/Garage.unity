@@ -5112,7 +5112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mech: {fileID: 1729873283}
   CustomData: {fileID: 11400000, guid: 1f925787f89ec9e439cfb23d099b6d3d, type: 2}
-  PartLibrary: {fileID: 0}
+  PartLibrary: {fileID: 11400000, guid: a599073ee6a939842b8e3ad458b70c1e, type: 2}
 --- !u!4 &1276480478
 Transform:
   m_ObjectHideFlags: 0

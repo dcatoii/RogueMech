@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a86e3c1c7c18f4ca248d533516e07d, type: 3}
   m_Name: CustomizationData
   m_EditorClassIdentifier: 
+  Library: {fileID: 11400000, guid: a599073ee6a939842b8e3ad458b70c1e, type: 2}
   DefaultCore: {fileID: 114975940203049238, guid: 11d4881f0eba6c34c88967e4b1795e6b,
     type: 2}
   DefaultLegs: {fileID: 114198999513247380, guid: dbb1c980d7396c7428734ecbbf97bafd,
@@ -23,9 +24,5 @@ MonoBehaviour:
     type: 2}
   DefaultRightWeapon: {fileID: 114647800236070300, guid: 6bd98a61bc465a5438525259e68d1806,
     type: 2}
-  CustomCore: {fileID: 0}
-  CustomLegs: {fileID: 0}
-  CustomArms: {fileID: 0}
-  CustomHead: {fileID: 0}
   CustomThruster: {fileID: 0}
   CustomRightWeapon: {fileID: 0}
