@@ -8,6 +8,7 @@ public class MechFrame : Mob {
     public FrameHead Head;
     public FrameArms Arms;
     public FrameLegs Legs;
+    public Transform MechRoot;
 
     public Animator myAnimator;
     public float Speed = 5.0f;
