@@ -886,6 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 0
+  StoreImage: {fileID: 21300000, guid: eeac123894a68534590c3197728fced1, type: 3}
   Manufacturer: Kurosawa
   MaxArmor: 2000
   ArmorPoints: 2000

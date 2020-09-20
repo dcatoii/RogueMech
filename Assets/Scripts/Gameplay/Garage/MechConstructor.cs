@@ -8,15 +8,22 @@ public class MechConstructor : MonoBehaviour {
 
     public MechFrame Mech;
     public MechCustomizationData CustomData;
+    public MechPartLibrary PartLibrary;
 
     private void Start()
     {
         instance = this;
+        ConstructMech("", null);
     }
 
-    public void ConstructMech(string mechData)
+    public void ConstructMech(string mechData, Transform location)
     {
-        
+        ConstructLegs(CustomData.GetLegs);
+        ConstructCore(CustomData.GetCore);
+        ConstructArms(CustomData.GetArms);
+        ConstructHead(CustomData.GetHead);
+        ConstructThruster(CustomData.GetThruster);
+        ConstructRightWeapon(CustomData.GetRightWeapon);
     }
 
 	public void SwapHead(FrameHead newHead)
@@ -105,5 +112,59 @@ public class MechConstructor : MonoBehaviour {
     void RecalculateDerivedStats()
     {
 
+    }
+
+    void ConstructHead(FrameHead newHead)
+    {
+        GameObject newHeadObj = GameObject.Instantiate(newHead.gameObject, Mech.Core.HeadSocket.transform);
+        newHeadObj.transform.localPosition = Vector3.zero;
+        Mech.Head = newHeadObj.GetComponent<FrameHead>();
+    }
+
+    void ConstructCore(FrameCore newCore)
+    {
+        GameObject newCoreObj = GameObject.Instantiate(newCore.gameObject, Mech.Legs.CoreSocket.transform);
+        newCoreObj.transform.localPosition = Vector3.zero;
+        FrameCore newCoreComponent = newCoreObj.GetComponent<FrameCore>();
+
+        Mech.Core = newCoreComponent;
+    }
+
+    void ConstructLegs(FrameLegs newLegs)
+    {
+        GameObject newLegsObj = GameObject.Instantiate(newLegs.gameObject, Mech.MechRoot);
+        newLegsObj.transform.localPosition = Vector3.zero;
+        FrameLegs newLegsComponent = newLegsObj.GetComponent<FrameLegs>();
+
+        Mech.Legs = newLegsComponent;
+    }
+
+    void ConstructArms(FrameArms newArms)
+    {
+        GameObject newArmsObj = GameObject.Instantiate(newArms.gameObject, Mech.Core.transform);
+        newArmsObj.transform.localPosition = Vector3.zero;
+        FrameArms newArmsComponent = newArmsObj.GetComponent<FrameArms>();
+
+        newArmsComponent.RightArm_Root.transform.parent = Mech.Core.RightArmSocket.transform;
+        newArmsComponent.RightArm_Root.transform.localPosition = Vector3.zero;
+
+        newArmsComponent.LeftArm_Root.transform.parent = Mech.Core.LeftArmSocket.transform;
+        newArmsComponent.LeftArm_Root.transform.localPosition = Vector3.zero;
+        
+        Mech.Arms = newArmsComponent;
+    }
+
+    void ConstructThruster(Thruster newThruster)
+    {
+        GameObject newThrusterObj = GameObject.Instantiate(newThruster.gameObject, Mech.Core.ThrusterSocket.transform);
+        newThrusterObj.transform.localPosition = Vector3.zero;
+        Mech.Core.thruster = newThrusterObj.GetComponent<Thruster>();
+    }
+
+    void ConstructRightWeapon(Weapon newWeapon)
+    {
+        GameObject newWeaponObj = GameObject.Instantiate(newWeapon.gameObject, Mech.Arms.RightHand.transform);
+        newWeaponObj.transform.localPosition = Vector3.zero;
+        Mech.RightHandWeapon = newWeaponObj.GetComponent<Weapon>();
     }
 }

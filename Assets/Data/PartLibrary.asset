@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a16849e47b3fe49bc704d3557af1ec, type: 3}
+  m_Name: PartLibrary
+  m_EditorClassIdentifier: 
+  Cores:
+  - {fileID: 114975940203049238, guid: 11d4881f0eba6c34c88967e4b1795e6b, type: 2}
+  - {fileID: 114747767896659856, guid: 1b2ab990e491a664cb2fd10e53c9ca41, type: 2}
+  Legs:
+  - {fileID: 114198999513247380, guid: dbb1c980d7396c7428734ecbbf97bafd, type: 2}
+  - {fileID: 114204345140261848, guid: 484a03d907203614896a868a35c2d3f3, type: 2}
+  Arms:
+  - {fileID: 114349151525526156, guid: 22289a5311109884f838aaa138b11a05, type: 2}
+  - {fileID: 114182912785429712, guid: 2bf2cad4ad8dc074c81f96c374687768, type: 2}
+  Heads:
+  - {fileID: 114005925156612200, guid: 0671c1dd1578f1b46bff6d20f5806baa, type: 2}
+  - {fileID: 114005925156612200, guid: b648f53115bda88489418300bed8bfef, type: 2}
+  Thrusters:
+  - {fileID: 114457154181320302, guid: 7c51d2175bd21c34b8a81006c1b29252, type: 2}
+  Weapons:
+  - {fileID: 114647800236070300, guid: 6bd98a61bc465a5438525259e68d1806, type: 2}

@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 0
+  StoreImage: {fileID: 21300000, guid: 38332853b7d949c429a8fb4d9b928603, type: 3}
   Manufacturer: GeneriCon
   MaxArmor: 1000
   ArmorPoints: 1000

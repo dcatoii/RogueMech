@@ -10,8 +10,15 @@ public class PlayerData {
 
     public static bool IsPartUnlocked(string partID) { return false; }
 
+    public static string CustomMechData
+    {
+        get { return PlayerPrefs.GetString("CustomMechData", ""); }
+        set { PlayerPrefs.SetString("CustomMechData", value); }
+    }
+
     public static void ClearPlayerData()
     {
         PlayerPrefs.DeleteAll();
     }
+
 }

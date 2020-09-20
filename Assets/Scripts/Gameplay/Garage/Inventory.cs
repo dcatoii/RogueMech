@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
 
+    public MechPartLibrary PartLibrary;
     public TMPro.TMP_Dropdown CategoryDropdown;
     public List<InventoryCatalogue> Catalogues;
     public ScrollRect InventoryScroller;
+
+    public InventoryCatalogue CataloguePrefab;
 
     public SKUDetailVeiwer DetailViewer;
 
@@ -15,6 +18,7 @@ public class Inventory : MonoBehaviour {
 
     private void Start()
     {
+        CreateAllCatalogues();
         SortedInventory = new Dictionary<InventoryCatalogue.PartCategory, InventoryCatalogue>();
         CategoryDropdown.options.Clear();
         foreach (InventoryCatalogue catalogue in Catalogues)
@@ -47,4 +51,35 @@ public class Inventory : MonoBehaviour {
         DetailViewer.UpdateSKUDetails(newSKU);
     }
 
+    void CreateAllCatalogues()
+    {
+        if (Catalogues != null)
+        {
+            foreach (InventoryCatalogue catalogue in Catalogues)
+                GameObject.Destroy(catalogue.gameObject);
+            Catalogues.Clear();
+        }
+        else
+            Catalogues = new List<InventoryCatalogue>();
+
+
+        CreateCatalogue(InventoryCatalogue.PartCategory.Head, PartLibrary.Heads);
+        CreateCatalogue(InventoryCatalogue.PartCategory.Core, PartLibrary.Cores);
+        CreateCatalogue(InventoryCatalogue.PartCategory.Arms, PartLibrary.Arms);
+        CreateCatalogue(InventoryCatalogue.PartCategory.Legs, PartLibrary.Legs);
+        CreateCatalogue(InventoryCatalogue.PartCategory.Thruster, PartLibrary.Thrusters);
+        CreateCatalogue(InventoryCatalogue.PartCategory.Weapon_Right, PartLibrary.Weapons);
+
+
+    }
+
+    void CreateCatalogue(InventoryCatalogue.PartCategory category, FramePart[] parts)
+    {
+        GameObject newCatalogueObj = GameObject.Instantiate(CataloguePrefab.gameObject, InventoryScroller.viewport);
+        InventoryCatalogue newCatalogue = newCatalogueObj.GetComponent<InventoryCatalogue>();
+        newCatalogueObj.name = "Catalogue_" + category.ToString();
+        newCatalogue.Category = category;
+        newCatalogue.GenerateSKUs(parts);
+        Catalogues.Add(newCatalogue);
+    }
 }

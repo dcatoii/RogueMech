@@ -224,6 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 0
+  StoreImage: {fileID: 21300014, guid: 2262f408278271248889a3ea3c7e75bf, type: 3}
+  Manufacturer: GeneriCon
   ProjectilePrefab: {fileID: 1633464349893888, guid: 60595c3b1d130f34383a76c7b52d1328,
     type: 2}
   FirePoint: {fileID: 1726271948383964}

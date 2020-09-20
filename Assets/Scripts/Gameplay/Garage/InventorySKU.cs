@@ -12,6 +12,8 @@ public class InventorySKU : MonoBehaviour {
 
     public bool isLocked = true;
 
+    public int LibraryID;
+
     public Image StoreCard;
     public Toggle toggle;
 

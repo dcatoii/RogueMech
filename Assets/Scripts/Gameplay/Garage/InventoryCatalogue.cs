@@ -20,6 +20,7 @@ public class InventoryCatalogue : MonoBehaviour {
     public PartCategory Category = PartCategory.Misc;
     public ToggleGroup Toggles;
     public List<InventorySKU> Skus;
+    public InventorySKU SKUPrefab;
 
     private void Start()
     {
@@ -29,5 +30,23 @@ public class InventoryCatalogue : MonoBehaviour {
         }
     }
 
+    public void GenerateSKUs(FramePart[] parts)
+    {
+        int LibID = 0;
+        foreach (FramePart part in parts)
+        {
+            GameObject newSKUObj = GameObject.Instantiate(SKUPrefab.gameObject, transform);
+            InventorySKU newSKU = newSKUObj.GetComponent<InventorySKU>();
+            newSKU.Catalogue = this;
+            newSKU.toggle.group = Toggles;
+            newSKU.SkuID = part.name;
+            newSKU.partPrefab = part;
+            newSKU.PreviewModel = part.gameObject;
+            newSKU.StoreImage = part.StoreImage;
+            newSKU.LibraryID = LibID;
+            LibID++;
 
+            Skus.Add(newSKU);
+        }
+    }
 }

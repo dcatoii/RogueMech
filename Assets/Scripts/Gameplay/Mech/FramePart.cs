@@ -5,6 +5,7 @@ using UnityEngine;
 public class FramePart : MonoBehaviour {
 
     public int Cost;
+    public Sprite StoreImage;
 
     public string Manufacturer = "GeneriCon";
 
