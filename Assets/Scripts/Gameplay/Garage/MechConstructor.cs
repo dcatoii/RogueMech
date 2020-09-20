@@ -34,7 +34,17 @@ public class MechConstructor : MonoBehaviour {
 
     public void SwapLegs (FrameLegs newLegs)
     {
+        GameObject newLegsObj = GameObject.Instantiate(newLegs.gameObject, Mech.MechRoot);
+        newLegsObj.transform.localPosition = Vector3.zero;
+        FrameLegs newLegsComponent = newLegsObj.GetComponent<FrameLegs>();
 
+        Mech.Core.transform.parent = newLegsComponent.CoreSocket.transform;
+        Mech.Core.transform.localPosition = Vector3.zero;
+
+        GameObject.Destroy(Mech.Legs.gameObject);
+        Mech.Legs = newLegsComponent;
+
+        RecalculateDerivedStats();
     }
 
     public void SwapArms (FrameArms newArms)
