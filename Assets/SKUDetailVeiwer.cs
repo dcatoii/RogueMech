@@ -64,6 +64,11 @@ public class SKUDetailVeiwer : MonoBehaviour {
                     MechConstructor.instance.SwapLegs(currentSKU.partPrefab as FrameLegs);
                     break;
                 }
+            case (InventoryCatalogue.PartCategory.Arms):
+                {
+                    MechConstructor.instance.SwapArms(currentSKU.partPrefab as FrameArms);
+                    break;
+                }
             case (InventoryCatalogue.PartCategory.Head):
                 {
                     MechConstructor.instance.SwapHead(currentSKU.partPrefab as FrameHead);

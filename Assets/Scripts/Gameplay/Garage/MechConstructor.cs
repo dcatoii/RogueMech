@@ -49,7 +49,25 @@ public class MechConstructor : MonoBehaviour {
 
     public void SwapArms (FrameArms newArms)
     {
+        GameObject newArmsObj = GameObject.Instantiate(newArms.gameObject, Mech.Core.transform);
+        newArmsObj.transform.localPosition = Vector3.zero;
+        FrameArms newArmsComponent = newArmsObj.GetComponent<FrameArms>();
 
+        newArmsComponent.RightArm_Root.transform.parent = Mech.Core.RightArmSocket.transform;
+        newArmsComponent.RightArm_Root.transform.localPosition = Vector3.zero;
+
+        newArmsComponent.LeftArm_Root.transform.parent = Mech.Core.LeftArmSocket.transform;
+        newArmsComponent.LeftArm_Root.transform.localPosition = Vector3.zero;
+
+        Mech.RightHandWeapon.transform.parent = newArmsComponent.RightHand.transform;
+        Mech.RightHandWeapon.transform.localPosition = Vector3.zero;
+
+        GameObject.Destroy(Mech.Arms.RightArm_Root.gameObject);
+        GameObject.Destroy(Mech.Arms.LeftArm_Root.gameObject);
+        GameObject.Destroy(Mech.Arms.gameObject);
+        Mech.Arms = newArmsComponent;
+
+        RecalculateDerivedStats();
     }
 
     void RecalculateDerivedStats()
