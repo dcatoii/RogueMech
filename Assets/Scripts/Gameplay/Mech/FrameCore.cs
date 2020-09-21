@@ -10,6 +10,7 @@ public class FrameCore : FrameComponent {
     public GameObject LeftArmSocket;
     public GameObject HeadSocket;
     public GameObject ThrusterSocket;
+    public GameObject CameraAnchor;
 
     public Thruster thruster;
     public float Energy;

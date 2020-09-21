@@ -26,6 +26,9 @@ public class MechConstructor : MonoBehaviour {
         ConstructHead(CustomData.GetHead);
         ConstructThruster(CustomData.GetThruster);
         ConstructRightWeapon(CustomData.GetRightWeapon);
+
+        if (Camera.main.GetComponent<CameraHardAttach>() != null)
+            Camera.main.GetComponent<CameraHardAttach>().target = Mech.Core.CameraAnchor.transform;
     }
 
 	public void SwapHead(int HeadID)
