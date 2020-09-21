@@ -8,7 +8,6 @@ public class FrameController : MonoBehaviour {
 
     public float CoreRotX = 0.0f, CoreRotY = 0.0f;
     public float LegRot = 0.0f;
-    public float LegRotSpeed = 90.0f;
 
 
     public void MoveForward(float fMagntude)
@@ -23,12 +22,12 @@ public class FrameController : MonoBehaviour {
         Vector3 transformVector = gameObject.transform.forward;
         transformVector.y = 0;
         transformVector.Normalize();
-        float speedMultiplier = ControlledFrame.Speed + ControlledFrame.Core.thruster.ThrusterSpeed;
+        float speedMultiplier = ControlledFrame.Legs.Speed + ControlledFrame.Core.thruster.ThrusterSpeed;
         gameObject.transform.localPosition += transformVector * Time.fixedDeltaTime * fMagntude * speedMultiplier;
         ControlledFrame.myAnimator.SetBool("Walking", true);
 
         //Leg turning
-        float absRotationDelta = Mathf.Clamp(LegRotSpeed * Time.fixedDeltaTime, 0.0f, Mathf.Abs(CoreRotX));
+        float absRotationDelta = Mathf.Clamp(ControlledFrame.Legs.TurnSpeed * Time.fixedDeltaTime, 0.0f, Mathf.Abs(CoreRotX));
         absRotationDelta = (CoreRotX < 0.0f ? -absRotationDelta : absRotationDelta);
         LegRot += absRotationDelta;
         CoreRotX -= absRotationDelta;
@@ -57,7 +56,7 @@ public class FrameController : MonoBehaviour {
         Vector3 transformVector = gameObject.transform.right;
         transformVector.y = 0;
         transformVector.Normalize();
-        float speedMultiplier = ControlledFrame.Speed + ControlledFrame.Core.thruster.ThrusterSpeed;
+        float speedMultiplier = ControlledFrame.Legs.Speed + ControlledFrame.Core.thruster.ThrusterSpeed;
         gameObject.transform.localPosition -= transformVector * Time.fixedDeltaTime * fMagntude * speedMultiplier;
         ControlledFrame.myAnimator.SetBool("Strafing", true);
         //play thruster particles

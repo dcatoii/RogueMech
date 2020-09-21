@@ -896,6 +896,8 @@ MonoBehaviour:
   MaxArmor: 2500
   ArmorPoints: 2500
   CoreSocket: {fileID: 1955765070823400}
+  Speed: 5
+  TurnSpeed: 90
 --- !u!114 &114214488987911580
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11,7 +11,6 @@ public class MechFrame : Mob {
     public Transform MechRoot;
 
     public Animator myAnimator;
-    public float Speed = 5.0f;
 
     public Weapon RightHandWeapon;
 
