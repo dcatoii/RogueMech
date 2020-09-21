@@ -10,8 +10,11 @@ public class Weapon : FrameAccessory {
     public float RefireTime = 0.4f;
     public float TimeSinceLastFire = 0.0f;
 
-	// Use this for initialization
-	void Start () {
+    public int Weight = 1000;
+    public int EnergyCost = 400;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -29,5 +32,23 @@ public class Weapon : FrameAccessory {
     private void FixedUpdate()
     {
         TimeSinceLastFire += Time.fixedDeltaTime;
+    }
+
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+        returnList.Add("Energy Cost");
+        returnList.Add("Weight");
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+
+        returnList.Add(EnergyCost.ToString());
+        returnList.Add(Weight.ToString());
+
+        return returnList;
     }
 }

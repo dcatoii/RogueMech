@@ -10,6 +10,10 @@ public class FrameArms : FrameComponent {
     public GameObject RightHand;
     public GameObject LeftHand;
 
+    public int MaxWeight = 2500;
+    public int Weight = 1000;
+    public int EnergyCost = 400;
+
     public override void OnHit(Projectile projectile)
     {
         base.OnHit(projectile);
@@ -20,5 +24,25 @@ public class FrameArms : FrameComponent {
     {
         base.OnPartBroken();
         Mech.BroadcastMessage("ArmsBroken");
+    }
+
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+        returnList.Add("Energy Cost");
+        returnList.Add("Weight");
+        returnList.Add("Maximum Weight");
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+
+        returnList.Add(EnergyCost.ToString());
+        returnList.Add(Weight.ToString());
+        returnList.Add(MaxWeight.ToString());
+
+        return returnList;
     }
 }

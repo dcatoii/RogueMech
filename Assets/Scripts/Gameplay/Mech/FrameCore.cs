@@ -19,6 +19,8 @@ public class FrameCore : FrameComponent {
     public float RechargeCooldown = 2.0f;
     public float TimeSinceLastEnergyUsed = 0.0f;
 
+    public int Weight = 2000;
+
     // Update is called once per frame
     protected override void FixedUpdate()
     {
@@ -60,6 +62,7 @@ public class FrameCore : FrameComponent {
     {
         List<string> returnList = base.GetAttributeNamesForStore();
 
+        returnList.Add("Weight");
         returnList.Add("Energy Capacity");
         returnList.Add("Recharge Delay");
         returnList.Add("Recharge Rate");
@@ -72,6 +75,7 @@ public class FrameCore : FrameComponent {
         List<string> returnList = base.GetAttributeValuesForStore();
 
 
+        returnList.Add(Weight.ToString());
         returnList.Add(((int)(MaxEnergy)).ToString());
         returnList.Add(((int)(RechargeCooldown * 1000)).ToString());
         returnList.Add(((int)(RechargeRate)).ToString());

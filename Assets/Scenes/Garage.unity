@@ -5248,7 +5248,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 905657922}
   m_Direction: 2
   m_Value: 0.99999857
-  m_Size: 0.9240675
+  m_Size: 0.9249999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6705,7 +6705,6 @@ MonoBehaviour:
   Legs: {fileID: 0}
   MechRoot: {fileID: 1356303886}
   myAnimator: {fileID: 0}
-  Speed: 5
   RightHandWeapon: {fileID: 0}
 --- !u!114 &1729873285
 MonoBehaviour:
@@ -6723,7 +6722,6 @@ MonoBehaviour:
   CoreRotX: 0
   CoreRotY: 0
   LegRot: 0
-  LegRotSpeed: 90
 --- !u!4 &1729873286
 Transform:
   m_ObjectHideFlags: 0

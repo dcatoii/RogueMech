@@ -14,8 +14,9 @@ public class Thruster : FrameAccessory {
     public float AccelerationRate;
     public float AscentSpeed;
 
-    
-    
+    public int Weight = 500;
+    public int EnergyCost = 200;
+
     /// <summary>
     /// Energy used per second
     /// </summary>
@@ -100,4 +101,29 @@ public class Thruster : FrameAccessory {
         emission.rateOverTime = (isOn ? 25 : 0);
     }
 
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+        returnList.Add("Energy Cost");
+        returnList.Add("Weight");
+        returnList.Add("Thrusting Speed");
+        returnList.Add("Thrust Energy Drain");
+        returnList.Add("Lift Speed");
+        returnList.Add("Lift Energy Drain");
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+
+        returnList.Add(EnergyCost.ToString());
+        returnList.Add(Weight.ToString());
+        returnList.Add(((int)(ThrusterMaxSpeed * 1000)).ToString());
+        returnList.Add(((int)(PowerUsage)).ToString());
+        returnList.Add(((int)(AscentSpeed * 1000)).ToString());
+        returnList.Add(((int)(AscentPowerUsage)).ToString());
+
+        return returnList;
+    }
 }
