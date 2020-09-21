@@ -10,7 +10,23 @@ public class InventorySKU : MonoBehaviour {
     public Sprite StoreImage;
     public GameObject PreviewModel;
 
+    public bool isLocked = true;
+
+    public int LibraryID;
 
     public Image StoreCard;
     public Toggle toggle;
+
+    public InventoryCatalogue Catalogue;
+
+    private void Start()
+    {
+        StoreCard.sprite = StoreImage;
+    }
+
+    public void OnToggle()
+    {
+        if(toggle.isOn)
+            SendMessageUpwards("SelectedKUChanged",this);
+    }
 }

@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class FrameCore : FrameComponent {
 
+
+    public GameObject RightArmSocket;
+    public GameObject LeftArmSocket;
+    public GameObject HeadSocket;
+    public GameObject ThrusterSocket;
+    public GameObject CameraAnchor;
+
     public Thruster thruster;
     public float Energy;
     public float MaxEnergy;
@@ -47,5 +54,28 @@ public class FrameCore : FrameComponent {
     {
         base.OnPartBroken();
         Mech.BroadcastMessage("CoreBroken");
+    }
+
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+
+        returnList.Add("Energy Capacity");
+        returnList.Add("Recharge Delay");
+        returnList.Add("Recharge Rate");
+
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+
+
+        returnList.Add(((int)(MaxEnergy)).ToString());
+        returnList.Add(((int)(RechargeCooldown * 1000)).ToString());
+        returnList.Add(((int)(RechargeRate)).ToString());
+
+        return returnList;
     }
 }

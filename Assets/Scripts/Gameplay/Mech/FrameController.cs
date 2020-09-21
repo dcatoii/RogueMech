@@ -153,8 +153,6 @@ public class FrameController : MonoBehaviour {
 
     public void FixedUpdate()
     {
-        
-
         if(ControlledFrame.Core.thruster.Ascending)
         {
             //todo: fly

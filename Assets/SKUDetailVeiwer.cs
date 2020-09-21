@@ -5,10 +5,16 @@ using UnityEngine;
 public class SKUDetailVeiwer : MonoBehaviour {
 
     public PartPreviewer Preview;
+    public TMPro.TMP_Text NameText;
     public RectTransform AttributeRoot;
     public RectTransform DetailRoot;
     public GameObject AttributeTextPrefab;
     public GameObject DetailTextPrefab;
+
+    public GameObject EquipButton;
+    public GameObject PurchaseButton;
+
+    InventorySKU currentSKU = null;
 
     public void UpdateSKUDetails(InventorySKU SKU)
     {
@@ -29,13 +35,50 @@ public class SKUDetailVeiwer : MonoBehaviour {
             newAtt.GetComponent<TMPro.TMP_Text>().text = attribute;
         }
 
-        foreach (string detail in SKU.partPrefab.GetAttributeNamesForStore())
+        foreach (string detail in SKU.partPrefab.GetAttributeValuesForStore())
         {
-            GameObject newDet = GameObject.Instantiate(AttributeTextPrefab, AttributeRoot);
+            GameObject newDet = GameObject.Instantiate(DetailTextPrefab, DetailRoot);
             newDet.GetComponent<TMPro.TMP_Text>().text = detail;
         }
 
+        //update name
+        NameText.text = SKU.SkuID;
+
         //update previewer
         Preview.ChangePreviewObject(SKU.partPrefab.gameObject);
+
+        currentSKU = SKU;
+    }
+
+    public void PurchaseButtonPressed()
+    {
+
+    }
+
+    public void EquipButtonPressed()
+    {
+        switch(currentSKU.Catalogue.Category)
+        {
+            case (InventoryCatalogue.PartCategory.Legs):
+                {
+                    MechConstructor.instance.SwapLegs(currentSKU.LibraryID);
+                    break;
+                }
+            case (InventoryCatalogue.PartCategory.Core):
+                {
+                    MechConstructor.instance.SwapCore(currentSKU.LibraryID);
+                    break;
+                }
+            case (InventoryCatalogue.PartCategory.Arms):
+                {
+                    MechConstructor.instance.SwapArms(currentSKU.LibraryID);
+                    break;
+                }
+            case (InventoryCatalogue.PartCategory.Head):
+                {
+                    MechConstructor.instance.SwapHead(currentSKU.LibraryID);
+                    break;
+                }
+        }
     }
 }

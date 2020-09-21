@@ -6,6 +6,6 @@ public class EnterGarageButton : MonoBehaviour {
 
 	public void EnterGarage()
     {
-        
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Garage");
     }
 }

@@ -53,7 +53,7 @@ public class FrameComponent : FramePart
 
     public override List<string> GetAttributeValuesForStore()
     {
-        List<string> returnList = base.GetAttributeNamesForStore();
+        List<string> returnList = base.GetAttributeValuesForStore();
         returnList.Add(ArmorPoints.ToString());
         return returnList;
     }
