@@ -9,6 +9,7 @@ public class MechConstructor : MonoBehaviour {
     public MechFrame Mech;
     public MechCustomizationData CustomData;
     public MechPartLibrary PartLibrary;
+    public WarningManager Warnings;
 
     private void Start()
     {
@@ -121,7 +122,9 @@ public class MechConstructor : MonoBehaviour {
 
     void RecalculateDerivedStats()
     {
-
+        Warnings.ClearWarnings();
+        foreach (string warning in Mech.CalculateDerivedStats())
+            Warnings.AddWarning(warning);
     }
 
     void ConstructHead(FrameHead newHead)
