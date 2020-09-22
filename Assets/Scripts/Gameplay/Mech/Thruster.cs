@@ -29,8 +29,9 @@ public class Thruster : FrameAccessory {
     FrameCore Core;
     MechFrame ArmorFrame;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         Core = GetComponentInParent<FrameCore>();
         ArmorFrame = GetComponentInParent<MechFrame>();
     }

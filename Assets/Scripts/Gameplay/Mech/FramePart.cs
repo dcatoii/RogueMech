@@ -8,6 +8,12 @@ public class FramePart : MonoBehaviour {
     public Sprite StoreImage;
 
     public string Manufacturer = "GeneriCon";
+    protected MechFrame Mech;
+
+    protected virtual void Start()
+    {
+        Mech = GetComponentInParent<MechFrame>();
+    }
 
     public virtual List<string> GetAttributeNamesForStore()
     {

@@ -29,7 +29,7 @@ public class TankMob : Mob {
         if ((Mission.instance.PlayerFrame.gameObject.transform.position - TankGun.FirePoint.transform.position).sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))
         {
             TurnTowardsPlayer();
-            TankGun.OnFireStart(Mission.instance.PlayerFrame.Core.gameObject.transform.position);
+            TankGun.OnFireDown(Mission.instance.PlayerFrame.Core.gameObject.transform.position);
         }
     }
 

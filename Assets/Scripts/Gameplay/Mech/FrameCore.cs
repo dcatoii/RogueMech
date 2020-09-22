@@ -38,7 +38,10 @@ public class FrameCore : FrameComponent {
         TimeSinceLastEnergyUsed = 0.0f;
         Energy -= amount;
         if (Energy <= 0.0f)
+        {
             StopAllEnergySystems();
+            return false;
+        }
         return true;
     }
 

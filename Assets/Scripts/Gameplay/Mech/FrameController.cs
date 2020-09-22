@@ -107,14 +107,14 @@ public class FrameController : MonoBehaviour {
         Vector3 target = Camera.main.transform.position + (Camera.main.transform.forward * ControlledFrame.RightHandWeapon.FunctionalRange);
         RaycastHit CameraRayInfo = new RaycastHit();
 
-        SetChildLayerRecursively(gameObject, LayerMask.NameToLayer("Ignore Raycast"));
+        RogueMechUtils.SetChildLayerRecursively(gameObject, LayerMask.NameToLayer("Ignore Raycast"));
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out CameraRayInfo, ControlledFrame.RightHandWeapon.FunctionalRange, LayerMask.GetMask(new string[] { "Terrain", "Units" })))
         {
             target = CameraRayInfo.point;
         }
-        SetChildLayerRecursively(gameObject, LayerMask.NameToLayer("Units"));
+        RogueMechUtils.SetChildLayerRecursively(gameObject, LayerMask.NameToLayer("Units"));
 
-        ControlledFrame.RightHandWeapon.OnFireStart(target);
+        ControlledFrame.RightHandWeapon.OnFireDown(target);
         /*
         RaycastHit WeaponRayInfo = new RaycastHit();
         Vector3 weaponDirection = (target - ControlledFrame.RightHandWeapon.FirePoint.transform.position).normalized;
@@ -126,7 +126,7 @@ public class FrameController : MonoBehaviour {
 
     public void RightArmEndFire()
     {
-
+        ControlledFrame.RightHandWeapon.OnFireUp(Vector3.zero);
     }
 
     public void LeftArmBeginFire()
@@ -155,15 +155,6 @@ public class FrameController : MonoBehaviour {
         if(ControlledFrame.Core.thruster.Ascending)
         {
             //todo: fly
-        }
-    }
-
-    void SetChildLayerRecursively(GameObject obj, int newLayer)
-    {
-        obj.layer = newLayer;
-        foreach(Transform child in obj.transform)
-        {
-            SetChildLayerRecursively(child.gameObject, newLayer);
         }
     }
 }

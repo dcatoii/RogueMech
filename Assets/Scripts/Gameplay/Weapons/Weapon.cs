@@ -14,11 +14,11 @@ public class Weapon : FrameAccessory {
     public int EnergyCost = 400;
 
     // Use this for initialization
-    void Start () {
-		
+    protected override void Start () {
+        base.Start();
 	}
 	
-    public void OnFireStart(Vector3 target)
+    public virtual void OnFireDown(Vector3 target)
     {
         if (TimeSinceLastFire < RefireTime)
             return;
@@ -29,7 +29,12 @@ public class Weapon : FrameAccessory {
         TimeSinceLastFire = 0.0f;
     }
 
-    private void FixedUpdate()
+    public virtual void OnFireUp(Vector3 target)
+    {
+
+    }
+
+    protected virtual void FixedUpdate()
     {
         TimeSinceLastFire += Time.fixedDeltaTime;
     }

@@ -11,13 +11,7 @@ public class FrameComponent : FramePart
 
     protected bool isInvulnerable = false;
     public bool IsInvulnerable { get { return isInvulnerable; } }
-    protected MechFrame Mech;
-
-    private void Start()
-    {
-        Mech = GetComponentInParent<MechFrame>();
-    }
-
+    
     public virtual void OnHit(Projectile projectile)
     {
         isInvulnerable = true;
