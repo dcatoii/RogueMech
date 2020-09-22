@@ -11,7 +11,7 @@ public class TankMob : Mob {
     {
         if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Weapons"))
         {
-            Projectile colProjectile = collision.rigidbody.GetComponent<Projectile>();
+            Projectile colProjectile = collision.gameObject.GetComponent<Projectile>();
             //if(colProjectile.Source)
             Health -= colProjectile.Damage;
             if(Health <= 0)

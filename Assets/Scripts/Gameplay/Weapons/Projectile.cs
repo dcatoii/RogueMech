@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour {
         transform.LookAt(target);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
         {

@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1633464349893888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.008, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children:
   - {fileID: 4881683674038842}
   - {fileID: 4275269577164860}
@@ -173,10 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
-  deathEffect: {fileID: 1098882699589878, guid: 2a15e282823d653458e1a632946459fd,
+  deathEffect: {fileID: 1098882699589878, guid: 982df6c874adcb14b9bc44a224034d3c,
     type: 2}
   Source: {fileID: 0}
-  Damage: 1200
+  Damage: 0
 --- !u!135 &135485044225024356
 SphereCollider:
   m_ObjectHideFlags: 1
