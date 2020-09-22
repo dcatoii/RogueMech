@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4966678323703408}
   - component: {fileID: 114005925156612200}
   m_Layer: 10
-  m_Name: Default_Head
+  m_Name: Minotaur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,9 +159,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cost: 0
   StoreImage: {fileID: 21300000, guid: 38332853b7d949c429a8fb4d9b928603, type: 3}
-  Manufacturer: GeneriCon
+  Manufacturer: Prometheus
   MaxArmor: 1000
   ArmorPoints: 1000
+  Weight: 500
+  EnergyCost: 200
 --- !u!114 &114427779450575028
 MonoBehaviour:
   m_ObjectHideFlags: 1

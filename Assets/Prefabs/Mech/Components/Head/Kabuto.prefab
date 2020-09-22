@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4966678323703408}
   - component: {fileID: 114005925156612200}
   m_Layer: 10
-  m_Name: Round_Head
+  m_Name: Kabuto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,8 +129,10 @@ MonoBehaviour:
   Cost: 0
   StoreImage: {fileID: 21300000, guid: e568be018e22f84469331cdac9abc449, type: 3}
   Manufacturer: Kurosawa
-  MaxArmor: 800
-  ArmorPoints: 800
+  MaxArmor: 1800
+  ArmorPoints: 1800
+  Weight: 300
+  EnergyCost: 350
 --- !u!114 &114427779450575028
 MonoBehaviour:
   m_ObjectHideFlags: 1

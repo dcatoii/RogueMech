@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65158390266260928}
   - component: {fileID: 114647800236070300}
   m_Layer: 10
-  m_Name: Default_Weapon
+  m_Name: Xiphos Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,10 +225,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cost: 0
   StoreImage: {fileID: 21300014, guid: 2262f408278271248889a3ea3c7e75bf, type: 3}
-  Manufacturer: GeneriCon
+  Manufacturer: Prometheus
   ProjectilePrefab: {fileID: 1633464349893888, guid: 60595c3b1d130f34383a76c7b52d1328,
     type: 2}
   FirePoint: {fileID: 1726271948383964}
   FunctionalRange: 200
   RefireTime: 0.4
   TimeSinceLastFire: 0
+  Weight: 1000
+  EnergyCost: 400
