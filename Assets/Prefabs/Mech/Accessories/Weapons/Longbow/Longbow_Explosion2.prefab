@@ -132,7 +132,7 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   Source: {fileID: 0}
   Damage: 800
-  lifeTime: 0.75
+  lifeTime: 0.4
   StartScale: {x: 0, y: 0, z: 0}
   EndScale: {x: 12, y: 12, z: 12}
   isDamageOverTime: 0
@@ -238,7 +238,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.75
+      scalar: 0.4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -291,7 +291,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 28
       minScalar: 5
       maxCurve:
         serializedVersion: 2

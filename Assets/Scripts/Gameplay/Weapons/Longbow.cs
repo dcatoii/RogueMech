@@ -57,6 +57,7 @@ public class Longbow : Weapon {
         chargeProjectile.enabled = true;
         chargeProjectile.GetComponent<Collider>().enabled = true;
         chargeProjectile.GetComponent<Rigidbody>().useGravity = true;
+        chargeProjectile.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll ^ RigidbodyConstraints.FreezePositionY;
         RogueMechUtils.SetChildLayerRecursively(chargeProjectile.gameObject, LayerMask.NameToLayer("Weapons"));
         chargeProjectile = null;
 
@@ -105,5 +106,6 @@ public class Longbow : Weapon {
         chargeProjectile.GetComponent<Collider>().enabled = false;
         chargeProjectile.transform.localPosition = Vector3.zero;
         chargeProjectile.transform.localRotation = Quaternion.identity;
+        chargeProjectile.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 }
