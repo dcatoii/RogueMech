@@ -79,6 +79,16 @@ public class SKUDetailVeiwer : MonoBehaviour {
                     MechConstructor.instance.SwapHead(currentSKU.LibraryID);
                     break;
                 }
+            case (InventoryCatalogue.PartCategory.Thruster):
+                {
+                    MechConstructor.instance.SwapThruster(currentSKU.LibraryID);
+                    break;
+                }
+            case (InventoryCatalogue.PartCategory.Weapon_Right):
+                {
+                    MechConstructor.instance.SwapRightWeapon(currentSKU.LibraryID);
+                    break;
+                }
         }
     }
 }

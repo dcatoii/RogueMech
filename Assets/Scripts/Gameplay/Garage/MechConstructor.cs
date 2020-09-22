@@ -30,6 +30,8 @@ public class MechConstructor : MonoBehaviour {
 
         if (Camera.main.GetComponent<CameraHardAttach>() != null)
             Camera.main.GetComponent<CameraHardAttach>().target = Mech.Core.CameraAnchor.transform;
+
+        RecalculateDerivedStats();
     }
 
 	public void SwapHead(int HeadID)
@@ -119,6 +121,38 @@ public class MechConstructor : MonoBehaviour {
         CustomData.PlayerMechData.Arms = ArmID;
         CustomData.SaveMechData();
     }
+
+
+    public void SwapThruster(int thrusterID)
+    {
+        GameObject newThrusterObj = GameObject.Instantiate(PartLibrary.Thrusters[thrusterID].gameObject, Mech.Core.ThrusterSocket.transform);
+        newThrusterObj.transform.localPosition = Vector3.zero;
+
+        GameObject.Destroy(Mech.Core.thruster.gameObject);
+
+        Mech.Core.thruster = newThrusterObj.GetComponent<Thruster>();
+
+        RecalculateDerivedStats();
+
+        CustomData.PlayerMechData.Thruster = thrusterID;
+        CustomData.SaveMechData();
+    }
+
+    public void SwapRightWeapon(int weaponID)
+    {
+        GameObject newWeaponObj = GameObject.Instantiate(PartLibrary.Weapons[weaponID].gameObject, Mech.Arms.RightHand.transform);
+        newWeaponObj.transform.localPosition = Vector3.zero;
+
+        GameObject.Destroy(Mech.RightHandWeapon.gameObject);
+
+        Mech.RightHandWeapon = newWeaponObj.GetComponent<Weapon>();
+
+        RecalculateDerivedStats();
+
+        CustomData.PlayerMechData.RightWeapon = weaponID;
+        CustomData.SaveMechData();
+    }
+
 
     void RecalculateDerivedStats()
     {

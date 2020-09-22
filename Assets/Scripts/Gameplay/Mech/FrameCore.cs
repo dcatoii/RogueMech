@@ -14,6 +14,7 @@ public class FrameCore : FrameComponent {
 
     public Thruster thruster;
     public float Energy;
+    public float EnergyCapacity;
     public float MaxEnergy;
     public float RechargeRate;
     public float RechargeCooldown = 2.0f;
@@ -76,7 +77,7 @@ public class FrameCore : FrameComponent {
 
 
         returnList.Add(Weight.ToString());
-        returnList.Add(((int)(MaxEnergy)).ToString());
+        returnList.Add(((int)(EnergyCapacity)).ToString());
         returnList.Add(((int)(RechargeCooldown * 1000)).ToString());
         returnList.Add(((int)(RechargeRate)).ToString());
 

@@ -91,7 +91,7 @@ public class MechFrame : Mob {
         UpdateArmWeight();
 
 
-        if(totalEnergyCost > Core.MaxEnergy)
+        if(Core.MaxEnergy < 0)
             returnList.Add("Insufficient Energy");
 
         if (totalLegsWeight > Legs.MaxWeight)
@@ -128,5 +128,6 @@ public class MechFrame : Mob {
         totalEnergyCost += Head.EnergyCost;
         totalEnergyCost += Core.thruster.EnergyCost;
         totalEnergyCost += RightHandWeapon.EnergyCost;
+        Core.Energy = Core.MaxEnergy = Core.EnergyCapacity - totalEnergyCost;
     }
 }

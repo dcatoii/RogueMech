@@ -24,8 +24,8 @@ public class MechCustomizationData : ScriptableObject {
     public FrameArms CustomArms { get { return Library.Arms[PlayerMechData.Arms]; } }
     public FrameHead CustomHead { get { return Library.Heads[PlayerMechData.Head]; } }
 
-    public Thruster CustomThruster;
-    public Weapon CustomRightWeapon;
+    public Thruster CustomThruster { get { return Library.Thrusters[PlayerMechData.Thruster]; } }
+    public Weapon CustomRightWeapon { get { return Library.Weapons[PlayerMechData.RightWeapon]; } }
 
 
     public Thruster GetThruster { get { return CustomThruster == null ? DefaultThruster : CustomThruster; } }

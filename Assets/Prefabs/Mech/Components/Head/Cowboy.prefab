@@ -9,20 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1338990702240990}
+  m_RootGameObject: {fileID: 1645185750350150}
   m_IsPrefabAsset: 1
---- !u!1 &1265718478761378
+--- !u!1 &1035067061429582
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4764714345140718}
-  - component: {fileID: 33775270706846760}
-  - component: {fileID: 23995029633642916}
-  - component: {fileID: 114427779450575028}
-  - component: {fileID: 135727324866769444}
+  - component: {fileID: 4903706136260672}
+  - component: {fileID: 33783592115407648}
+  - component: {fileID: 23297918731182240}
+  - component: {fileID: 114094566673004544}
+  - component: {fileID: 136114617032742858}
   m_Layer: 10
   m_Name: Model_Head
   m_TagString: Untagged
@@ -30,55 +30,55 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1338990702240990
+--- !u!1 &1645185750350150
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4966678323703408}
-  - component: {fileID: 114005925156612200}
+  - component: {fileID: 4883735991610054}
+  - component: {fileID: 114375217930008104}
   m_Layer: 10
-  m_Name: Kabuto
+  m_Name: Cowboy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4764714345140718
+--- !u!4 &4883735991610054
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265718478761378}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 4966678323703408}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4966678323703408
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1338990702240990}
+  m_GameObject: {fileID: 1645185750350150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.63, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4764714345140718}
+  - {fileID: 4903706136260672}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23995029633642916
+--- !u!4 &4903706136260672
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035067061429582}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 2, y: 1.5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 4883735991610054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!23 &23297918731182240
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265718478761378}
+  m_GameObject: {fileID: 1035067061429582}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -108,52 +108,53 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33775270706846760
+--- !u!33 &33783592115407648
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265718478761378}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114005925156612200
+  m_GameObject: {fileID: 1035067061429582}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114094566673004544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1338990702240990}
+  m_GameObject: {fileID: 1035067061429582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 114375217930008104}
+--- !u!114 &114375217930008104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645185750350150}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a36849895af6f04a9dfe18550f8ad79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 0
-  StoreImage: {fileID: 21300010, guid: 006f7f82ca50d224a993a4ca8304ad81, type: 3}
-  Manufacturer: Kurosawa
-  MaxArmor: 1800
-  ArmorPoints: 1800
-  Weight: 300
-  EnergyCost: 350
---- !u!114 &114427779450575028
-MonoBehaviour:
+  StoreImage: {fileID: 21300000, guid: e568be018e22f84469331cdac9abc449, type: 3}
+  Manufacturer: AmeriCorp
+  MaxArmor: 800
+  ArmorPoints: 800
+  Weight: 400
+  EnergyCost: 300
+--- !u!136 &136114617032742858
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265718478761378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  component: {fileID: 114005925156612200}
---- !u!135 &135727324866769444
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265718478761378}
+  m_GameObject: {fileID: 1035067061429582}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.5000001
+  m_Height: 2.0000005
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
