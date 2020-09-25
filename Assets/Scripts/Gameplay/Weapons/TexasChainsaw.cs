@@ -6,8 +6,8 @@ public class TexasChainsaw : Weapon
 {
 
     public float MaxHeat = 5.0f;
-    int heat = 0;
-    public int HeatPerBullet = 0;
+    float heat = 0;
+    public float HeatPerBullet = 0.1f;
     public float CooldownDelay = 1.0f;
     public float CooldownRate = 2.0f;
     public float OverHeatCooldown = 5.0f;
@@ -39,13 +39,28 @@ public class TexasChainsaw : Weapon
             if (TimeSinceLastFire > RefireTime)
             {
                 FireProjectile();
+                heat += HeatPerBullet;
+                if(heat > MaxHeat)
+                {
+                    isOverheated = true;
+                    OnFireUp(Vector3.zero);
+                }
             }
             bloom = Mathf.Min(bloom + (Time.fixedDeltaTime * BloomGrowthRate), MaxBloom);
         }
         else
         {
             if (TimeSinceLastFire > BloomCooldown)
-                bloom = Mathf.Min(bloom - (Time.fixedDeltaTime * BloomGrowthRate), 0);
+                bloom = Mathf.Max(bloom - (Time.fixedDeltaTime * BloomGrowthRate), 0.0f);
+
+            if (TimeSinceLastFire > CooldownDelay)
+                heat = Mathf.Max(heat - (CooldownRate * Time.fixedDeltaTime), 0.0f);
+
+            if (isOverheated && TimeSinceLastFire > OverHeatCooldown)
+            {
+                //TODO: OVERHEAT WARNING
+                isOverheated = false;
+            }
         }
     }
 

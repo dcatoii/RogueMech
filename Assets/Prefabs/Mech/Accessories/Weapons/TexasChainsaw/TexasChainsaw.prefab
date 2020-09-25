@@ -955,11 +955,10 @@ MonoBehaviour:
   Weight: 1000
   EnergyCost: 400
   MaxHeat: 5
-  HeatPerBullet: 0
+  HeatPerBullet: 0.1
   CooldownDelay: 1
   CooldownRate: 2
   OverHeatCooldown: 5
   MaxBloom: 20
   BloomGrowthRate: 15
   BloomCooldown: 1
-  debugTargetSphere: {fileID: 1636962951399114}
