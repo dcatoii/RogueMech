@@ -234,6 +234,8 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 700
   EnergyCost: 300
+  HUDPrefab: {fileID: 114460389922162414, guid: 7c7631eac084f78469ae560ec0104202,
+    type: 2}
   BaseEnergyPerShot: 100
   chargeRate: 50
   Level2Charge: 50

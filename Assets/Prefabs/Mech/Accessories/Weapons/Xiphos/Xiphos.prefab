@@ -234,6 +234,8 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 1000
   EnergyCost: 400
+  HUDPrefab: {fileID: 114092409537422708, guid: 7502918e25e2983459d87357630beec4,
+    type: 2}
   MaxCharges: 6
   RechargeCooldown: 1
   BulletRechargeTime: 0.5

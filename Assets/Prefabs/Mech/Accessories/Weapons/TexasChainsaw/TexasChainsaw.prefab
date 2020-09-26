@@ -954,6 +954,8 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 1000
   EnergyCost: 400
+  HUDPrefab: {fileID: 114710436051750526, guid: 8706f91ac0b80d84fb910a412713084a,
+    type: 2}
   MaxHeat: 5
   HeatPerBullet: 0.1
   CooldownDelay: 1

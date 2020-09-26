@@ -12,6 +12,7 @@ public class Weapon : FrameAccessory {
 
     public int Weight = 1000;
     public int EnergyCost = 400;
+    public WeaponHUD HUDPrefab;
 
     // Use this for initialization
     protected override void Start () {
