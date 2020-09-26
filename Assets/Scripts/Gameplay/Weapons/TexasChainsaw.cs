@@ -7,12 +7,14 @@ public class TexasChainsaw : Weapon
 
     public float MaxHeat = 5.0f;
     float heat = 0;
+    public float CurrentHeat { get { return heat; } }
     public float HeatPerBullet = 0.1f;
     public float CooldownDelay = 1.0f;
     public float CooldownRate = 2.0f;
     public float OverHeatCooldown = 5.0f;
     bool isFiring = false;
     bool isOverheated = false;
+    public bool IsOverheated {  get { return isOverheated; } }
     float bloom;
     public float MaxBloom = 20.0f;
     public float BloomGrowthRate = 15.0f;

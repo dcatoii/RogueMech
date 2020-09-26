@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 65158390266260928}
   - component: {fileID: 114647800236070300}
   m_Layer: 10
-  m_Name: Xiphos Pistol
+  m_Name: Prototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

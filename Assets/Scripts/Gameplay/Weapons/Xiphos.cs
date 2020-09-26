@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Xiphos : Weapon {
 
-    int Charges = 0;
+    int charges = 0;
+    public int Charges {  get { return charges; } }
     bool isFiring;
     float recharge = 0.0f;
+    public float Recharge { get { return recharge; } }
     public int MaxCharges = 6;
     public float RechargeCooldown = 1.0f;
     public float BulletRechargeTime = 0.5f;
@@ -15,14 +17,14 @@ public class Xiphos : Weapon {
     protected override void Start()
     {
         base.Start();
-        Charges = MaxCharges;
+        charges = MaxCharges;
         isFiring = false;
         recharge = 0.0f;
     }
 
     public override void OnFireDown(Vector3 target)
     {
-        if (Charges == 0)
+        if (charges == 0)
             return;
 
 
@@ -45,11 +47,11 @@ public class Xiphos : Weapon {
             if (TimeSinceLastFire > RefireTime)
             {
                 FireProjectile();
-                if (Charges == 0)
+                if (charges == 0)
                     OnFireUp(Vector3.zero);
             }
         }
-        else if (Charges < MaxCharges)
+        else if (charges < MaxCharges)
         {
             if (TimeSinceLastFire > RechargeCooldown)
             {
@@ -57,7 +59,7 @@ public class Xiphos : Weapon {
                 if(recharge >= BulletRechargeTime)
                 {
                     recharge -= BulletRechargeTime;
-                    Charges++;
+                    charges++;
                 }
             }
         }
@@ -83,7 +85,7 @@ public class Xiphos : Weapon {
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
 
         TimeSinceLastFire = 0.0f;
-        Charges--;
+        charges--;
     }
 
 }

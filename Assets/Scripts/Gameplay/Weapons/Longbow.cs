@@ -5,9 +5,9 @@ using UnityEngine;
 public class Longbow : Weapon {
 
     bool isCharging = false;
-    bool IsCharging { get { return isCharging; } }
+    public bool IsCharging { get { return isCharging; } }
     int chargeLevel = 0;
-
+    public int ChargeLevel { get { return chargeLevel; } }
 
     public int BaseEnergyPerShot = 100;
     public float chargeRate = 50;
@@ -16,6 +16,7 @@ public class Longbow : Weapon {
     public GameObject ProjectilePrefabLevel2;
     public GameObject ProjectilePrefabLevel3;
     float energyLevel = 0.0f;
+    public float EnergyLevel { get { return energyLevel; } }
 
     Projectile chargeProjectile = null;
 
