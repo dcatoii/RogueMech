@@ -22,7 +22,5 @@ MonoBehaviour:
     type: 2}
   DefaultThruster: {fileID: 114457154181320302, guid: 7c51d2175bd21c34b8a81006c1b29252,
     type: 2}
-  DefaultRightWeapon: {fileID: 114647800236070300, guid: 6bd98a61bc465a5438525259e68d1806,
+  DefaultRightWeapon: {fileID: 114173342318970388, guid: 6bd98a61bc465a5438525259e68d1806,
     type: 2}
-  CustomThruster: {fileID: 0}
-  CustomRightWeapon: {fileID: 0}

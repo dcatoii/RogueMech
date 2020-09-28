@@ -40,13 +40,15 @@ public class Inventory : MonoBehaviour {
             {
                 catalogue.gameObject.SetActive(true);
                 InventoryScroller.content = catalogue.GetComponent<RectTransform>();
+                catalogue.Skus[0].toggle.isOn = true;
+                catalogue.Skus[0].OnToggle();
             }
             else
                 catalogue.gameObject.SetActive(false);
         }
     }
 
-    void SelectedKUChanged(InventorySKU newSKU)
+    void SelectedSKUChanged(InventorySKU newSKU)
     {
         DetailViewer.UpdateSKUDetails(newSKU);
     }

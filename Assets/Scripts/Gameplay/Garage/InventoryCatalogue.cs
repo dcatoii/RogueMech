@@ -49,4 +49,14 @@ public class InventoryCatalogue : MonoBehaviour {
             Skus.Add(newSKU);
         }
     }
+
+    protected void FixedUpdate()
+    {
+        FramePart equippedPart = ApplicationContext.PlayerCustomizationData.GetPartByType(Category);
+
+        foreach(InventorySKU sku in Skus)
+        {
+            sku.isEquipped = (sku.partPrefab == equippedPart);
+        }
+    }
 }
