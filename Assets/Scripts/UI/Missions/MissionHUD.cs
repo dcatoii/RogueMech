@@ -8,7 +8,7 @@ public class MissionHUD : MonoBehaviour {
     public Transform textListRoot;
 
     public GameObject MissionFailurePopup;
-    public GameObject MissionCompletePopup;
+    public MissionCompletePopup CompletePopup;
 
     Dictionary<MissionObjective, MissionText> trackedMissions = new Dictionary<MissionObjective, MissionText>();
 
@@ -38,9 +38,13 @@ public class MissionHUD : MonoBehaviour {
         GameObject.Instantiate(MissionFailurePopup, transform);
     }
 
-    public void MissionSuccess()
+    public void MissionSuccess(int reward, int bonus, int repair, int total)
     {
 
-        GameObject.Instantiate(MissionCompletePopup, transform);
+        MissionCompletePopup popup = GameObject.Instantiate(CompletePopup.gameObject, transform).GetComponent<MissionCompletePopup>();
+        popup.RewardValue = reward;
+        popup.BonusValue = bonus;
+        popup.RepairValue = repair;
+        popup.TotalValue = total;
     }
 }

@@ -9,6 +9,7 @@ public class Mission : MonoBehaviour {
     public MissionHUD HUD;
     public MechFrame PlayerFrame;
     public int BaseAward = 25000;
+    int BonusAmount = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -43,10 +44,10 @@ public class Mission : MonoBehaviour {
             RepairCost += PlayerFrame.Legs.MaxArmor - PlayerFrame.Legs.ArmorPoints;
             RepairCost += PlayerFrame.Head.MaxArmor - PlayerFrame.Head.ArmorPoints;
             RepairCost += PlayerFrame.Arms.MaxArmor - PlayerFrame.Arms.ArmorPoints;
-            int FinalReward = BaseAward - RepairCost;
+            int FinalReward = BaseAward + BonusAmount - RepairCost;
             PlayerData.Currency += FinalReward;
 
-            HUD.MissionSuccess();
+            HUD.MissionSuccess(BaseAward, BonusAmount, RepairCost, FinalReward);
             PlayerFrame.GetComponent<PlayerInputManager>().enabled = false;
         }
         else

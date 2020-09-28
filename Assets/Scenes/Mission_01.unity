@@ -2437,7 +2437,7 @@ MonoBehaviour:
   textListRoot: {fileID: 1187516583}
   MissionFailurePopup: {fileID: 1065938940369060, guid: 8059bc6d72934ee4c973db1f88c0967c,
     type: 2}
-  MissionCompletePopup: {fileID: 1065938940369060, guid: 647c42cb207893248ab6a9bce869a787,
+  CompletePopup: {fileID: 114879138526515956, guid: 647c42cb207893248ab6a9bce869a787,
     type: 2}
 --- !u!224 &1787747268
 RectTransform:
@@ -2641,6 +2641,7 @@ MonoBehaviour:
   - {fileID: 1935112672}
   HUD: {fileID: 1787747267}
   PlayerFrame: {fileID: 1072583074}
+  BaseAward: 25000
 --- !u!4 &1797519791
 Transform:
   m_ObjectHideFlags: 0
