@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerData {
 
-	public static int Currency {  get { return PlayerPrefs.GetInt("PlayerCurrency", 10000); }
+    public static bool HasSavedData
+    {
+        get { return PlayerPrefs.GetInt("ActiveSaveState", 0) == 1; }
+        set { PlayerPrefs.SetInt("ActiveSaveState", value ? 1 : 0); }
+    }
+
+    public static int Currency {  get { return PlayerPrefs.GetInt("PlayerCurrency", 10000); }
         set { PlayerPrefs.SetInt("PlayerCurrency", value); }
     }
 

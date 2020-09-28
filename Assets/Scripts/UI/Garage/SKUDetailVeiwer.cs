@@ -74,9 +74,10 @@ public class SKUDetailVeiwer : MonoBehaviour {
         if (PlayerData.Currency >= currentSKU.partPrefab.Cost)
         {
             currentSKU.isLocked = false;
-            PlayerData.Currency -= currentSKU.partPrefab.Cost;
+            PlayerData.Currency = PlayerData.Currency - currentSKU.partPrefab.Cost;
             PlayerData.UnlockPart(currentSKU.partPrefab.gameObject.name);
             PurchaseButton.gameObject.SetActive(false);
+            AlreadyEquipped.SetActive(false);
             EquipButton.SetActive(true);
         }
         
