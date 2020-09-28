@@ -11,10 +11,13 @@ public class InventorySKU : MonoBehaviour {
     public GameObject PreviewModel;
 
     public bool isLocked = true;
+    public bool isEquipped = false;
 
     public int LibraryID;
 
     public Image StoreCard;
+    public GameObject LockedIcon;
+    public GameObject EquippedIcon;
     public Toggle toggle;
 
     public InventoryCatalogue Catalogue;
@@ -22,11 +25,18 @@ public class InventorySKU : MonoBehaviour {
     private void Start()
     {
         StoreCard.sprite = StoreImage;
+        isLocked = !PlayerData.IsPartUnlocked(partPrefab.gameObject.name);
     }
 
     public void OnToggle()
     {
         if(toggle.isOn)
-            SendMessageUpwards("SelectedKUChanged",this);
+            SendMessageUpwards("SelectedSKUChanged",this);
+    }
+
+    protected void FixedUpdate()
+    {
+        EquippedIcon.SetActive(isEquipped);
+        LockedIcon.SetActive(isLocked);
     }
 }

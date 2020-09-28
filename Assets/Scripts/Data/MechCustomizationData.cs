@@ -50,6 +50,38 @@ public class MechCustomizationData : ScriptableObject {
             PlayerMechData = new MechData();
     }
 
+    public FramePart GetPartByType(InventoryCatalogue.PartCategory category)
+    {
+        switch (category)
+        {
+            case (InventoryCatalogue.PartCategory.Legs):
+                {
+                    return GetLegs;
+                }
+            case (InventoryCatalogue.PartCategory.Core):
+                {
+                    return GetCore;
+                }
+            case (InventoryCatalogue.PartCategory.Arms):
+                {
+                    return GetArms;
+                }
+            case (InventoryCatalogue.PartCategory.Head):
+                {
+                    return GetHead;
+                }
+            case (InventoryCatalogue.PartCategory.Thruster):
+                {
+                    return GetThruster;
+                }
+            case (InventoryCatalogue.PartCategory.Weapon_Right):
+                {
+                    return GetRightWeapon;
+                }
+        }
+        return null;
+    }
+
     
 }
 
