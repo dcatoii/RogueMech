@@ -116,7 +116,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1782936180913234, guid: 6ee32577d74eeb64d9cc6d14ac2edca9,
     type: 2}
   Source: {fileID: 0}
-  Damage: 800
+  Damage: 600
 --- !u!135 &135888337410419228
 SphereCollider:
   m_ObjectHideFlags: 1
