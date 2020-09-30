@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 20000
   StoreImage: {fileID: 21300000, guid: 41c6269ae4365074082bf64178013ca7, type: 3}
   Manufacturer: AmeriCorp
   MaxArmor: 17500

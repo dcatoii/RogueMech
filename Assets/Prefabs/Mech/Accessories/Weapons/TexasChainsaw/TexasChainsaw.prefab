@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb09ebaf4bdab344a12f580fdf8b1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 12500
   StoreImage: {fileID: 21300030, guid: eeac123894a68534590c3197728fced1, type: 3}
   Manufacturer: AmeriCorp
   ProjectilePrefab: {fileID: 1633464349893888, guid: 5b8f308b7253a96498b803231e3d960e,

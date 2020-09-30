@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4fce464b1d599489321371a1b7179a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 7500
   StoreImage: {fileID: 21300000, guid: 006f7f82ca50d224a993a4ca8304ad81, type: 3}
   Manufacturer: Kurosawa
   MaxArmor: 2000

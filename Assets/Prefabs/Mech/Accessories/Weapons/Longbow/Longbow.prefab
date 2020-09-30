@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e229d6a16f30a4543916a5a4945004e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 12500
   StoreImage: {fileID: 21300000, guid: fdd2c921c62d2cd43b815fa60199d5de, type: 3}
   Manufacturer: GeneriCon
   ProjectilePrefab: {fileID: 1633464349893888, guid: e8f15c18ca86a01419f1923f1c854962,

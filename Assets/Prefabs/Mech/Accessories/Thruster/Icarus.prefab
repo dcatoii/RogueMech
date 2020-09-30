@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd07fb5192277d84cb3285671affb545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 8000
   StoreImage: {fileID: 21300000, guid: c11241572f1a3444f956e4d29d23b3b1, type: 3}
   Manufacturer: Prometheus
   FwdThruster: {fileID: 198065360613892274}
