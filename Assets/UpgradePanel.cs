@@ -41,11 +41,12 @@ public class UpgradePanel : MonoBehaviour {
     }
     public void UnlockButtonPressed()
     {
-        
+        SendMessageUpwards("UpgradeButtonPressed");
     }
 
-    public void SelectedSKUChanged(UpgradeOption option)
+    public void SelectedUpgradeOption(UpgradeOption option)
     {
+        Debug.Log("SelectedUpgradeOption " + "Level: " + option.UpgradeLevel.ToString() + " Index: " + option.UpgradeIndex.ToString());
         UpgradeNameText.text = option.UpgradeName;
         UpgradeDescriptionText.text = option.UpgradeDescription;
     }

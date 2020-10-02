@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4012878220402984}
   - component: {fileID: 114919697773684650}
   m_Layer: 10
-  m_Name: Pony Express
+  m_Name: PonyExpress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -96,7 +96,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
         if (PlayerData.Currency >= currentSKU.partPrefab.UpgradeLevels[data.UpgradeLevel].Cost)
         {
             //consume currency
-            PlayerData.Currency = PlayerData.Currency - currentSKU.partPrefab.Cost;
+            PlayerData.Currency = PlayerData.Currency - currentSKU.partPrefab.UpgradeLevels[data.UpgradeLevel].Cost;
             //upgrae the part
             UpgradeManager.UnlockUpgradeLevel(currentSKU.partPrefab);
             //apply the first upgrade option
@@ -106,6 +106,12 @@ public class SKUDetailVeiwer : MonoBehaviour {
             MechConstructor.instance.UpdateUpgrades();
 
         }
+    }
+
+    public void SelectedUpgradeOption(UpgradeOption option)
+    {
+        UpgradeManager.SwapUpgrade(currentSKU.partPrefab, option.UpgradeLevel, option.UpgradeIndex);
+        MechConstructor.instance.UpdateUpgrades();
     }
 
     public void EquipButtonPressed()
@@ -163,8 +169,8 @@ public class SKUDetailVeiwer : MonoBehaviour {
         {
             GameObject newPanelObj = GameObject.Instantiate(UpgradePanelPrefab.gameObject, UpgradeRoot);
             UpgradePanel panel = newPanelObj.GetComponent<UpgradePanel>();
-            panel.GenerateOptions(upgrade.Options);
             panel.UpgradeLevel = currLevel;
+            panel.GenerateOptions(upgrade.Options);
 
             //if the part is locked, indicate that the part must be purchased on the first upgrade. Simply mark the rest as locked
             if (currentSKU.isLocked)
@@ -188,7 +194,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
                     if (data.UpgradeOptions[currLevel] != -1)
                     {
                         panel.Options[data.UpgradeOptions[currLevel]].toggle.isOn = true;
-                        panel.SelectedSKUChanged(panel.Options[data.UpgradeOptions[currLevel]]);
+                        panel.SelectedUpgradeOption(panel.Options[data.UpgradeOptions[currLevel]]);
                     }
                     else //no upgrade has been selected for this level
                     {
