@@ -11,6 +11,38 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1338990702240990}
   m_IsPrefabAsset: 1
+--- !u!1 &1214272180596186
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4868255718156332}
+  - component: {fileID: 114523564971244056}
+  m_Layer: 10
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1242571325902442
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4350962456663186}
+  - component: {fileID: 114092273089691372}
+  m_Layer: 10
+  m_Name: Level1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1265718478761378
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,6 +57,22 @@ GameObject:
   - component: {fileID: 135727324866769444}
   m_Layer: 10
   m_Name: Model_Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1272191213228414
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4073890969887074}
+  - component: {fileID: 114515339015806400}
+  m_Layer: 10
+  m_Name: Reduced Weight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +94,152 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1440917182975446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4732727805039884}
+  m_Layer: 10
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1695982536605488
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4141689483063240}
+  - component: {fileID: 114314448215663822}
+  m_Layer: 10
+  m_Name: Reinforced Plating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1895877025381508
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4631143398479726}
+  - component: {fileID: 114732657545846566}
+  m_Layer: 10
+  m_Name: Improved Circuits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1951134407697556
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4682163292401802}
+  - component: {fileID: 114373660185742760}
+  m_Layer: 10
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4073890969887074
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272191213228414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4682163292401802}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4141689483063240
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695982536605488}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4868255718156332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4350962456663186
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242571325902442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4631143398479726}
+  m_Father: {fileID: 4732727805039884}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4631143398479726
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895877025381508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4350962456663186}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4682163292401802
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951134407697556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4073890969887074}
+  m_Father: {fileID: 4732727805039884}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4732727805039884
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440917182975446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.4399996, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4350962456663186}
+  - {fileID: 4682163292401802}
+  - {fileID: 4868255718156332}
+  m_Father: {fileID: 4966678323703408}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4764714345140718
 Transform:
   m_ObjectHideFlags: 1
@@ -59,6 +253,20 @@ Transform:
   m_Father: {fileID: 4966678323703408}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4868255718156332
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1214272180596186}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4141689483063240}
+  m_Father: {fileID: 4732727805039884}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4966678323703408
 Transform:
   m_ObjectHideFlags: 1
@@ -70,6 +278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4764714345140718}
+  - {fileID: 4732727805039884}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,12 +339,59 @@ MonoBehaviour:
   StoreImage: {fileID: 21300010, guid: 006f7f82ca50d224a993a4ca8304ad81, type: 3}
   Manufacturer: Kurosawa
   PartID: Kabuto
-  UpgradeLevels: []
+  UpgradeLevels:
+  - {fileID: 114092273089691372}
+  - {fileID: 114373660185742760}
+  - {fileID: 114523564971244056}
   AppliedUpgrades: []
   MaxArmor: 1800
   ArmorPoints: 1800
   Weight: 300
   EnergyCost: 350
+--- !u!114 &114092273089691372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242571325902442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10000
+  Options:
+  - {fileID: 114732657545846566}
+--- !u!114 &114314448215663822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695982536605488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02757785caf886438e0f0cf621a099e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300004, guid: 3ad56d0daa98d8a41b2846a87a936e73, type: 3}
+  StoreDescription: Additional plating increases armor
+  MaxArmor: 450
+  Weight: 0
+  EnergyCost: 0
+--- !u!114 &114373660185742760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951134407697556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 25000
+  Options:
+  - {fileID: 114515339015806400}
 --- !u!114 &114427779450575028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +404,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   component: {fileID: 114005925156612200}
+--- !u!114 &114515339015806400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272191213228414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02757785caf886438e0f0cf621a099e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 5dd683b010ffc2042b61238972973992, type: 3}
+  StoreDescription: Ligher materials reduce weight
+  MaxArmor: 0
+  Weight: -75
+  EnergyCost: 0
+--- !u!114 &114523564971244056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1214272180596186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 50000
+  Options:
+  - {fileID: 114314448215663822}
+--- !u!114 &114732657545846566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895877025381508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02757785caf886438e0f0cf621a099e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 4703fced59df4ef4da0dd8f4331048f7, type: 3}
+  StoreDescription: Integration of more efficient electronics reduces energy cost
+  MaxArmor: 0
+  Weight: 0
+  EnergyCost: -75
 --- !u!135 &135727324866769444
 SphereCollider:
   m_ObjectHideFlags: 1
