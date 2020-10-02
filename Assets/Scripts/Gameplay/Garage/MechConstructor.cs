@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,6 +32,8 @@ public class MechConstructor : MonoBehaviour {
         if (Camera.main.GetComponent<CameraHardAttach>() != null)
             Camera.main.GetComponent<CameraHardAttach>().target = Mech.Core.CameraAnchor.transform;
 
+        UpdateUpgrades();
+
         RecalculateDerivedStats();
     }
 
@@ -41,8 +44,8 @@ public class MechConstructor : MonoBehaviour {
         GameObject.Destroy(Mech.Head.gameObject);
         Mech.Head = newHeadObj.GetComponent<FrameHead>();
         RecalculateDerivedStats();
-
         CustomData.PlayerMechData.Head = HeadID;
+        UpgradeManager.ApplyUpgrades(Mech.Head);
         CustomData.SaveMechData();
     }
 
@@ -76,6 +79,7 @@ public class MechConstructor : MonoBehaviour {
         RecalculateDerivedStats();
 
         CustomData.PlayerMechData.Core = CoreID;
+        UpgradeManager.ApplyUpgrades(Mech.Core);
         CustomData.SaveMechData();
     }
 
@@ -93,6 +97,7 @@ public class MechConstructor : MonoBehaviour {
 
         RecalculateDerivedStats();
         CustomData.PlayerMechData.Legs = LegID;
+        UpgradeManager.ApplyUpgrades(Mech.Legs);
         CustomData.SaveMechData();
     }
 
@@ -119,9 +124,21 @@ public class MechConstructor : MonoBehaviour {
         RecalculateDerivedStats();
 
         CustomData.PlayerMechData.Arms = ArmID;
+        UpgradeManager.ApplyUpgrades(Mech.Arms);
         CustomData.SaveMechData();
     }
 
+    public void UpdateUpgrades()
+    {
+        UpgradeManager.ApplyUpgrades(Mech.Core);
+        UpgradeManager.ApplyUpgrades(Mech.Head);
+        UpgradeManager.ApplyUpgrades(Mech.Legs);
+        UpgradeManager.ApplyUpgrades(Mech.Arms);
+        UpgradeManager.ApplyUpgrades(Mech.Core.thruster);
+        UpgradeManager.ApplyUpgrades(Mech.RightHandWeapon);
+
+        RecalculateDerivedStats();
+    }
 
     public void SwapThruster(int thrusterID)
     {
@@ -135,6 +152,7 @@ public class MechConstructor : MonoBehaviour {
         RecalculateDerivedStats();
 
         CustomData.PlayerMechData.Thruster = thrusterID;
+        UpgradeManager.ApplyUpgrades(Mech.Core.thruster);
         CustomData.SaveMechData();
     }
 
@@ -150,6 +168,7 @@ public class MechConstructor : MonoBehaviour {
         RecalculateDerivedStats();
 
         CustomData.PlayerMechData.RightWeapon = weaponID;
+        UpgradeManager.ApplyUpgrades(Mech.RightHandWeapon);
         CustomData.SaveMechData();
     }
 

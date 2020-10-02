@@ -10,8 +10,13 @@ public class SKUDetailVeiwer : MonoBehaviour {
     public TMPro.TMP_Text NameText;
     public RectTransform AttributeRoot;
     public RectTransform DetailRoot;
+    public RectTransform UpgradeRoot;
+
+    public GameObject StatsRoot;
     public GameObject AttributeTextPrefab;
     public GameObject DetailTextPrefab;
+
+    public UpgradePanel UpgradePanelPrefab;
 
     public GameObject EquipButton;
     public Button PurchaseButton;
@@ -19,8 +24,8 @@ public class SKUDetailVeiwer : MonoBehaviour {
     public TMPro.TMP_Text PurchaseText;
     public GameObject AlreadyEquipped;
 
-
     InventorySKU currentSKU = null;
+    List<UpgradePanel> upgradePanels;
 
     public void UpdateSKUDetails(InventorySKU SKU)
     {
@@ -67,6 +72,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
         EquipButton.SetActive(!currentSKU.isLocked && !currentSKU.isEquipped);
         AlreadyEquipped.SetActive(!currentSKU.isLocked && currentSKU.isEquipped);
 
+        UpdateUpgradeTab();
     }
 
     public void PurchaseButtonPressed()
@@ -75,7 +81,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
         {
             currentSKU.isLocked = false;
             PlayerData.Currency = PlayerData.Currency - currentSKU.partPrefab.Cost;
-            PlayerData.UnlockPart(currentSKU.partPrefab.gameObject.name);
+            PlayerData.UnlockPart(currentSKU.partPrefab.PartID);
             PurchaseButton.gameObject.SetActive(false);
             AlreadyEquipped.SetActive(false);
             EquipButton.SetActive(true);
@@ -85,7 +91,21 @@ public class SKUDetailVeiwer : MonoBehaviour {
 
     public void UpgradeButtonPressed()
     {
+        UpgradeData data = UpgradeManager.LoadUpgradeData(currentSKU.partPrefab);
 
+        if (PlayerData.Currency >= currentSKU.partPrefab.UpgradeLevels[data.UpgradeLevel].Cost)
+        {
+            //consume currency
+            PlayerData.Currency = PlayerData.Currency - currentSKU.partPrefab.Cost;
+            //upgrae the part
+            UpgradeManager.UnlockUpgradeLevel(currentSKU.partPrefab);
+            //apply the first upgrade option
+            UpgradeManager.SwapUpgrade(currentSKU.partPrefab, data.UpgradeLevel, 0);
+            //update the upgrade panels
+            UpdateUpgradeTab();
+            MechConstructor.instance.UpdateUpgrades();
+
+        }
     }
 
     public void EquipButtonPressed()
@@ -126,5 +146,73 @@ public class SKUDetailVeiwer : MonoBehaviour {
 
         EquipButton.SetActive(false);
         AlreadyEquipped.SetActive(true);
+    }
+
+    private void UpdateUpgradeTab()
+    {
+        //clear the old panels
+        if (upgradePanels != null)
+            foreach (UpgradePanel panel in upgradePanels)
+                GameObject.Destroy(panel.gameObject);
+
+        upgradePanels = new List<UpgradePanel>();
+
+        UpgradeData data = UpgradeManager.LoadUpgradeData(currentSKU.partPrefab);
+        int currLevel = 0;
+        foreach(UpgradeLevel upgrade in currentSKU.partPrefab.UpgradeLevels)
+        {
+            GameObject newPanelObj = GameObject.Instantiate(UpgradePanelPrefab.gameObject, UpgradeRoot);
+            UpgradePanel panel = newPanelObj.GetComponent<UpgradePanel>();
+            panel.GenerateOptions(upgrade.Options);
+            panel.UpgradeLevel = currLevel;
+
+            //if the part is locked, indicate that the part must be purchased on the first upgrade. Simply mark the rest as locked
+            if (currentSKU.isLocked)
+            {
+                panel.ShowLockedView();
+                if (currLevel == 0)
+                {
+                    panel.LockedText.text = "Purchase this part from the store to unlock upgrades";
+                }
+                else
+                {
+                    panel.LockedText.text = "Locked";
+                }
+            }
+            else
+            {
+                //if this upgrade is already unlocked
+                if (currLevel < data.UpgradeLevel)
+                {
+                    panel.ShowUnlockedView();
+                    if (data.UpgradeOptions[currLevel] != -1)
+                    {
+                        panel.Options[data.UpgradeOptions[currLevel]].toggle.isOn = true;
+                        panel.SelectedSKUChanged(panel.Options[data.UpgradeOptions[currLevel]]);
+                    }
+                    else //no upgrade has been selected for this level
+                    {
+                        panel.UpgradeNameText.text = "Choose an Upgrade";
+                        panel.UpgradeDescriptionText.text = "";
+                    }
+                }
+                //if this is the next available upgrade tier
+                else if (currLevel == data.UpgradeLevel)
+                {
+                    panel.ShowPurchaseableView();
+                    panel.UnlockCostText.text = "Unlock Upgrade Tier: $" + String.Format("{0:n0}", upgrade.Cost);
+                }
+                //if this is 1 or more tiers below the next available upgrade
+                else
+                {
+                    panel.ShowLockedView();
+                    panel.LockedText.text = "Purchase this part from the store to unlock upgrades";
+                }
+            }
+            //add to the panel list
+            upgradePanels.Add(panel);
+            //increment level
+            currLevel++;
+        }
     }
 }

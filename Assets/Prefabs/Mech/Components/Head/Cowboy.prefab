@@ -141,6 +141,9 @@ MonoBehaviour:
   Cost: 6000
   StoreImage: {fileID: 21300000, guid: e568be018e22f84469331cdac9abc449, type: 3}
   Manufacturer: AmeriCorp
+  PartID: Cowboy
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 800
   ArmorPoints: 800
   Weight: 400

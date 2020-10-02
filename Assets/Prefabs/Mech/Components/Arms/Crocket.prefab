@@ -924,6 +924,9 @@ MonoBehaviour:
   Cost: 7500
   StoreImage: {fileID: 21300000, guid: eeac123894a68534590c3197728fced1, type: 3}
   Manufacturer: AmeriCorp
+  PartID: Crocket
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 3500
   ArmorPoints: 3500
   RightArm_Root: {fileID: 1548598072081526}

@@ -1019,6 +1019,9 @@ MonoBehaviour:
   Cost: 0
   StoreImage: {fileID: 21300000, guid: 5482971d57314b94087e863e528a5f1f, type: 3}
   Manufacturer: Prometheus
+  PartID: Achilles
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 3000
   ArmorPoints: 3000
   CoreSocket: {fileID: 1098268156387200}

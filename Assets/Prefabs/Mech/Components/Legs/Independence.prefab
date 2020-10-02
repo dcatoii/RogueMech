@@ -869,6 +869,9 @@ MonoBehaviour:
   Cost: 9000
   StoreImage: {fileID: 21300000, guid: 66b43a0d2af2e8e4d9ae819ab4b78a6c, type: 3}
   Manufacturer: AmeriCorp
+  PartID: Independence
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 3500
   ArmorPoints: 3500
   CoreSocket: {fileID: 1067209153511000}

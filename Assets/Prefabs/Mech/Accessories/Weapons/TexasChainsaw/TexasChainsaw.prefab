@@ -946,6 +946,9 @@ MonoBehaviour:
   Cost: 12500
   StoreImage: {fileID: 21300030, guid: eeac123894a68534590c3197728fced1, type: 3}
   Manufacturer: AmeriCorp
+  PartID: TexasChainsaw
+  UpgradeLevels: []
+  AppliedUpgrades: []
   ProjectilePrefab: {fileID: 1633464349893888, guid: 5b8f308b7253a96498b803231e3d960e,
     type: 2}
   FirePoint: {fileID: 1726271948383964}

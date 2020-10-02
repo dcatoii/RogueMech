@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4012878220402984}
   - component: {fileID: 114919697773684650}
   m_Layer: 10
-  m_Name: PonyExpress
+  m_Name: Pony Express
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,6 +264,9 @@ MonoBehaviour:
   Cost: 6000
   StoreImage: {fileID: 21300000, guid: 9db457348ab3ed149b89b7e0604abc0a, type: 3}
   Manufacturer: AmeriCorp
+  PartID: PonyExpress
+  UpgradeLevels: []
+  AppliedUpgrades: []
   FwdThruster: {fileID: 198643811644848402}
   UpThruster: {fileID: 198812626329031786}
   LeftThruster: {fileID: 198736143528559026}

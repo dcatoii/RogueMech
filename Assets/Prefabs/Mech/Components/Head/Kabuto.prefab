@@ -129,6 +129,9 @@ MonoBehaviour:
   Cost: 9000
   StoreImage: {fileID: 21300010, guid: 006f7f82ca50d224a993a4ca8304ad81, type: 3}
   Manufacturer: Kurosawa
+  PartID: Kabuto
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 1800
   ArmorPoints: 1800
   Weight: 300

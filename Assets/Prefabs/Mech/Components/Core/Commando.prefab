@@ -305,6 +305,9 @@ MonoBehaviour:
   Cost: 20000
   StoreImage: {fileID: 21300000, guid: 41c6269ae4365074082bf64178013ca7, type: 3}
   Manufacturer: AmeriCorp
+  PartID: Commando
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 17500
   ArmorPoints: 17500
   RightArmSocket: {fileID: 1371715312684206}

@@ -264,6 +264,9 @@ MonoBehaviour:
   Cost: 0
   StoreImage: {fileID: 21300000, guid: 0aa6095ddf0316646a1b0d510c7af0f7, type: 3}
   Manufacturer: Prometheus
+  PartID: Chariot
+  UpgradeLevels: []
+  AppliedUpgrades: []
   FwdThruster: {fileID: 198200253839346920}
   UpThruster: {fileID: 198320118820765816}
   LeftThruster: {fileID: 198357679264147504}

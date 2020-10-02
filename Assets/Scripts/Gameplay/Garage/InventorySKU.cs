@@ -25,7 +25,7 @@ public class InventorySKU : MonoBehaviour {
     private void Start()
     {
         StoreCard.sprite = StoreImage;
-        isLocked = !PlayerData.IsPartUnlocked(partPrefab.gameObject.name);
+        isLocked = !PlayerData.IsPartUnlocked(partPrefab.PartID);
     }
 
     public void OnToggle()

@@ -226,6 +226,9 @@ MonoBehaviour:
   Cost: 0
   StoreImage: {fileID: 21300000, guid: 3e652a597824bd44d91fd93f87e3857d, type: 3}
   Manufacturer: Prometheus
+  PartID: Xiphos
+  UpgradeLevels: []
+  AppliedUpgrades: []
   ProjectilePrefab: {fileID: 1633464349893888, guid: 60595c3b1d130f34383a76c7b52d1328,
     type: 2}
   FirePoint: {fileID: 1726271948383964}

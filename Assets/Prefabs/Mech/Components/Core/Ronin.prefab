@@ -317,6 +317,9 @@ MonoBehaviour:
   Cost: 15000
   StoreImage: {fileID: 21300000, guid: 5dd683b010ffc2042b61238972973992, type: 3}
   Manufacturer: Kurosawa
+  PartID: Ronin
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 11500
   ArmorPoints: 11500
   RightArmSocket: {fileID: 1662348276455834}

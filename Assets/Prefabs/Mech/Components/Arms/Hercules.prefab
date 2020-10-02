@@ -990,6 +990,9 @@ MonoBehaviour:
   Cost: 0
   StoreImage: {fileID: 21300000, guid: 133efc8b88eda0f4ca9914b312de2520, type: 3}
   Manufacturer: Prometheus
+  PartID: Hercules
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 2500
   ArmorPoints: 2500
   RightArm_Root: {fileID: 1460212822513388}

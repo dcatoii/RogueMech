@@ -264,6 +264,9 @@ MonoBehaviour:
   Cost: 8000
   StoreImage: {fileID: 21300000, guid: c11241572f1a3444f956e4d29d23b3b1, type: 3}
   Manufacturer: Prometheus
+  PartID: Icarus
+  UpgradeLevels: []
+  AppliedUpgrades: []
   FwdThruster: {fileID: 198065360613892274}
   UpThruster: {fileID: 198003935940328576}
   LeftThruster: {fileID: 198017847456427274}

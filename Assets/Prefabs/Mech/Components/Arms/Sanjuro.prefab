@@ -888,6 +888,9 @@ MonoBehaviour:
   Cost: 7500
   StoreImage: {fileID: 21300000, guid: 006f7f82ca50d224a993a4ca8304ad81, type: 3}
   Manufacturer: Kurosawa
+  PartID: Sanjuro
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 2000
   ArmorPoints: 2000
   RightArm_Root: {fileID: 1207887188168944}

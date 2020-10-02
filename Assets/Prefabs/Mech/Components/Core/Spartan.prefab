@@ -317,6 +317,9 @@ MonoBehaviour:
   Cost: 0
   StoreImage: {fileID: 21300000, guid: 70ddff1ddbea29545907e424e1d98ec8, type: 3}
   Manufacturer: Prometheus
+  PartID: Spartan
+  UpgradeLevels: []
+  AppliedUpgrades: []
   MaxArmor: 15000
   ArmorPoints: 15000
   RightArmSocket: {fileID: 1679501023111996}
