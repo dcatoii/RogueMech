@@ -42,6 +42,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1120773697563176
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4576042828184230}
+  - component: {fileID: 114274622304808592}
+  m_Layer: 10
+  m_Name: Improved Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1148848581005684
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,6 +68,22 @@ GameObject:
   - component: {fileID: 4249111343579464}
   m_Layer: 10
   m_Name: ThrusterSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1157363951889428
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4224655729397352}
+  - component: {fileID: 114145676191601944}
+  m_Layer: 10
+  m_Name: Improved Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,6 +109,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1193049963868386
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4785105248401468}
+  - component: {fileID: 114409868374165504}
+  m_Layer: 10
+  m_Name: Superconductive Coils
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1196691645254470
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4096247504210308}
+  - component: {fileID: 114149106492102830}
+  m_Layer: 10
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1256251779459902
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +151,54 @@ GameObject:
   - component: {fileID: 4824870949204852}
   m_Layer: 10
   m_Name: ArmSocket_Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1286385926515310
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4164591391710174}
+  - component: {fileID: 114877684312866926}
+  m_Layer: 10
+  m_Name: Level1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1320575204579950
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4145148951349652}
+  - component: {fileID: 114037612572579922}
+  m_Layer: 10
+  m_Name: Kurata Plates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1589687839609766
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4878301967833498}
+  - component: {fileID: 114448557243517366}
+  m_Layer: 10
+  m_Name: Bushido Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,6 +234,53 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1665924577754864
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4095015642403572}
+  - component: {fileID: 114264651528647814}
+  m_Layer: 10
+  m_Name: Meditation Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1846347712860338
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4152366385308866}
+  - component: {fileID: 114664814234081054}
+  m_Layer: 10
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1989098443975662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4680838529751138}
+  m_Layer: 10
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4090561488312824
 Transform:
   m_ObjectHideFlags: 1
@@ -135,6 +294,34 @@ Transform:
   m_Father: {fileID: 4619271582942738}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4095015642403572
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665924577754864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4152366385308866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4096247504210308
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196691645254470}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4785105248401468}
+  - {fileID: 4145148951349652}
+  m_Father: {fileID: 4680838529751138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4103716153565426
 Transform:
   m_ObjectHideFlags: 1
@@ -146,6 +333,62 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 4619271582942738}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4145148951349652
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320575204579950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4096247504210308}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4152366385308866
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846347712860338}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4095015642403572}
+  - {fileID: 4878301967833498}
+  m_Father: {fileID: 4680838529751138}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4164591391710174
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286385926515310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4224655729397352}
+  - {fileID: 4576042828184230}
+  m_Father: {fileID: 4680838529751138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4224655729397352
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157363951889428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4164591391710174}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4249111343579464
@@ -174,6 +417,19 @@ Transform:
   m_Father: {fileID: 4619271582942738}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4576042828184230
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120773697563176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4164591391710174}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4619271582942738
 Transform:
   m_ObjectHideFlags: 1
@@ -190,8 +446,25 @@ Transform:
   - {fileID: 4738302086313962}
   - {fileID: 4824870949204852}
   - {fileID: 4284662052728368}
+  - {fileID: 4680838529751138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4680838529751138
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989098443975662}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.220007, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4164591391710174}
+  - {fileID: 4096247504210308}
+  - {fileID: 4152366385308866}
+  m_Father: {fileID: 4619271582942738}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4738302086313962
 Transform:
@@ -206,6 +479,19 @@ Transform:
   m_Father: {fileID: 4619271582942738}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4785105248401468
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193049963868386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4096247504210308}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4824870949204852
 Transform:
   m_ObjectHideFlags: 1
@@ -218,6 +504,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4619271582942738}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4878301967833498
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589687839609766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4152366385308866}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23510316429490788
 MeshRenderer:
@@ -291,6 +590,147 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114037612572579922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320575204579950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 631559a710b49244ebcace100e0dc254, type: 3}
+  StoreDescription: An additional defensicve coat increases armor and weight
+  MaxArmor: 2500
+  EnergyCapacity: 0
+  RechargeRate: 0
+  RechargeCooldown: 0
+  Weight: 300
+--- !u!114 &114145676191601944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157363951889428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 1333526977daf754d91cf036a0cee04c, type: 3}
+  StoreDescription: accelerated power generation reduces recharge delay and increases
+    recharge rate
+  MaxArmor: 0
+  EnergyCapacity: 0
+  RechargeRate: 50
+  RechargeCooldown: 0.25
+  Weight: 0
+--- !u!114 &114149106492102830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196691645254470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 25000
+  Options:
+  - {fileID: 114409868374165504}
+  - {fileID: 114037612572579922}
+--- !u!114 &114264651528647814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665924577754864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: a1d96d714e8eb71459d00f6c48bee004, type: 3}
+  StoreDescription: Quick-dispersal core increases recharge delay while greatly increasing
+    recharge rate
+  MaxArmor: 0
+  EnergyCapacity: 0
+  RechargeRate: 100
+  RechargeCooldown: 1
+  Weight: 0
+--- !u!114 &114274622304808592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1120773697563176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: cfe599772e2a21b4194fa7c9ec1afaa9, type: 3}
+  StoreDescription: A more powerful energy source increases energy capacity
+  MaxArmor: 0
+  EnergyCapacity: 800
+  RechargeRate: 0
+  RechargeCooldown: 0
+  Weight: 0
+--- !u!114 &114409868374165504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193049963868386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 4703fced59df4ef4da0dd8f4331048f7, type: 3}
+  StoreDescription: Using super-conductive wires reduces recharge delay and max energy
+    capacity
+  MaxArmor: 0
+  EnergyCapacity: 400
+  RechargeRate: 0
+  RechargeCooldown: -0.5
+  Weight: 0
+--- !u!114 &114448557243517366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589687839609766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 0b343d174dafc3446815bd99c4fa3ff8, type: 3}
+  StoreDescription: High-durability core increases armor and energy capacity
+  MaxArmor: 1500
+  EnergyCapacity: 400
+  RechargeRate: 0
+  RechargeCooldown: 0
+  Weight: 0
+--- !u!114 &114664814234081054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846347712860338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 50000
+  Options:
+  - {fileID: 114264651528647814}
+  - {fileID: 114448557243517366}
 --- !u!114 &114693566607322966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +758,10 @@ MonoBehaviour:
   StoreImage: {fileID: 21300000, guid: 5dd683b010ffc2042b61238972973992, type: 3}
   Manufacturer: Kurosawa
   PartID: Ronin
-  UpgradeLevels: []
+  UpgradeLevels:
+  - {fileID: 114877684312866926}
+  - {fileID: 114149106492102830}
+  - {fileID: 114664814234081054}
   AppliedUpgrades: []
   MaxArmor: 11500
   ArmorPoints: 11500
@@ -335,3 +778,18 @@ MonoBehaviour:
   RechargeCooldown: 2.45
   TimeSinceLastEnergyUsed: 0
   Weight: 1500
+--- !u!114 &114877684312866926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286385926515310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10000
+  Options:
+  - {fileID: 114145676191601944}
+  - {fileID: 114274622304808592}

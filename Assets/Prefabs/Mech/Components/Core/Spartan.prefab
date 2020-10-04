@@ -11,6 +11,38 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1512098547004860}
   m_IsPrefabAsset: 1
+--- !u!1 &1076362531707186
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4797492707019422}
+  - component: {fileID: 114798709630905030}
+  m_Layer: 10
+  m_Name: Superconductive Coils
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1155464366715232
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4060087294453068}
+  - component: {fileID: 114236802967055920}
+  m_Layer: 10
+  m_Name: Ultralight Materials
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1296899481488128
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,6 +53,38 @@ GameObject:
   - component: {fileID: 4603513387785508}
   m_Layer: 10
   m_Name: HeadSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1403786723789374
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4703554074886370}
+  - component: {fileID: 114780790238203922}
+  m_Layer: 10
+  m_Name: Level1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1445003836887260
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4038456156927594}
+  - component: {fileID: 114329215228900380}
+  m_Layer: 10
+  m_Name: Maximus Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,6 +151,85 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1698828170328876
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4901458783138302}
+  - component: {fileID: 114208089846871120}
+  m_Layer: 10
+  m_Name: Advanced Plating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1735499709133652
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4462550430218138}
+  - component: {fileID: 114802645580529144}
+  m_Layer: 10
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1740125653153760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4824840229612556}
+  m_Layer: 10
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1768101889656906
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4095818363993998}
+  - component: {fileID: 114158659005383402}
+  m_Layer: 10
+  m_Name: Eternity Armor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1811331529325502
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4296572628798596}
+  - component: {fileID: 114412997307882472}
+  m_Layer: 10
+  m_Name: Improved Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1841390911402488
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +265,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1927425812989592
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4212730695873788}
+  - component: {fileID: 114882756999078776}
+  m_Layer: 10
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4038456156927594
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445003836887260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4462550430218138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4060087294453068
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155464366715232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4212730695873788}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4076439355636546
 Transform:
   m_ObjectHideFlags: 1
@@ -133,6 +318,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4361870599507956}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4095818363993998
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768101889656906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4462550430218138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4120525151139356
@@ -160,6 +358,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4361870599507956}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4212730695873788
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927425812989592}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4060087294453068}
+  - {fileID: 4797492707019422}
+  m_Father: {fileID: 4824840229612556}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4296572628798596
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811331529325502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4703554074886370}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4322501321455934
 Transform:
@@ -190,8 +416,24 @@ Transform:
   - {fileID: 4531221015549980}
   - {fileID: 4322501321455934}
   - {fileID: 4603513387785508}
+  - {fileID: 4824840229612556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4462550430218138
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735499709133652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4038456156927594}
+  - {fileID: 4095818363993998}
+  m_Father: {fileID: 4824840229612556}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4531221015549980
 Transform:
@@ -218,6 +460,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4361870599507956}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4703554074886370
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403786723789374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4901458783138302}
+  - {fileID: 4296572628798596}
+  m_Father: {fileID: 4824840229612556}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4797492707019422
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076362531707186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4212730695873788}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4824840229612556
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740125653153760}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1024.2306, y: -7.173966, z: -189.63159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4703554074886370}
+  - {fileID: 4212730695873788}
+  - {fileID: 4462550430218138}
+  m_Father: {fileID: 4361870599507956}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4901458783138302
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698828170328876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4703554074886370}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23664827495280328
 MeshRenderer:
@@ -291,6 +590,162 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114158659005383402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768101889656906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 0b343d174dafc3446815bd99c4fa3ff8, type: 3}
+  StoreDescription: An additional layer of armor increases weight and armor and reduces
+    recharge delay
+  MaxArmor: 4500
+  EnergyCapacity: 0
+  RechargeRate: 0
+  RechargeCooldown: -0.25
+  Weight: 750
+--- !u!114 &114208089846871120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698828170328876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 0b343d174dafc3446815bd99c4fa3ff8, type: 3}
+  StoreDescription: Enhanced armor plates increases durability
+  MaxArmor: 3000
+  EnergyCapacity: 0
+  RechargeRate: 0
+  RechargeCooldown: 0
+  Weight: 0
+--- !u!114 &114236802967055920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155464366715232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 631559a710b49244ebcace100e0dc254, type: 3}
+  StoreDescription: Using lighter metals reduces max weight and armor
+  MaxArmor: 1500
+  EnergyCapacity: 0
+  RechargeRate: 0
+  RechargeCooldown: 0
+  Weight: 500
+--- !u!114 &114329215228900380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445003836887260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: a1d96d714e8eb71459d00f6c48bee004, type: 3}
+  StoreDescription: Increases energy, recharge rage, and recharge delay. Are you not
+    entertained?
+  MaxArmor: 0
+  EnergyCapacity: 270
+  RechargeRate: 25
+  RechargeCooldown: 0.5
+  Weight: 0
+--- !u!114 &114412997307882472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811331529325502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 0}
+  StoreDescription: A more powerful energy source increases energy capacity
+  MaxArmor: 0
+  EnergyCapacity: 540
+  RechargeRate: 0
+  RechargeCooldown: 0
+  Weight: 0
+--- !u!114 &114780790238203922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403786723789374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10000
+  Options:
+  - {fileID: 114208089846871120}
+  - {fileID: 114412997307882472}
+--- !u!114 &114798709630905030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076362531707186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716e6510849f0564cbeac2d1f4699c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 4703fced59df4ef4da0dd8f4331048f7, type: 3}
+  StoreDescription: Using super-conductive wires reduces recharge delay and max energy
+    capacity
+  MaxArmor: 0
+  EnergyCapacity: -270
+  RechargeRate: 0
+  RechargeCooldown: -0.5
+  Weight: 0
+--- !u!114 &114802645580529144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735499709133652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 50000
+  Options:
+  - {fileID: 114329215228900380}
+  - {fileID: 114158659005383402}
+--- !u!114 &114882756999078776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927425812989592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 25000
+  Options:
+  - {fileID: 114236802967055920}
+  - {fileID: 114798709630905030}
 --- !u!114 &114907900694141642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +773,10 @@ MonoBehaviour:
   StoreImage: {fileID: 21300000, guid: 70ddff1ddbea29545907e424e1d98ec8, type: 3}
   Manufacturer: Prometheus
   PartID: Spartan
-  UpgradeLevels: []
+  UpgradeLevels:
+  - {fileID: 114780790238203922}
+  - {fileID: 114882756999078776}
+  - {fileID: 114802645580529144}
   AppliedUpgrades: []
   MaxArmor: 15000
   ArmorPoints: 15000
