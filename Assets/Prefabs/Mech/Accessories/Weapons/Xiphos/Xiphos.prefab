@@ -11,6 +11,54 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1614912343782164}
   m_IsPrefabAsset: 1
+--- !u!1 &1004119518544828
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4362161313715092}
+  - component: {fileID: 114316835336419946}
+  m_Layer: 10
+  m_Name: Increase Capacity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1156054024580552
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4976077873615086}
+  - component: {fileID: 114294602311984480}
+  m_Layer: 10
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1198866007618072
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4682686717646744}
+  - component: {fileID: 114815508308694420}
+  m_Layer: 10
+  m_Name: Hair Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1457480961532778
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,6 +72,53 @@ GameObject:
   - component: {fileID: 33738938059084330}
   m_Layer: 10
   m_Name: Model_Weapon_Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1480539926833278
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4650957701610484}
+  - component: {fileID: 114143872041725840}
+  m_Layer: 10
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1578215992783686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4966036030319056}
+  m_Layer: 10
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1607342537337984
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4634926024082666}
+  - component: {fileID: 114468804971237312}
+  m_Layer: 10
+  m_Name: Level1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,6 +158,70 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1783267220509616
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4973350669259440}
+  - component: {fileID: 114751675846497456}
+  m_Layer: 10
+  m_Name: Explosive Rounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1853605490059586
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4183700431009784}
+  - component: {fileID: 114933143645442810}
+  m_Layer: 10
+  m_Name: Increase Capacity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1886311161053560
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4238647741596072}
+  - component: {fileID: 114061102144073188}
+  m_Layer: 10
+  m_Name: The Kraken
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1929019899236524
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4781608018538240}
+  - component: {fileID: 114248294338240558}
+  m_Layer: 10
+  m_Name: Gladiator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4114272558604508
 Transform:
   m_ObjectHideFlags: 1
@@ -75,6 +234,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4978170792983136}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4183700431009784
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853605490059586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4634926024082666}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4238647741596072
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886311161053560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4976077873615086}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4362161313715092
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004119518544828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4650957701610484}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4634926024082666
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607342537337984}
+  m_LocalRotation: {x: -0, y: -0, z: 8.731149e-11, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4682686717646744}
+  - {fileID: 4183700431009784}
+  m_Father: {fileID: 4966036030319056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4650957701610484
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1480539926833278}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4973350669259440}
+  - {fileID: 4362161313715092}
+  m_Father: {fileID: 4966036030319056}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4682686717646744
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198866007618072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4634926024082666}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4781608018538240
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929019899236524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4976077873615086}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4831469975001284
 Transform:
@@ -89,6 +343,50 @@ Transform:
   m_Father: {fileID: 4978170792983136}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4966036030319056
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578215992783686}
+  m_LocalRotation: {x: -0.03185105, y: 0.009986727, z: 0.014599213, w: 0.9993361}
+  m_LocalPosition: {x: -25.400923, y: -5.010672, z: -6.681438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4634926024082666}
+  - {fileID: 4650957701610484}
+  - {fileID: 4976077873615086}
+  m_Father: {fileID: 4978170792983136}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4973350669259440
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783267220509616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4650957701610484}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4976077873615086
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156054024580552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4781608018538240}
+  - {fileID: 4238647741596072}
+  m_Father: {fileID: 4966036030319056}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4978170792983136
 Transform:
   m_ObjectHideFlags: 1
@@ -101,6 +399,7 @@ Transform:
   m_Children:
   - {fileID: 4831469975001284}
   - {fileID: 4114272558604508}
+  - {fileID: 4966036030319056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -212,6 +511,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114061102144073188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886311161053560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7613fa03137cf4fb6d96bfebec219f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 4703fced59df4ef4da0dd8f4331048f7, type: 3}
+  StoreDescription: Reduces damage for high-speed firing. Increases max shots, weight
+    and energy cost. Release the Kraken!
+  Weight: 150
+  EnergyCost: 50
+  damage: -75
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxCharges: 1
+  RechargeCooldown: 2
+  BulletRechargeTime: -0.25
+--- !u!114 &114143872041725840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1480539926833278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 25000
+  Options:
+  - {fileID: 114751675846497456}
+  - {fileID: 114316835336419946}
 --- !u!114 &114173342318970388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +563,10 @@ MonoBehaviour:
   StoreImage: {fileID: 21300000, guid: 3e652a597824bd44d91fd93f87e3857d, type: 3}
   Manufacturer: Prometheus
   PartID: Xiphos
-  UpgradeLevels: []
+  UpgradeLevels:
+  - {fileID: 114468804971237312}
+  - {fileID: 114143872041725840}
+  - {fileID: 114294602311984480}
   AppliedUpgrades: []
   ProjectilePrefab: {fileID: 1633464349893888, guid: 60595c3b1d130f34383a76c7b52d1328,
     type: 2}
@@ -237,8 +576,146 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 1000
   EnergyCost: 400
+  damage: 200
   HUDPrefab: {fileID: 114092409537422708, guid: 7502918e25e2983459d87357630beec4,
     type: 2}
   MaxCharges: 6
   RechargeCooldown: 1
   BulletRechargeTime: 0.5
+--- !u!114 &114248294338240558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929019899236524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7613fa03137cf4fb6d96bfebec219f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 7203dcb9e449d864db086d8ed15bb1d3, type: 3}
+  StoreDescription: Increases Damage, reduces energy cost and max charges. Are you
+    not entertained?
+  Weight: 0
+  EnergyCost: -100
+  damage: 50
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxCharges: -1
+  RechargeCooldown: 0
+  BulletRechargeTime: 0
+--- !u!114 &114294602311984480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156054024580552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 50000
+  Options:
+  - {fileID: 114248294338240558}
+  - {fileID: 114061102144073188}
+--- !u!114 &114316835336419946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004119518544828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7613fa03137cf4fb6d96bfebec219f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 6c08e26225b0b464bbdef72ef86a786d, type: 3}
+  StoreDescription: Allows an additional shot to be stored
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxCharges: 1
+  RechargeCooldown: 0
+  BulletRechargeTime: 0
+--- !u!114 &114468804971237312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1607342537337984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10000
+  Options:
+  - {fileID: 114815508308694420}
+  - {fileID: 114933143645442810}
+--- !u!114 &114751675846497456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783267220509616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7613fa03137cf4fb6d96bfebec219f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 035e8399e8eb7c04ebca64bf8b4ef114, type: 3}
+  StoreDescription: Heavy rounds explode on impact, dealing more damage but take longer
+    to charge
+  Weight: 0
+  EnergyCost: 0
+  damage: 100
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxCharges: 0
+  RechargeCooldown: 1
+  BulletRechargeTime: 0.5
+--- !u!114 &114815508308694420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198866007618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7613fa03137cf4fb6d96bfebec219f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 66b538f2af8621f4a898c93639fad0ed, type: 3}
+  StoreDescription: Imrpoved firing sensitivity increases rate of fire
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: -0.07
+  MaxCharges: 0
+  RechargeCooldown: 0
+  BulletRechargeTime: 0
+--- !u!114 &114933143645442810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853605490059586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7613fa03137cf4fb6d96bfebec219f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 6c08e26225b0b464bbdef72ef86a786d, type: 3}
+  StoreDescription: Allows an additional shot to be stored
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxCharges: 1
+  RechargeCooldown: 0
+  BulletRechargeTime: 0

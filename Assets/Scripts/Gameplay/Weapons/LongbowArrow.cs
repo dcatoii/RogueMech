@@ -2,34 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public class LongbowArrow : Projectile {
 
-    public float speed = 10;
-    public GameObject deathEffect;
-    public Mob Source;
-    public int Damage = 800;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-    public virtual void SetDamage(int value)
+    int explosionDamage = 0;
+
+    public override void SetDamage(int value)
     {
-        Damage = value;
+        explosionDamage = value;
     }
 
-	// Update is called once per frame
-	void FixedUpdate () {
-        transform.position += transform.forward * Time.fixedDeltaTime * speed;	
-
-	}
-
-    public void SetTarget(Vector3 target)
-    {
-        transform.LookAt(target);
-    }
-
-    protected virtual void OnCollisionEnter(Collision collision)
+    protected override void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
         {
@@ -42,12 +24,14 @@ public class Projectile : MonoBehaviour {
                 return;
 
             MechComponentCollisionDetector frameCollision = collision.collider.GetComponent<MechComponentCollisionDetector>();
-            if(frameCollision != null) //we collided with a mech
+            if (frameCollision != null) //we collided with a mech
             {
                 frameCollision.component.OnHit(this);
             }
             Object.Destroy(this.gameObject);
-            GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
+            GameObject explosionObj = GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
+            ExplodingDamageArea explosion = explosionObj.GetComponentInChildren<ExplodingDamageArea>();
+            explosion.SetDamage(explosionDamage);
         }
     }
 }

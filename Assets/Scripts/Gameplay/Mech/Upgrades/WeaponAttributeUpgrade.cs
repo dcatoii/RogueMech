@@ -6,9 +6,9 @@ public class WeaponAttributeUpgrade : PartUpgrade {
 
     public int Weight = 0;
     public int EnergyCost = 0;
-
-    public float FunctionalRange = 200.0f;
-    public float RefireTime = 0.4f;
+    public int damage = 0;
+    public float FunctionalRange = 0.0f;
+    public float RefireTime = 0.0f;
 
 
     public override void Apply(FramePart Part)

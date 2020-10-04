@@ -11,6 +11,85 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1614912343782164}
   m_IsPrefabAsset: 1
+--- !u!1 &1025175515639704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4330778933461792}
+  m_Layer: 10
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1089347588767294
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4810620766250628}
+  - component: {fileID: 114480420354887498}
+  m_Layer: 10
+  m_Name: Rashomon Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1281221866403010
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4058366512826702}
+  - component: {fileID: 114897075911967630}
+  m_Layer: 10
+  m_Name: Efficient Charging
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1414785243468524
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4225108557585462}
+  - component: {fileID: 114002785651755858}
+  m_Layer: 10
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1418172172704830
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4176155441206358}
+  - component: {fileID: 114769718698943910}
+  m_Layer: 10
+  m_Name: Ultralight Materials
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1457480961532778
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,6 +103,54 @@ GameObject:
   - component: {fileID: 33738938059084330}
   m_Layer: 10
   m_Name: Model_Weapon_Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1513103830362868
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4295296967817766}
+  - component: {fileID: 114742655798460316}
+  m_Layer: 10
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1515176210104890
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4093118170097836}
+  - component: {fileID: 114967636438322022}
+  m_Layer: 10
+  m_Name: Level1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1612095851848488
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4495690504135926}
+  - component: {fileID: 114561954756239256}
+  m_Layer: 10
+  m_Name: Gorobei Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,6 +175,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1652943836550182
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4374293861639516}
+  - component: {fileID: 114366502926529356}
+  m_Layer: 10
+  m_Name: Efficient Bolts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1688056597139174
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4308992659906910}
+  - component: {fileID: 114941711137544254}
+  m_Layer: 10
+  m_Name: Quick Draw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1726271948383964
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +222,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4058366512826702
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281221866403010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4295296967817766}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4093118170097836
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515176210104890}
+  m_LocalRotation: {x: -0, y: -0, z: 8.731149e-11, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4308992659906910}
+  - {fileID: 4374293861639516}
+  m_Father: {fileID: 4330778933461792}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4114272558604508
 Transform:
   m_ObjectHideFlags: 1
@@ -75,6 +262,117 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4978170792983136}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4176155441206358
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1418172172704830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4295296967817766}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4225108557585462
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414785243468524}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4810620766250628}
+  - {fileID: 4495690504135926}
+  m_Father: {fileID: 4330778933461792}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4295296967817766
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513103830362868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4176155441206358}
+  - {fileID: 4058366512826702}
+  m_Father: {fileID: 4330778933461792}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4308992659906910
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1688056597139174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4093118170097836}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4330778933461792
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025175515639704}
+  m_LocalRotation: {x: -0.03185105, y: 0.009986727, z: 0.014599213, w: 0.9993361}
+  m_LocalPosition: {x: -18.876028, y: -7.8218775, z: -2.8364673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4093118170097836}
+  - {fileID: 4295296967817766}
+  - {fileID: 4225108557585462}
+  m_Father: {fileID: 4978170792983136}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4374293861639516
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1652943836550182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4093118170097836}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4495690504135926
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612095851848488}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4225108557585462}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4810620766250628
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089347588767294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4225108557585462}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4831469975001284
 Transform:
@@ -101,6 +399,7 @@ Transform:
   m_Children:
   - {fileID: 4831469975001284}
   - {fileID: 4114272558604508}
+  - {fileID: 4330778933461792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -212,6 +511,70 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114002785651755858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414785243468524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 50000
+  Options:
+  - {fileID: 114480420354887498}
+  - {fileID: 114561954756239256}
+--- !u!114 &114366502926529356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1652943836550182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a6edc159ae1644a34b7e7a49a8ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: cfe599772e2a21b4194fa7c9ec1afaa9, type: 3}
+  StoreDescription: Reduces energy cost of basic shots
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  BaseEnergyPerShot: -25
+  chargeRate: 0
+  Level2Damage: 0
+  Level3Damage: 0
+  Level2Charge: 0
+  Level3Charge: 0
+--- !u!114 &114480420354887498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089347588767294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a6edc159ae1644a34b7e7a49a8ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300020, guid: 393021b790fe7bd4484e9f84c76ad03e, type: 3}
+  StoreDescription: Greatly increase damage, charge time, and energy cost. Dead men
+    tell no lies.
+  Weight: 0
+  EnergyCost: 0
+  damage: 150
+  FunctionalRange: 0
+  RefireTime: 0
+  BaseEnergyPerShot: 25
+  chargeRate: 0
+  Level2Damage: 150
+  Level3Damage: 250
+  Level2Charge: 50
+  Level3Charge: 50
 --- !u!114 &114548672872925806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,23 +590,157 @@ MonoBehaviour:
   StoreImage: {fileID: 21300000, guid: fdd2c921c62d2cd43b815fa60199d5de, type: 3}
   Manufacturer: GeneriCon
   PartID: Longbow
-  UpgradeLevels: []
+  UpgradeLevels:
+  - {fileID: 114967636438322022}
+  - {fileID: 114742655798460316}
+  - {fileID: 114002785651755858}
   AppliedUpgrades: []
   ProjectilePrefab: {fileID: 1633464349893888, guid: e8f15c18ca86a01419f1923f1c854962,
     type: 2}
   FirePoint: {fileID: 1726271948383964}
   FunctionalRange: 100
-  RefireTime: 0.7
+  RefireTime: 1.2
   TimeSinceLastFire: 0
   Weight: 700
   EnergyCost: 300
+  damage: 0
   HUDPrefab: {fileID: 114460389922162414, guid: 7c7631eac084f78469ae560ec0104202,
     type: 2}
   BaseEnergyPerShot: 100
   chargeRate: 50
+  Level2Damage: 0
+  Level3Damage: 0
   Level2Charge: 50
   Level3Charge: 50
   ProjectilePrefabLevel2: {fileID: 1633464349893888, guid: 6de36efd8f9357a459f3f3a3c58d9de8,
     type: 2}
   ProjectilePrefabLevel3: {fileID: 1633464349893888, guid: 6bc5d076f50bdf845b32f7cfcccd6696,
     type: 2}
+--- !u!114 &114561954756239256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612095851848488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a6edc159ae1644a34b7e7a49a8ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300026, guid: 3ad56d0daa98d8a41b2846a87a936e73, type: 3}
+  StoreDescription: Fire quickly and efficiently for reduced damage. If you can't
+    kill them all, kill as many as you can.
+  Weight: 0
+  EnergyCost: 0
+  damage: -100
+  FunctionalRange: 0
+  RefireTime: -0.25
+  BaseEnergyPerShot: -25
+  chargeRate: 25
+  Level2Damage: -150
+  Level3Damage: -200
+  Level2Charge: 0
+  Level3Charge: 0
+--- !u!114 &114742655798460316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513103830362868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 25000
+  Options:
+  - {fileID: 114769718698943910}
+  - {fileID: 114897075911967630}
+--- !u!114 &114769718698943910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1418172172704830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a6edc159ae1644a34b7e7a49a8ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300006, guid: 393021b790fe7bd4484e9f84c76ad03e, type: 3}
+  StoreDescription: Utilize lighter, but less effiient parts to reduce weight and
+    increase base energy cost
+  Weight: -150
+  EnergyCost: 100
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  BaseEnergyPerShot: 0
+  chargeRate: 0
+  Level2Damage: 0
+  Level3Damage: 0
+  Level2Charge: 0
+  Level3Charge: 0
+--- !u!114 &114897075911967630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281221866403010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a6edc159ae1644a34b7e7a49a8ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: a1d96d714e8eb71459d00f6c48bee004, type: 3}
+  StoreDescription: Ion regulators reduce charge speed and charged shot energy usage
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  BaseEnergyPerShot: 0
+  chargeRate: -25
+  Level2Damage: 0
+  Level3Damage: 0
+  Level2Charge: -15
+  Level3Charge: -15
+--- !u!114 &114941711137544254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1688056597139174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48a6edc159ae1644a34b7e7a49a8ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 9a9029abb4c4e2a409c2863c7bd58142, type: 3}
+  StoreDescription: Increases fire rate
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: -0.2
+  BaseEnergyPerShot: 0
+  chargeRate: 0
+  Level2Damage: 0
+  Level3Damage: 0
+  Level2Charge: 0
+  Level3Charge: 0
+--- !u!114 &114967636438322022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515176210104890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10000
+  Options:
+  - {fileID: 114941711137544254}
+  - {fileID: 114366502926529356}

@@ -19,7 +19,9 @@ public class TexasChainsaw : Weapon
     public float MaxBloom = 20.0f;
     public float BloomGrowthRate = 15.0f;
     public float BloomCooldown = 1.0f;
-    
+    public float MinHeatMultiplier = 1.0f;
+    public float MaxHeatMultiplier = 1.0f;
+
     public override void OnFireDown(Vector3 target)
     {
         if (isOverheated)
@@ -89,6 +91,7 @@ public class TexasChainsaw : Weapon
         GameObject newProjectileObject = (GameObject.Instantiate(ProjectilePrefab, FirePoint.transform.position, Quaternion.identity) as GameObject);
         newProjectileObject.GetComponent<Projectile>().Source = GetComponentInParent<MechFrame>();
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
+        newProjectileObject.GetComponent<Projectile>().SetDamage((int)(damage * LeanTween.easeInQuad(MinHeatMultiplier, MaxHeatMultiplier, heat/MaxHeat)));
 
         TimeSinceLastFire = 0.0f;
     }
