@@ -85,6 +85,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
             PurchaseButton.gameObject.SetActive(false);
             AlreadyEquipped.SetActive(false);
             EquipButton.SetActive(true);
+            UpdateUpgradeTab();
         }
         
     }
@@ -212,7 +213,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
                 else
                 {
                     panel.ShowLockedView();
-                    panel.LockedText.text = "Purchase this part from the store to unlock upgrades";
+                    panel.LockedText.text = "You must purchase all previous upgrade tiers before this upgrade becomes available";
                 }
             }
             //add to the panel list
