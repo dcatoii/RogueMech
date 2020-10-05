@@ -6,8 +6,12 @@ public class FramePart : MonoBehaviour {
 
     public int Cost;
     public Sprite StoreImage;
-
     public string Manufacturer = "GeneriCon";
+    public string PartID;
+    public List<UpgradeLevel> UpgradeLevels;
+
+    public List<PartUpgrade> AppliedUpgrades = new List<PartUpgrade>();
+
     protected MechFrame Mech;
 
     protected virtual void Start()

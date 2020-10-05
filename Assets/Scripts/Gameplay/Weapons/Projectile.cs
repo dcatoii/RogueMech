@@ -13,6 +13,11 @@ public class Projectile : MonoBehaviour {
 		
 	}
 	
+    public virtual void SetDamage(int value)
+    {
+        Damage = value;
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () {
         transform.position += transform.forward * Time.fixedDeltaTime * speed;	

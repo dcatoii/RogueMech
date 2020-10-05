@@ -11,6 +11,8 @@ public class Longbow : Weapon {
 
     public int BaseEnergyPerShot = 100;
     public float chargeRate = 50;
+    public int Level2Damage = 0;
+    public int Level3Damage = 0;
     public float Level2Charge = 50;
     public float Level3Charge = 50;
     public GameObject ProjectilePrefabLevel2;
@@ -29,7 +31,7 @@ public class Longbow : Weapon {
         chargeLevel = 0;
         energyLevel = 0.0f;
 
-        GenerateProjectile(ProjectilePrefab);
+        GenerateProjectile(ProjectilePrefab, damage);
    
         if (Mech.Core.ConsumeEnergy(BaseEnergyPerShot) == false)
             OnFireUp(Vector3.zero);
@@ -77,7 +79,7 @@ public class Longbow : Weapon {
             if (chargeLevel == 0 && energyLevel >= Level2Charge)
             {
 
-                GenerateProjectile(ProjectilePrefabLevel2);
+                GenerateProjectile(ProjectilePrefabLevel2, Level2Damage);
 
                 Debug.Log("Charge level 2");
                 chargeLevel = 1;
@@ -85,7 +87,7 @@ public class Longbow : Weapon {
             }
             if (chargeLevel == 1 && energyLevel >= Level3Charge)
             {
-                GenerateProjectile(ProjectilePrefabLevel3);
+                GenerateProjectile(ProjectilePrefabLevel3, Level3Damage);
 
                 Debug.Log("Charge level 3");
                 chargeLevel = 2;
@@ -96,7 +98,7 @@ public class Longbow : Weapon {
         }
     }
 
-    protected void GenerateProjectile(GameObject prefab)
+    protected void GenerateProjectile(GameObject prefab, int _damage)
     {
         if(chargeProjectile != null)
             GameObject.Destroy(chargeProjectile.gameObject);
@@ -108,5 +110,6 @@ public class Longbow : Weapon {
         chargeProjectile.transform.localPosition = Vector3.zero;
         chargeProjectile.transform.localRotation = Quaternion.identity;
         chargeProjectile.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        chargeProjectile.SetDamage(_damage);
     }
 }

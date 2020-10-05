@@ -11,6 +11,22 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1614912343782164}
   m_IsPrefabAsset: 1
+--- !u!1 &1024034818973192
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4273281278466594}
+  - component: {fileID: 114550863478138136}
+  m_Layer: 10
+  m_Name: Level3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1083133968422704
 GameObject:
   m_ObjectHideFlags: 1
@@ -23,6 +39,22 @@ GameObject:
   - component: {fileID: 33609094877259064}
   m_Layer: 10
   m_Name: Model_Weapon_Right (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1259979794897180
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4816941480491546}
+  - component: {fileID: 114851299132492446}
+  m_Layer: 10
+  m_Name: Thermal Converter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +94,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1424941105106094
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4895927506394592}
+  - component: {fileID: 114890262253275850}
+  m_Layer: 10
+  m_Name: Sledgehammer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1457480961532778
 GameObject:
   m_ObjectHideFlags: 1
@@ -74,6 +122,22 @@ GameObject:
   - component: {fileID: 33308192246551536}
   m_Layer: 10
   m_Name: Model_Weapon_Right (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1489804123996522
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4294711899686512}
+  - component: {fileID: 114437981602044666}
+  m_Layer: 10
+  m_Name: Recoil Compensator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,6 +213,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1622128794037122
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4157044092916660}
+  - component: {fileID: 114549945710553182}
+  m_Layer: 10
+  m_Name: Rapid Cooling System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1636962951399114
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +241,22 @@ GameObject:
   - component: {fileID: 23200251152508988}
   m_Layer: 10
   m_Name: DebugTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1718113258793396
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4754161921144870}
+  - component: {fileID: 114110532716641290}
+  m_Layer: 10
+  m_Name: Leatherface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,6 +311,69 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1790523967405304
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4698975404956134}
+  - component: {fileID: 114856962875005596}
+  m_Layer: 10
+  m_Name: Level1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1843370610438922
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4686013505084282}
+  - component: {fileID: 114787196709147764}
+  m_Layer: 10
+  m_Name: Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1888534150416962
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4588970654954998}
+  - component: {fileID: 114988575006894892}
+  m_Layer: 10
+  m_Name: Heavy Slugs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1945499566304628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4304666081541166}
+  m_Layer: 10
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1997118289618820
 GameObject:
   m_ObjectHideFlags: 1
@@ -258,6 +417,19 @@ Transform:
   m_Father: {fileID: 4978170792983136}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4157044092916660
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1622128794037122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4686013505084282}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4257020449915240
 Transform:
   m_ObjectHideFlags: 1
@@ -270,6 +442,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4978170792983136}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4273281278466594
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024034818973192}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4895927506394592}
+  - {fileID: 4754161921144870}
+  m_Father: {fileID: 4304666081541166}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4294711899686512
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489804123996522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4698975404956134}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4304666081541166
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945499566304628}
+  m_LocalRotation: {x: -0.03185105, y: 0.009986727, z: 0.014599213, w: 0.9993361}
+  m_LocalPosition: {x: -19.611279, y: -7.220786, z: -4.4280105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4698975404956134}
+  - {fileID: 4686013505084282}
+  - {fileID: 4273281278466594}
+  m_Father: {fileID: 4978170792983136}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4396091756319106
 Transform:
@@ -360,6 +576,62 @@ Transform:
   m_Father: {fileID: 4537089655090466}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4588970654954998
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888534150416962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4698975404956134}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4686013505084282
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843370610438922}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4816941480491546}
+  - {fileID: 4157044092916660}
+  m_Father: {fileID: 4304666081541166}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4698975404956134
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790523967405304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4588970654954998}
+  - {fileID: 4294711899686512}
+  m_Father: {fileID: 4304666081541166}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4754161921144870
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718113258793396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4273281278466594}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4790365616899280
 Transform:
   m_ObjectHideFlags: 1
@@ -374,6 +646,19 @@ Transform:
   m_Father: {fileID: 4537089655090466}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4816941480491546
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259979794897180}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4686013505084282}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4831469975001284
 Transform:
   m_ObjectHideFlags: 1
@@ -400,6 +685,19 @@ Transform:
   m_Father: {fileID: 4537089655090466}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4895927506394592
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424941105106094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4273281278466594}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4978170792983136
 Transform:
   m_ObjectHideFlags: 1
@@ -413,6 +711,7 @@ Transform:
   - {fileID: 4537089655090466}
   - {fileID: 4114272558604508}
   - {fileID: 4257020449915240}
+  - {fileID: 4304666081541166}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -932,6 +1231,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114110532716641290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718113258793396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c615ec513f9b4797b763c69513409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 9a9029abb4c4e2a409c2863c7bd58142, type: 3}
+  StoreDescription: Fires and heats up more rapidly while recovering from Overheat
+    sooner. Great for ruining doors!
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: -0.025
+  MaxHeat: 0
+  HeatPerBullet: 0.025
+  CooldownDelay: 0
+  CooldownRate: 0
+  OverHeatCooldown: -1
+  MaxBloom: 0
+  BloomGrowthRate: 0
+  BloomCooldown: 0
+  MinHeatMultiplier: 0
+  MaxHeatMultiplier: 0
 --- !u!114 &114236365214316876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -946,6 +1274,12 @@ MonoBehaviour:
   Cost: 12500
   StoreImage: {fileID: 21300030, guid: eeac123894a68534590c3197728fced1, type: 3}
   Manufacturer: AmeriCorp
+  PartID: TexasChainsaw
+  UpgradeLevels:
+  - {fileID: 114856962875005596}
+  - {fileID: 114787196709147764}
+  - {fileID: 114550863478138136}
+  AppliedUpgrades: []
   ProjectilePrefab: {fileID: 1633464349893888, guid: 5b8f308b7253a96498b803231e3d960e,
     type: 2}
   FirePoint: {fileID: 1726271948383964}
@@ -954,6 +1288,7 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 1000
   EnergyCost: 400
+  damage: 0
   HUDPrefab: {fileID: 114710436051750526, guid: 8706f91ac0b80d84fb910a412713084a,
     type: 2}
   MaxHeat: 5
@@ -964,3 +1299,191 @@ MonoBehaviour:
   MaxBloom: 20
   BloomGrowthRate: 15
   BloomCooldown: 1
+  MinHeatMultiplier: 1
+  MaxHeatMultiplier: 1
+--- !u!114 &114437981602044666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489804123996522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c615ec513f9b4797b763c69513409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 9a9029abb4c4e2a409c2863c7bd58142, type: 3}
+  StoreDescription: Recoil shock absorbers increase accuracy
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxHeat: 0
+  HeatPerBullet: 0
+  CooldownDelay: 0
+  CooldownRate: 0
+  OverHeatCooldown: 0
+  MaxBloom: -4
+  BloomGrowthRate: -5
+  BloomCooldown: 0
+  MinHeatMultiplier: 0
+  MaxHeatMultiplier: 0
+--- !u!114 &114549945710553182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1622128794037122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c615ec513f9b4797b763c69513409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 4703fced59df4ef4da0dd8f4331048f7, type: 3}
+  StoreDescription: Increases heat per bullet, reduces cooling time
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxHeat: 0
+  HeatPerBullet: 0.025
+  CooldownDelay: -0.25
+  CooldownRate: 0.25
+  OverHeatCooldown: -1
+  MaxBloom: 0
+  BloomGrowthRate: 0
+  BloomCooldown: 0
+  MinHeatMultiplier: 0
+  MaxHeatMultiplier: 0
+--- !u!114 &114550863478138136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024034818973192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 50000
+  Options:
+  - {fileID: 114890262253275850}
+  - {fileID: 114110532716641290}
+--- !u!114 &114787196709147764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843370610438922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 25000
+  Options:
+  - {fileID: 114851299132492446}
+  - {fileID: 114549945710553182}
+--- !u!114 &114851299132492446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259979794897180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c615ec513f9b4797b763c69513409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: 035e8399e8eb7c04ebca64bf8b4ef114, type: 3}
+  StoreDescription: Increases damage at high heat, reduces damage at low heat
+  Weight: 0
+  EnergyCost: 0
+  damage: 0
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxHeat: 0
+  HeatPerBullet: 0
+  CooldownDelay: 0
+  CooldownRate: 0
+  OverHeatCooldown: 0
+  MaxBloom: 0
+  BloomGrowthRate: 0
+  BloomCooldown: 0
+  MinHeatMultiplier: -0.5
+  MaxHeatMultiplier: 1
+--- !u!114 &114856962875005596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1790523967405304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 10000
+  Options:
+  - {fileID: 114988575006894892}
+  - {fileID: 114437981602044666}
+--- !u!114 &114890262253275850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424941105106094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c615ec513f9b4797b763c69513409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300006, guid: 3ad56d0daa98d8a41b2846a87a936e73, type: 3}
+  StoreDescription: An older model firing system that reduces damage but can fire
+    much longer. Sometimes the old ways are better.
+  Weight: 0
+  EnergyCost: 0
+  damage: -20
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxHeat: 2
+  HeatPerBullet: 0
+  CooldownDelay: 0
+  CooldownRate: 0
+  OverHeatCooldown: 1
+  MaxBloom: 0
+  BloomGrowthRate: 0
+  BloomCooldown: 0
+  MinHeatMultiplier: 0
+  MaxHeatMultiplier: 0
+--- !u!114 &114988575006894892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888534150416962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c615ec513f9b4797b763c69513409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoreImage: {fileID: 21300000, guid: bbbbba1b9b4620140b1b0efb4da8bcd3, type: 3}
+  StoreDescription: Larger slugs increase damage
+  Weight: 0
+  EnergyCost: 0
+  damage: 20
+  FunctionalRange: 0
+  RefireTime: 0
+  MaxHeat: 0
+  HeatPerBullet: 0
+  CooldownDelay: 0
+  CooldownRate: 0
+  OverHeatCooldown: 0
+  MaxBloom: 0
+  BloomGrowthRate: 0
+  BloomCooldown: 0
+  MinHeatMultiplier: 0
+  MaxHeatMultiplier: 0

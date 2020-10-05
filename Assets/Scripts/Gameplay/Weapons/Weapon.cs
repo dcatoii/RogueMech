@@ -12,6 +12,7 @@ public class Weapon : FrameAccessory {
 
     public int Weight = 1000;
     public int EnergyCost = 400;
+    public int damage = 0;
     public WeaponHUD HUDPrefab;
 
     // Use this for initialization

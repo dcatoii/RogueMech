@@ -100,6 +100,12 @@ public class MechFrame : Mob {
         if(totalArmWeight > Arms.MaxWeight)
             returnList.Add("Arms Overweight");
 
+
+        Core.ArmorPoints = Core.MaxArmor;
+        Legs.ArmorPoints = Legs.MaxArmor;
+        Arms.ArmorPoints = Arms.MaxArmor;
+        Head.ArmorPoints = Head.MaxArmor;
+
         return returnList;
     }
 
