@@ -1732,9 +1732,9 @@ MonoBehaviour:
   CoreRotX: 0
   CoreRotY: 0
   LegRot: 0
-  verticalSwayAmount: 0.5
-  horiztonalSwayAmount: 1
-  swaySpeed: 4
+  verticalSwayAmount: 0.05
+  horiztonalSwayAmount: 0.1
+  swaySpeed: 1
 --- !u!4 &1072583077
 Transform:
   m_ObjectHideFlags: 0
