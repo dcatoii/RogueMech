@@ -1316,10 +1316,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300018, guid: eeac123894a68534590c3197728fced1, type: 3}
-  StoreDescription: Additional armor on structural weaknesses dramatically increases
-    armor, but increases energy cost and reduces max weight
+  StoreDescription: Fortify structural weaknesses to dramatically increase armor.
+    Increases energy cost and reduces max weight
   MaxArmor: 2000
-  MaxWeight: 750
+  MaxWeight: -750
   EnergyCost: 250
   Speed: 0
   TurnSpeed: 0
@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300018, guid: 393021b790fe7bd4484e9f84c76ad03e, type: 3}
-  StoreDescription: Reduced friction on bearings increases turning abilitu
+  StoreDescription: Reduced friction on bearings increases turning ability
   MaxArmor: 0
   MaxWeight: 0
   EnergyCost: 0
