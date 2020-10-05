@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 4038456156927594}
   - component: {fileID: 114329215228900380}
   m_Layer: 10
-  m_Name: Maximus Core
+  m_Name: Leonidas Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4095818363993998}
   - component: {fileID: 114158659005383402}
   m_Layer: 10
-  m_Name: Eternity Armor
+  m_Name: Phalanx Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,7 +607,7 @@ MonoBehaviour:
   MaxArmor: 4500
   EnergyCapacity: 0
   RechargeRate: 0
-  RechargeCooldown: -0.25
+  RechargeCooldown: -0.5
   Weight: 750
 --- !u!114 &114208089846871120
 MonoBehaviour:
@@ -657,11 +657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: a1d96d714e8eb71459d00f6c48bee004, type: 3}
-  StoreDescription: Increases energy, recharge rage, and recharge delay. Are you not
-    entertained?
+  StoreDescription: Increases energy, recharge rage, and recharge delay.
   MaxArmor: 0
-  EnergyCapacity: 270
-  RechargeRate: 25
+  EnergyCapacity: 500
+  RechargeRate: 50
   RechargeCooldown: 0.5
   Weight: 0
 --- !u!114 &114412997307882472
