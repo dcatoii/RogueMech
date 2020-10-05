@@ -15,6 +15,8 @@ public class MechFrame : Mob {
 
     public Weapon RightHandWeapon;
 
+    public MechHUD HUD;
+
     int totalArmWeight = 0;
     int totalEnergyCost = 0;
     int totalLegsWeight = 0;
@@ -60,17 +62,18 @@ public class MechFrame : Mob {
 
     void ArmsBroken()
     {
-
+        Mission.instance.BadNotification("Arms Destroyed");
     }
 
     void LegsBroken()
     {
-
+        Mission.instance.BadNotification("Legs Destroyed");
     }
 
     void HeadBroken()
     {
-
+        Mission.instance.BadNotification("Head Destroyed");
+        HUD.gameObject.SetActive(false);
     }
 
     protected override void Die()

@@ -15,6 +15,9 @@ public class MechHUD : MonoBehaviour {
         if (Mission.instance.PlayerFrame == null)
             return;
 
+        if (Mission.instance.PlayerFrame.HUD == null)
+            Mission.instance.PlayerFrame.HUD = this;
+
         if (EnergyHUD.TrackedCore == null)
         {
             EnergyHUD.TrackedCore = Mission.instance.PlayerFrame.Core;

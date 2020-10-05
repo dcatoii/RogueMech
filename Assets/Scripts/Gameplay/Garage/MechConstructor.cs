@@ -175,9 +175,16 @@ public class MechConstructor : MonoBehaviour {
 
     void RecalculateDerivedStats()
     {
-        Warnings.ClearWarnings();
-        foreach (string warning in Mech.CalculateDerivedStats())
-            Warnings.AddWarning(warning);
+        if (Warnings == null)
+        {
+            Mech.CalculateDerivedStats();
+        }
+        else
+        {
+            Warnings.ClearWarnings();
+            foreach (string warning in Mech.CalculateDerivedStats())
+                Warnings.AddWarning(warning);
+        }
     }
 
     void ConstructHead(FrameHead newHead)

@@ -10,6 +10,8 @@ public class MissionHUD : MonoBehaviour {
     public GameObject MissionFailurePopup;
     public MissionCompletePopup CompletePopup;
 
+    public MissionToastManager Toasts;
+
     Dictionary<MissionObjective, MissionText> trackedMissions = new Dictionary<MissionObjective, MissionText>();
 
     public void TrackMission(MissionObjective objective)

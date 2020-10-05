@@ -9,6 +9,17 @@ public class FrameController : MonoBehaviour {
     public float CoreRotX = 0.0f, CoreRotY = 0.0f;
     public float LegRot = 0.0f;
 
+    [Range(0, 1f)]
+    [SerializeField]
+    float verticalSwayAmount = 0.5f;
+
+    [Range(0, 1f)]
+    [SerializeField]
+    float horiztonalSwayAmount = 1f;
+
+    [Range(0, 15f)]
+    [SerializeField]
+    float swaySpeed = 0.5f;
 
     public void MoveForward(float fMagntude)
     {
@@ -22,7 +33,9 @@ public class FrameController : MonoBehaviour {
         Vector3 transformVector = gameObject.transform.forward;
         transformVector.y = 0;
         transformVector.Normalize();
-        float speedMultiplier = ControlledFrame.Legs.Speed + ControlledFrame.Core.thruster.ThrusterSpeed;
+        //half leg speed if legs are destroyed
+        float LegSpeed = ControlledFrame.Legs.IsDestroyed ? (ControlledFrame.Legs.Speed / 2) : ControlledFrame.Legs.Speed;
+        float speedMultiplier = LegSpeed + ControlledFrame.Core.thruster.ThrusterSpeed;
         gameObject.transform.localPosition += transformVector * Time.fixedDeltaTime * fMagntude * speedMultiplier;
         ControlledFrame.myAnimator.SetBool("Walking", true);
 
@@ -56,7 +69,8 @@ public class FrameController : MonoBehaviour {
         Vector3 transformVector = gameObject.transform.right;
         transformVector.y = 0;
         transformVector.Normalize();
-        float speedMultiplier = ControlledFrame.Legs.Speed + ControlledFrame.Core.thruster.ThrusterSpeed;
+        float LegSpeed = ControlledFrame.Legs.IsDestroyed ? (ControlledFrame.Legs.Speed / 2) : ControlledFrame.Legs.Speed;
+        float speedMultiplier = LegSpeed + ControlledFrame.Core.thruster.ThrusterSpeed;
         gameObject.transform.localPosition -= transformVector * Time.fixedDeltaTime * fMagntude * speedMultiplier;
         ControlledFrame.myAnimator.SetBool("Strafing", true);
         //play thruster particles
@@ -152,9 +166,12 @@ public class FrameController : MonoBehaviour {
 
     public void FixedUpdate()
     {
-        if(ControlledFrame.Core.thruster.Ascending)
+        if(ControlledFrame.Arms.IsDestroyed)
         {
-            //todo: fly
+            float x = 0, y = 0;
+            y += verticalSwayAmount * Mathf.Sin((swaySpeed * 2) * Time.time);
+            x += horiztonalSwayAmount * Mathf.Sin(swaySpeed * Time.time);
+            Aim(x, y);
         }
     }
 }

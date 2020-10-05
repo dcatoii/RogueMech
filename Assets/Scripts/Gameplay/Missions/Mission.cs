@@ -56,4 +56,17 @@ public class Mission : MonoBehaviour {
 
         PlayerFrame = null;
     }
+
+    public void BadNotification(string Text)
+    {
+        HUD.Toasts.ShowBadToast(Text);
+    }
+    public void GoodNotification(string Text)
+    {
+        HUD.Toasts.ShowGoodToast(Text);
+    }
+    public void NeutralNotification(string Text)
+    {
+        HUD.Toasts.ShowNeutralToast(Text);
+    }
 }

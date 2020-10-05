@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 224437080732317384}
   - component: {fileID: 114097539492681860}
   m_Layer: 5
-  m_Name: Charge
+  m_Name: XiphosCharge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
