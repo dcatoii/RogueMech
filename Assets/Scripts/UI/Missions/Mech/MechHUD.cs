@@ -18,6 +18,11 @@ public class MechHUD : MonoBehaviour {
         if (Mission.instance.PlayerFrame.HUD == null)
             Mission.instance.PlayerFrame.HUD = this;
 
+        if(Crosshairs == null)
+        {
+            Crosshairs = GameObject.Instantiate(Mission.instance.PlayerFrame.Head.CrosshairPrefab, transform).GetComponent<Image>();
+        }
+
         if (EnergyHUD.TrackedCore == null)
         {
             EnergyHUD.TrackedCore = Mission.instance.PlayerFrame.Core;

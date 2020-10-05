@@ -379,6 +379,8 @@ MonoBehaviour:
   ArmorPoints: 1000
   Weight: 500
   EnergyCost: 200
+  CrosshairPrefab: {fileID: 1881726420812200, guid: bde41fde49d19ba449d80cc82bef712d,
+    type: 2}
 --- !u!114 &114015709569052036
 MonoBehaviour:
   m_ObjectHideFlags: 1

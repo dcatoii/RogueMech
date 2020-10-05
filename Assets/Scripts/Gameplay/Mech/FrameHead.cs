@@ -7,6 +7,8 @@ public class FrameHead : FrameComponent {
     public int Weight = 500;
     public int EnergyCost = 200;
 
+    public GameObject CrosshairPrefab;
+
     public override void OnHit(Projectile projectile)
     {
         base.OnHit(projectile);
