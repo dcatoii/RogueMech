@@ -5,6 +5,7 @@ using UnityEngine;
 public class PartPreviewer : MonoBehaviour {
 
     GameObject CurrentPreview = null;
+    public FramePart Part = null;
 
 	public void ChangePreviewObject(GameObject prefab)
     {
@@ -13,5 +14,7 @@ public class PartPreviewer : MonoBehaviour {
 
         CurrentPreview = GameObject.Instantiate(prefab, transform);
         CurrentPreview.transform.localPosition = Vector3.zero;
+        Part = CurrentPreview.GetComponent<FramePart>();
+        UpgradeManager.ApplyUpgrades(Part);
     }
 }

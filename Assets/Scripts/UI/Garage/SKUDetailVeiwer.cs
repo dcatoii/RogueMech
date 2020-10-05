@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,38 +29,21 @@ public class SKUDetailVeiwer : MonoBehaviour {
 
     public void UpdateSKUDetails(InventorySKU SKU)
     {
-        //clean up old attributes
-        foreach (TMPro.TMP_Text attribute in AttributeRoot.GetComponentsInChildren<TMPro.TMP_Text>())
-        {
-            GameObject.Destroy(attribute.gameObject);
-        }
-        foreach (TMPro.TMP_Text detail in DetailRoot.GetComponentsInChildren<TMPro.TMP_Text>())
-        {
-            GameObject.Destroy(detail.gameObject);
-        }
+        
 
-        //set new attributes and details
-        foreach (string attribute in SKU.partPrefab.GetAttributeNamesForStore())
-        {
-            GameObject newAtt = GameObject.Instantiate(AttributeTextPrefab, AttributeRoot);
-            newAtt.GetComponent<TMPro.TMP_Text>().text = attribute;
-        }
-
-        foreach (string detail in SKU.partPrefab.GetAttributeValuesForStore())
-        {
-            GameObject newDet = GameObject.Instantiate(DetailTextPrefab, DetailRoot);
-            newDet.GetComponent<TMPro.TMP_Text>().text = detail;
-        }
-
-        //update name
-        NameText.text = SKU.SkuID;
+        
 
         //update previewer
         Preview.ChangePreviewObject(SKU.partPrefab.gameObject);
 
         currentSKU = SKU;
 
-        //update UI
+        ///////////////////update UI///////////////////////
+        //update name
+        NameText.text = SKU.SkuID;
+        //update stats
+        UpdateStats();
+
         PurchaseButton.gameObject.SetActive(currentSKU.isLocked);
         if (currentSKU.isLocked)
         {
@@ -72,7 +55,34 @@ public class SKUDetailVeiwer : MonoBehaviour {
         EquipButton.SetActive(!currentSKU.isLocked && !currentSKU.isEquipped);
         AlreadyEquipped.SetActive(!currentSKU.isLocked && currentSKU.isEquipped);
 
+        
         UpdateUpgradeTab();
+    }
+
+    private void UpdateStats()
+    {
+        //clean up old attributes
+        foreach (TMPro.TMP_Text attribute in AttributeRoot.GetComponentsInChildren<TMPro.TMP_Text>())
+        {
+            GameObject.Destroy(attribute.gameObject);
+        }
+        foreach (TMPro.TMP_Text detail in DetailRoot.GetComponentsInChildren<TMPro.TMP_Text>())
+        {
+            GameObject.Destroy(detail.gameObject);
+        }
+
+        //set new attributes and details
+        foreach (string attribute in Preview.Part.GetAttributeNamesForStore())
+        {
+            GameObject newAtt = GameObject.Instantiate(AttributeTextPrefab, AttributeRoot);
+            newAtt.GetComponent<TMPro.TMP_Text>().text = attribute;
+        }
+
+        foreach (string detail in Preview.Part.GetAttributeValuesForStore())
+        {
+            GameObject newDet = GameObject.Instantiate(DetailTextPrefab, DetailRoot);
+            newDet.GetComponent<TMPro.TMP_Text>().text = detail;
+        }
     }
 
     public void PurchaseButtonPressed()
@@ -101,9 +111,11 @@ public class SKUDetailVeiwer : MonoBehaviour {
             //upgrae the part
             UpgradeManager.UnlockUpgradeLevel(currentSKU.partPrefab);
             //apply the first upgrade option
-            UpgradeManager.SwapUpgrade(currentSKU.partPrefab, data.UpgradeLevel, 0);
-            //update the upgrade panels
+            UpgradeManager.SwapUpgrade(Preview.Part, data.UpgradeLevel, 0);
+            //update the stats and upgrade panels
+            UpdateStats();
             UpdateUpgradeTab();
+            //update preview mech
             MechConstructor.instance.UpdateUpgrades();
 
         }
@@ -111,8 +123,10 @@ public class SKUDetailVeiwer : MonoBehaviour {
 
     public void SelectedUpgradeOption(UpgradeOption option)
     {
-        UpgradeManager.SwapUpgrade(currentSKU.partPrefab, option.UpgradeLevel, option.UpgradeIndex);
+        UpgradeManager.SwapUpgrade(Preview.Part, option.UpgradeLevel, option.UpgradeIndex);
+        UpgradeManager.ApplyUpgrades(Preview.Part);
         MechConstructor.instance.UpdateUpgrades();
+        UpdateStats();
     }
 
     public void EquipButtonPressed()
@@ -166,7 +180,7 @@ public class SKUDetailVeiwer : MonoBehaviour {
 
         UpgradeData data = UpgradeManager.LoadUpgradeData(currentSKU.partPrefab);
         int currLevel = 0;
-        foreach(UpgradeLevel upgrade in currentSKU.partPrefab.UpgradeLevels)
+        foreach(UpgradeLevel upgrade in Preview.Part.UpgradeLevels)
         {
             GameObject newPanelObj = GameObject.Instantiate(UpgradePanelPrefab.gameObject, UpgradeRoot);
             UpgradePanel panel = newPanelObj.GetComponent<UpgradePanel>();
