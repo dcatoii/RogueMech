@@ -125,8 +125,14 @@ public class SKUDetailVeiwer : MonoBehaviour {
     {
         UpgradeManager.SwapUpgrade(Preview.Part, option.UpgradeLevel, option.UpgradeIndex);
         UpgradeManager.ApplyUpgrades(Preview.Part);
-        MechConstructor.instance.UpdateUpgrades();
+
+        //Fixes a null ref issue with the mech constructor's start not being called first
+        if (MechConstructor.instance != null)
+            MechConstructor.instance.UpdateUpgrades();
+
+        //update part stats
         UpdateStats();
+        //do not need to update upgrade tab becuase the panel handels options changing on it's own
     }
 
     public void EquipButtonPressed()

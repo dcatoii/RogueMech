@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,6 +44,7 @@ public class InventoryCatalogue : MonoBehaviour {
             newSKU.PreviewModel = part.gameObject;
             newSKU.StoreImage = part.StoreImage;
             newSKU.LibraryID = LibID;
+            newSKU.isLocked = !PlayerData.IsPartUnlocked(part.PartID);
             LibID++;
 
             Skus.Add(newSKU);
