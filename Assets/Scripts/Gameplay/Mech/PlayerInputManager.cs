@@ -10,6 +10,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     bool isWeapon1InUse = false;
     bool isThrusterInUse = false;
+    bool isInViewTransition = false;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerInputManager : MonoBehaviour {
 
         HandleWeapon1Input();
 
+        HandleViewTransition();
     }
 
     void HandleWeapon1Input()
@@ -63,5 +65,32 @@ public class PlayerInputManager : MonoBehaviour {
             ArmorFrame.EndThruster();
             isThrusterInUse = false;
         }
+    }
+
+    void HandleViewTransition()
+    {
+        if (isInViewTransition)
+            return;
+
+        if (Input.GetAxisRaw("ChangeView") > 0)
+        {
+            if(Camera.main.transform.parent == ArmorFrame.ControlledFrame.Core.CameraAnchor.transform)
+            {
+                Camera.main.transform.parent = ArmorFrame.ControlledFrame.Core.HeadSocket.transform;
+            }
+            else
+            {
+                Camera.main.transform.parent = ArmorFrame.ControlledFrame.Core.CameraAnchor.transform;
+            }
+            LTDescr desc = LeanTween.moveLocal(Camera.main.gameObject, Vector3.zero, 0.33f);
+            desc.setOnComplete(TransitionComplete);
+            isInViewTransition = true;
+        }
+
+    }
+
+    void TransitionComplete()
+    {
+        isInViewTransition = false;
     }
 }
