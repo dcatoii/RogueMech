@@ -49,6 +49,7 @@ public class LongbowAttributeUpgrade : WeaponAttributeUpgrade {
         weapon.EnergyCost -= EnergyCost;
         weapon.FunctionalRange -= FunctionalRange;
         weapon.RefireTime -= RefireTime;
+        weapon.damage -= damage;
         weapon.Level2Damage -= Level2Damage;
         weapon.Level3Damage -= Level3Damage;
         weapon.BaseEnergyPerShot -= BaseEnergyPerShot;

@@ -603,13 +603,13 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 700
   EnergyCost: 300
-  damage: 0
+  damage: 350
   HUDPrefab: {fileID: 114460389922162414, guid: 7c7631eac084f78469ae560ec0104202,
     type: 2}
   BaseEnergyPerShot: 100
   chargeRate: 50
-  Level2Damage: 0
-  Level3Damage: 0
+  Level2Damage: 800
+  Level3Damage: 1200
   Level2Charge: 50
   Level3Charge: 50
   ProjectilePrefabLevel2: {fileID: 1633464349893888, guid: 6de36efd8f9357a459f3f3a3c58d9de8,

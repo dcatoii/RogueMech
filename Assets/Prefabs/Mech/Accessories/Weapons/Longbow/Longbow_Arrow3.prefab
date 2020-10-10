@@ -36,9 +36,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000172594071530}
-  - component: {fileID: 114561037588370034}
   - component: {fileID: 135485044225024356}
   - component: {fileID: 54187484837016430}
+  - component: {fileID: 114941167457307540}
   m_Layer: 11
   m_Name: Longbow_Arrow3
   m_TagString: Untagged
@@ -161,7 +161,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 1
---- !u!114 &114561037588370034
+--- !u!114 &114941167457307540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1633464349893888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6f699eeef20114d958a092cc9b36e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5200434ddfd9c2b48a09e4df69ef5556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
