@@ -35,8 +35,9 @@ public class Longbow : Weapon {
    
         if (Mech.Core.ConsumeEnergy(BaseEnergyPerShot) == false)
             OnFireUp(Vector3.zero);
-        
-        
+
+
+        TimeSinceLastFire = 0.0f;
     }
 
     public override void OnFireUp(Vector3 target)
@@ -64,7 +65,6 @@ public class Longbow : Weapon {
         RogueMechUtils.SetChildLayerRecursively(chargeProjectile.gameObject, LayerMask.NameToLayer("Weapons"));
         chargeProjectile = null;
 
-        TimeSinceLastFire = 0.0f;
         chargeLevel = 0;
         isCharging = false;
     }

@@ -8,6 +8,7 @@ public class MechHUD : MonoBehaviour {
     public Image Crosshairs;
     public MechEnergyHud EnergyHUD;
     public MechArmorHud ArmorHUD;
+    public ComponentHealthUI ComponentHealth;
     WeaponHUD weaponHUD;
 
     private void FixedUpdate()
@@ -31,6 +32,10 @@ public class MechHUD : MonoBehaviour {
         {
             ArmorHUD.TrackedCore = Mission.instance.PlayerFrame.Core;
         }
+
+        if (ComponentHealth.trackedFrame == null)
+            ComponentHealth.TrackMech(Mission.instance.PlayerFrame);
+
         if(weaponHUD == null)
         {
             GameObject newHudObject = GameObject.Instantiate(Mission.instance.PlayerFrame.RightHandWeapon.HUDPrefab.gameObject, transform);
