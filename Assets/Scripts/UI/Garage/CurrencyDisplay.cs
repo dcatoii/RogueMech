@@ -14,6 +14,14 @@ public class CurrencyDisplay : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Text.text = "Funds:     $" + String.Format("{0:n0}", PlayerData.Currency);
+        int numSpaces = 5;
+        string CashString = "$" + String.Format("{0:n0}", PlayerData.Currency);
+        numSpaces -= (CashString.Length - 7);
+        string fundsText = "Funds:";
+        for (int i = 0; i < numSpaces; i++)
+            fundsText += " ";
+
+        fundsText += CashString;
+        Text.text = fundsText;
     }
 }
