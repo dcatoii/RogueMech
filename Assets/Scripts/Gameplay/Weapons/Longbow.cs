@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -111,5 +112,37 @@ public class Longbow : Weapon {
         chargeProjectile.transform.localRotation = Quaternion.identity;
         chargeProjectile.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         chargeProjectile.SetDamage(_damage);
+    }
+
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+        returnList.Add("Power");
+        returnList.Add("Energy per Shot");
+        returnList.Add("Level 2 Charge");
+        returnList.Add("Level 3 Charge");
+        returnList.Add("Charge Rate");
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+        returnList.Add(CalculatePower().ToString());
+        returnList.Add(BaseEnergyPerShot.ToString());
+        returnList.Add(((int)(Level2Charge)).ToString());
+        returnList.Add(((int)(Level2Charge + Level3Charge)).ToString());
+        returnList.Add(String.Format("{0:0.00}", chargeRate));
+        return returnList;
+    }
+
+    int CalculatePower()
+    {
+        float returnPower = 0f;
+        float power1 = (float)(damage) / RefireTime;
+        float power2 = Level2Damage / Mathf.Max(RefireTime, (Level2Charge / chargeRate));
+        float power3 = Level3Damage / Mathf.Max(RefireTime, ((Level3Charge + Level2Charge) / chargeRate));
+        returnPower = Mathf.Max(power1, power2, power3);
+        return (int)(returnPower);
     }
 }

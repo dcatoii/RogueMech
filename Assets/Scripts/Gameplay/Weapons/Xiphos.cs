@@ -90,4 +90,33 @@ public class Xiphos : Weapon {
         charges--;
     }
 
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+        returnList.Add("Power");
+        returnList.Add("Clip Size");
+        returnList.Add("Recharge Delay");
+        returnList.Add("Bullet Charge Time");
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+        returnList.Add(CalculatePower().ToString());
+        returnList.Add(MaxCharges.ToString());
+        returnList.Add(((int)(RechargeCooldown * 1000)).ToString());
+        returnList.Add(((int)(BulletRechargeTime* 1000)).ToString());
+        return returnList;
+    }
+
+    int CalculatePower()
+    {
+        float returnPower = 0f;
+        float fullReloadtime = RechargeCooldown + (BulletRechargeTime * MaxCharges);
+        float unloadTime = MaxCharges * RefireTime;
+        float clipDamage = MaxCharges * damage;
+        returnPower = clipDamage / (fullReloadtime + unloadTime);
+        return (int)(returnPower);
+    }
 }

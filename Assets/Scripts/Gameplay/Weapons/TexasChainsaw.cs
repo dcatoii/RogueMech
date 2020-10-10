@@ -95,4 +95,38 @@ public class TexasChainsaw : Weapon
 
         TimeSinceLastFire = 0.0f;
     }
+
+    public override List<string> GetAttributeNamesForStore()
+    {
+        List<string> returnList = base.GetAttributeNamesForStore();
+        returnList.Add("Power");
+        returnList.Add("Max Heat");
+        returnList.Add("Heat Per Bullet");
+        returnList.Add("Cooldown Delay");
+        returnList.Add("Cooldown Rate");
+        returnList.Add("Overheat Time");
+        return returnList;
+    }
+
+    public override List<string> GetAttributeValuesForStore()
+    {
+        List<string> returnList = base.GetAttributeValuesForStore();
+        returnList.Add(CalculatePower().ToString());
+        returnList.Add(((int)(MaxHeat * 1000)).ToString());
+        returnList.Add(((int)(HeatPerBullet * 1000)).ToString());
+        returnList.Add(((int)(CooldownDelay * 1000)).ToString());
+        returnList.Add(((int)(CooldownRate * 1000)).ToString());
+        returnList.Add(((int)(OverHeatCooldown * 1000)).ToString());
+        return returnList;
+    }
+
+    int CalculatePower()
+    {
+        float returnPower = 0f;
+        int maxBullets = Mathf.CeilToInt(MaxHeat / HeatPerBullet);
+        float unloadTime = maxBullets * RefireTime;
+        float fullUnloadDamage = maxBullets * damage * ((MinHeatMultiplier + MaxHeatMultiplier) / 2);
+        returnPower = fullUnloadDamage / (OverHeatCooldown + unloadTime);
+        return (int)(returnPower);
+    }
 }
