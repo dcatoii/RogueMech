@@ -10,7 +10,7 @@ public class PlayerData {
         set { PlayerPrefs.SetInt("ActiveSaveState", value ? 1 : 0); }
     }
 
-    public static int Currency {  get { return PlayerPrefs.GetInt("PlayerCurrency", 100000); }
+    public static int Currency {  get { return PlayerPrefs.GetInt("PlayerCurrency", 10000); }
         set { PlayerPrefs.SetInt("PlayerCurrency", value); }
     }
 
