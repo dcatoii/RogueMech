@@ -45,7 +45,7 @@ public class Xiphos : Weapon {
             return;
 
         base.FixedUpdate();
-        if (isFiring)
+        if (isFiring && charges > 0)
         {
             if (TimeSinceLastFire > RefireTime)
             {
