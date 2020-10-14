@@ -25,6 +25,9 @@ public class FrameCore : FrameComponent {
     // Update is called once per frame
     protected override void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         base.FixedUpdate();
 
         if (TimeSinceLastEnergyUsed >= RechargeCooldown)

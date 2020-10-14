@@ -166,7 +166,10 @@ public class FrameController : MonoBehaviour {
 
     public void FixedUpdate()
     {
-        if(ControlledFrame.Arms.IsDestroyed)
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
+        if (ControlledFrame.Arms.IsDestroyed)
         {
             float x = 0, y = 0;
             y += verticalSwayAmount * Mathf.Sin((swaySpeed * 2) * Time.time);

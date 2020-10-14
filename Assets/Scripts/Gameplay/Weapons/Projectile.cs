@@ -22,6 +22,9 @@ public class Projectile : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         // Calculate the desired movement vector
         Vector3 move = transform.forward * Time.fixedDeltaTime * speed;
         transform.position += move;

@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerInputManager : MonoBehaviour {
 
     public FrameController ArmorFrame;
-    public float Sensitivity = 6.0f;
 
     bool isWeapon1InUse = false;
     bool isThrusterInUse = false;
@@ -20,13 +19,15 @@ public class PlayerInputManager : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
+        if (ApplicationContext.Game.IsPaused)
+            return;
 
         HandleThruster();
 
         ArmorFrame.MoveForward(Input.GetAxis("Forward"));
         ArmorFrame.Strafe(Input.GetAxis("Strafe"));
 
-        ArmorFrame.Aim(Input.GetAxis("Mouse X") * Sensitivity, Input.GetAxis("Mouse Y")*Sensitivity);
+        ArmorFrame.Aim(Input.GetAxis("Mouse X") * PlayerData.Sensitivity, Input.GetAxis("Mouse Y")* PlayerData.Sensitivity);
 
         HandleWeapon1Input();
 

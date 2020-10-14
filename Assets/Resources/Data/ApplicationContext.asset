@@ -14,3 +14,6 @@ MonoBehaviour:
   Lib: {fileID: 11400000, guid: a599073ee6a939842b8e3ad458b70c1e, type: 2}
   playerCustomizationData: {fileID: 11400000, guid: 1f925787f89ec9e439cfb23d099b6d3d,
     type: 2}
+  gameContext: {fileID: 11400000, guid: eacd37ecfed3ba6479764966d7f3a678, type: 2}
+  PausePrefab: {fileID: 114801711876283100, guid: c0ff672addb970c46b088a4bb8ae28e0,
+    type: 2}

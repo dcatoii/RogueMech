@@ -72,6 +72,9 @@ public class Longbow : Weapon {
 
     protected override void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         base.FixedUpdate();
         if(isCharging && chargeLevel < 2)
         {

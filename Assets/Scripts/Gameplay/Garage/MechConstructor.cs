@@ -30,7 +30,7 @@ public class MechConstructor : MonoBehaviour {
         ConstructRightWeapon(CustomData.GetRightWeapon);
 
         if (Camera.main.GetComponent<CameraHardAttach>() != null)
-            Camera.main.GetComponent<CameraHardAttach>().target = Mech.Core.CameraAnchor.transform;
+            Camera.main.GetComponent<CameraHardAttach>().target = PlayerData.DefaultViewMode == 0 ? Mech.Core.CameraAnchor.transform : Mech.Core.HeadSocket.transform;
 
         UpdateUpgrades();
 

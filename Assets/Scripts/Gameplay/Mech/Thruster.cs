@@ -61,6 +61,9 @@ public class Thruster : FrameAccessory {
 
     public void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         if (!Thrusting && ThrusterSpeed > 0.0f)
             ThrusterSpeed = Mathf.Clamp(ThrusterSpeed - Time.fixedDeltaTime * AccelerationRate, 0.0f, ThrusterMaxSpeed);
         else if(Thrusting)

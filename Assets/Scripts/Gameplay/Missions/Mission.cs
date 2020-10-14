@@ -19,7 +19,11 @@ public class Mission : MonoBehaviour {
             objective.OnMissionStart();
             HUD.TrackMission(objective);
         }
-	}
+        //safety call to make sure no lingering pauses interfere
+        ApplicationContext.Game.CurrentState = GameContext.Gamestate.Mission;
+        ApplicationContext.Resume();
+
+    }
 
     public void ObjectiveComplete(MissionObjective objective)
     {
@@ -34,7 +38,7 @@ public class Mission : MonoBehaviour {
 
     public void EndMission (bool wasMissionSuccessful)
     {
-
+        ApplicationContext.Game.IsPaused = true;
         Cursor.visible = true;
 
         if (wasMissionSuccessful)
@@ -68,5 +72,16 @@ public class Mission : MonoBehaviour {
     public void NeutralNotification(string Text)
     {
         HUD.Toasts.ShowNeutralToast(Text);
+    }
+
+    private void FixedUpdate()
+    {
+        if(ApplicationContext.Game.IsPaused)
+            return;
+
+       if (Input.GetAxis("Cancel") > 0)
+        {
+            ApplicationContext.Pause();
+        }
     }
 }

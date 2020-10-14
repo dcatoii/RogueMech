@@ -14,6 +14,18 @@ public class PlayerData {
         set { PlayerPrefs.SetInt("PlayerCurrency", value); }
     }
 
+    public static int DefaultViewMode
+    {
+        get { return PlayerPrefs.GetInt("DefaultViewMode", 0); }
+        set { PlayerPrefs.SetInt("DefaultViewMode", value); }
+    }
+
+    public static float Sensitivity
+    {
+        get { return PlayerPrefs.GetFloat("Sensitivity", 6.0f); }
+        set { PlayerPrefs.SetFloat("Sensitivity", value); }
+    }
+
     public static bool IsPartUnlocked(string partID) { return PlayerPrefs.GetInt(partID + "_unlocked", 0) == 1; }
     public static void UnlockPart(string partID) { PlayerPrefs.SetInt(partID + "_unlocked", 1); }
 

@@ -15,6 +15,9 @@ public class MissionObjectiveTimeLimit : MissionObjective {
 
     private void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         if (!isMissionActive)
             return;
 

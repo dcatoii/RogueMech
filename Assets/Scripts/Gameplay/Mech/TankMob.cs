@@ -23,7 +23,7 @@ public class TankMob : Mob {
 
     private void FixedUpdate()
     {
-        if (Mission.instance.PlayerFrame == null)
+        if (Mission.instance.PlayerFrame == null || ApplicationContext.Game.IsPaused)
             return;
 
         if ((Mission.instance.PlayerFrame.gameObject.transform.position - TankGun.FirePoint.transform.position).sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))

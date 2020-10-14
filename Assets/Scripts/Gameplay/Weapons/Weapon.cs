@@ -38,6 +38,9 @@ public class Weapon : FrameAccessory {
 
     protected virtual void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         TimeSinceLastFire += Time.fixedDeltaTime;
     }
 

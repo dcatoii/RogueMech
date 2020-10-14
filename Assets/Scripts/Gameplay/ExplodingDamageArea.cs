@@ -13,13 +13,16 @@ public class ExplodingDamageArea : Projectile {
 
     private void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         age += Time.fixedDeltaTime;
         gameObject.transform.localScale = Vector3.Lerp(StartScale, EndScale, Mathf.Clamp(age / lifeTime, 0.0f, 1.0f));
     }
 
     protected override void OnCollisionEnter(Collision collision)
     {
-        
+        //do nothing
     }
 
 }

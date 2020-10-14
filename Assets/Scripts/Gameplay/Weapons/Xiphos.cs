@@ -41,6 +41,9 @@ public class Xiphos : Weapon {
 
     protected override void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         base.FixedUpdate();
         if (isFiring)
         {
