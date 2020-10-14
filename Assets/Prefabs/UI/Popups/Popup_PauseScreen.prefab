@@ -550,7 +550,6 @@ GameObject:
   - component: {fileID: 222886256340447966}
   - component: {fileID: 114696319007408340}
   - component: {fileID: 114733021953307586}
-  - component: {fileID: 114412607183724440}
   - component: {fileID: 114958712726540792}
   m_Layer: 5
   m_Name: Button_Quit
@@ -1280,17 +1279,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &114412607183724440
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980339740917388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d15dc387930e344a8bbe251d34f1bc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114427033215385072
 MonoBehaviour:
   m_ObjectHideFlags: 1
