@@ -45,13 +45,15 @@ public class Xiphos : Weapon {
             return;
 
         base.FixedUpdate();
-        if (isFiring && charges > 0)
+        if (isFiring)
         {
-            if (TimeSinceLastFire > RefireTime)
+            if (charges <= 0)
+            {
+                OnFireUp(Vector3.zero);
+            }
+            else if (TimeSinceLastFire > RefireTime)
             {
                 FireProjectile();
-                if (charges == 0)
-                    OnFireUp(Vector3.zero);
             }
         }
         else if (charges < MaxCharges)
