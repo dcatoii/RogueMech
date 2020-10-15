@@ -5,35 +5,94 @@ using UnityEngine;
 public class Mission : MonoBehaviour {
 
     public static Mission instance;
-    public MissionObjective[] Missions;
+    public List<MissionObjective> StartingGoals;
+    List<MissionObjective> CompletedObjectives = new List<MissionObjective>();
+    List<MissionObjective> CriticalActiveGoals = new List<MissionObjective>();
     public MissionHUD HUD;
     public MechFrame PlayerFrame;
     public int BaseAward = 25000;
     int BonusAmount = 0;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         instance = this;
-        foreach(MissionObjective objective in Missions)
-        {
-            objective.OnMissionStart();
-            HUD.TrackMission(objective);
-        }
+        //begin tracking the starting goals
+        InitializeGoals(StartingGoals);
         //safety call to make sure no lingering pauses interfere
         ApplicationContext.Game.CurrentState = GameContext.Gamestate.Mission;
         ApplicationContext.Resume();
 
     }
 
+    private void InitializeGoals(List<MissionObjective> Goals)
+    {
+        if (Goals == null)
+            return;
+
+        foreach (MissionObjective objective in Goals)
+        {
+            objective.OnMissionStart();
+            HUD.TrackMission(objective);
+            //if this is a negative goal, assume compelte until it has failed
+            if (objective.failOnComplete)
+            {
+                CompletedObjectives.Add(objective);
+                BonusAmount += objective.ScoreValue;
+            }
+            else if (!objective.isBonusObjective) //if this is a positive goal, record that we are tracking it for mission completion
+                CriticalActiveGoals.Add(objective);
+        }
+    }
+
     public void ObjectiveComplete(MissionObjective objective)
     {
-        EndMission(true);
+        CompletedObjectives.Add(objective);
+        objective.isMissionActive = false;
+        BonusAmount += objective.ScoreValue;
+
+        //initialize any subsequent objectives
+        InitializeGoals(objective.SecondaryObjectives);
+        //update the mission-critical objectives list if this is not a bonus objective
+        if(!objective.isBonusObjective)
+        {
+            //remove from the list of active goals
+            CriticalActiveGoals.Remove(objective);
+            //determine if the mission is complete
+            if (CriticalActiveGoals.Count == 0)
+            {
+                EndMission(true);
+            }
+        }
+
+        HUD.UntrackMission(objective);
 
     }
 
     public void ObjectiveFailed(MissionObjective objective)
     {
-        EndMission(false);
+        //if this is a negative goal, we assumed it succeeded and need remove it from the success list
+        if (objective.failOnComplete)
+        {
+            CompletedObjectives.Remove(objective);
+            BonusAmount -= objective.ScoreValue;
+        }
+
+        //if this is a mission-critical objective, failing it should fail the mission
+        //Mission-Critical means that the objective is not a bonus objective and has no fallback when failed
+        if (!objective.isBonusObjective && objective.SecondaryObjectives.Count == 0)
+            EndMission(false);
+        else //if this is not mission-critical, initialize any subsequent goals the objective may have
+        {
+            InitializeGoals(objective.SecondaryObjectives);
+            objective.isMissionActive = false;
+            HUD.UntrackMission(objective);
+            if (objective.isBonusObjective)
+                BadNotification("Bonus Objective Failed!");
+            else
+                BadNotification("Objective Failed!");
+        }
+
     }
 
     public void EndMission (bool wasMissionSuccessful)
