@@ -30,6 +30,7 @@ public class Inventory : MonoBehaviour {
         //this terrible code is intended to force a refresh of the values on startup
         CategoryDropdown.value = 1;
         CategoryDropdown.value = 0;
+        ApplicationContext.Game.CurrentState = GameContext.Gamestate.Garage;
     }
 
     public void UpdateActiveCatalogue()
@@ -83,5 +84,15 @@ public class Inventory : MonoBehaviour {
         newCatalogue.Category = category;
         newCatalogue.GenerateSKUs(parts);
         Catalogues.Add(newCatalogue);
+    }
+    private void FixedUpdate()
+    {
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
+        if (Input.GetAxis("Cancel") > 0)
+        {
+            ApplicationContext.Pause();
+        }
     }
 }

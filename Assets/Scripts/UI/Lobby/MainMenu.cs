@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
     private void Start()
     {
         ContinueButton.SetActive(PlayerData.HasSavedData);
+        ApplicationContext.Game.CurrentState = GameContext.Gamestate.MainMenu;
     }
 
     public void NewGame()
@@ -36,4 +37,6 @@ public class MainMenu : MonoBehaviour {
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Garage");
     }
+
+    
 }
