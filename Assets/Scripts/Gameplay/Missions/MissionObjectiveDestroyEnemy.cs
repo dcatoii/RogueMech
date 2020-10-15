@@ -31,6 +31,10 @@ public class MissionObjectiveDestroyEnemy : MissionObjective {
 
     public override string GetMissionText()
     {
-        return EnemyID + " destroyed: " + count + " / " + TargetCount;
+        string outString = string.Format(MissionTextFormat,EnemyID, count.ToString() + " / " + TargetCount.ToString());
+        //outString.Replace("%1", EnemyID);
+        //outString.Replace("%2", count.ToString() + " / " + TargetCount.ToString());
+        return outString;
+        //return EnemyID + " destroyed: " + count + " / " + TargetCount;
     }
 }

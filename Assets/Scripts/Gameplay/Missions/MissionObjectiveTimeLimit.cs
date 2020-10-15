@@ -15,10 +15,7 @@ public class MissionObjectiveTimeLimit : MissionObjective {
 
     private void FixedUpdate()
     {
-        if (ApplicationContext.Game.IsPaused)
-            return;
-
-        if (!isMissionActive)
+        if (!isMissionActive || ApplicationContext.Game.IsPaused)
             return;
 
         TimeElapsed += Time.fixedDeltaTime;
@@ -33,6 +30,8 @@ public class MissionObjectiveTimeLimit : MissionObjective {
 
     public override string GetMissionText()
     {
+        //string outString = MissionTextFormat;
+
         int c = Mathf.CeilToInt(Mathf.Clamp(TimeLimit - TimeElapsed, 0.0f, TimeLimit));
         int sec = c % 60;
         int min = c / 60;
@@ -40,6 +39,11 @@ public class MissionObjectiveTimeLimit : MissionObjective {
         string timeString = (hr > 0) ? hr.ToString() + " : " : "";
         timeString += ((min > 9) ? "" : "0") + min.ToString() + " : ";
         timeString += ((sec > 9) ? "" : "0") + sec.ToString();
-        return "Time Remaining:" + timeString;
+
+
+        //outString.Replace("%1", timeString);
+        string outString = string.Format(MissionTextFormat, timeString);
+        return outString;
+        //return "Time Remaining:" + timeString;
     }
 }
