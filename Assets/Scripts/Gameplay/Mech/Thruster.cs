@@ -42,6 +42,7 @@ public class Thruster : FrameAccessory {
         {
             Ascending = true;
             ArmorFrame.GetComponent<Rigidbody>().useGravity = false;
+            ToggleUpThruster(true);
         }
 
         Thrusting = true;
