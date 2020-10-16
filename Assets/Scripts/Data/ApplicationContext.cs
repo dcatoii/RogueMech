@@ -37,8 +37,7 @@ public class ApplicationContext : ScriptableObject
         Game.IsPaused = true;
         GameObject.Instantiate(instance.PausePrefab, PopupRoot.transform);
         Time.timeScale = 0f;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
+        UnlockCursor();
     }
 
     public static void Resume()
@@ -46,10 +45,19 @@ public class ApplicationContext : ScriptableObject
         Time.timeScale = 1f;
         Game.IsPaused = false;
         if (Game.CurrentState == GameContext.Gamestate.Mission)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+            LockCursor();
+    }
+
+    public static void LockCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public static void UnlockCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
 }

@@ -98,7 +98,7 @@ public class Mission : MonoBehaviour {
     public void EndMission (bool wasMissionSuccessful)
     {
         ApplicationContext.Game.IsPaused = true;
-        Cursor.visible = true;
+        ApplicationContext.UnlockCursor();
 
         if (wasMissionSuccessful)
         {

@@ -13,8 +13,7 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        ApplicationContext.LockCursor();
     }
 
     // Update is called once per frame
@@ -34,7 +33,9 @@ public class PlayerInputManager : MonoBehaviour {
 
     private void Update()
     {
-        //trying to move this to update to see if we get smoother aiming
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
         ArmorFrame.Aim(Input.GetAxis("Mouse X") * PlayerData.Sensitivity, Input.GetAxis("Mouse Y") * PlayerData.Sensitivity);
     }
 
