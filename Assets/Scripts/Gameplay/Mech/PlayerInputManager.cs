@@ -14,7 +14,7 @@ public class PlayerInputManager : MonoBehaviour {
     private void Start()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -26,12 +26,16 @@ public class PlayerInputManager : MonoBehaviour {
 
         ArmorFrame.MoveForward(Input.GetAxis("Forward"));
         ArmorFrame.Strafe(Input.GetAxis("Strafe"));
-
-        ArmorFrame.Aim(Input.GetAxis("Mouse X") * PlayerData.Sensitivity, Input.GetAxis("Mouse Y")* PlayerData.Sensitivity);
-
+        
         HandleWeapon1Input();
 
         HandleViewTransition();
+    }
+
+    private void Update()
+    {
+        //trying to move this to update to see if we get smoother aiming
+        ArmorFrame.Aim(Input.GetAxis("Mouse X") * PlayerData.Sensitivity, Input.GetAxis("Mouse Y") * PlayerData.Sensitivity);
     }
 
     void HandleWeapon1Input()
