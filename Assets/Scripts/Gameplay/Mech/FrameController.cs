@@ -30,7 +30,7 @@ public class FrameController : MonoBehaviour {
             return;
         }
 
-        Vector3 transformVector = gameObject.transform.forward;
+        Vector3 transformVector = ControlledFrame.Legs.transform.forward;
         transformVector.y = 0;
         transformVector.Normalize();
         //half leg speed if legs are destroyed
@@ -45,7 +45,7 @@ public class FrameController : MonoBehaviour {
         LegRot += absRotationDelta;
         CoreRotX -= absRotationDelta;
         Quaternion LegQauternion = Quaternion.AngleAxis(LegRot, Vector3.up);
-        transform.localRotation = Quaternion.identity * LegQauternion;
+        ControlledFrame.Legs.transform.localRotation = Quaternion.identity * LegQauternion;
 
 
 
@@ -66,7 +66,7 @@ public class FrameController : MonoBehaviour {
             return;
         }
 
-        Vector3 transformVector = gameObject.transform.right;
+        Vector3 transformVector = ControlledFrame.Legs.transform.right;
         transformVector.y = 0;
         transformVector.Normalize();
         float LegSpeed = ControlledFrame.Legs.IsDestroyed ? (ControlledFrame.Legs.Speed / 2) : ControlledFrame.Legs.Speed;
