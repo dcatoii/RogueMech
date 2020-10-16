@@ -18,6 +18,6 @@ public class MissionObjective : MonoBehaviour {
 
     public virtual string GetMissionText()
     {
-        return "Unknown Mission";
+        return MissionTextFormat;
     }
 }

@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour {
         PlayerData.HasSavedData = true;
 
         //start the first mission
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Mission_01");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Mission_00");
 
     }
 
