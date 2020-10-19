@@ -48,7 +48,7 @@ public class MissionTrigger : MonoBehaviour {
 
         foreach (TriggeredAction action in EnterActions)
         {
-            action.Activate();
+            action.Activate(unit);
         }
     }
 }

@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	protected virtual void FixedUpdate () {
 
         if (ApplicationContext.Game.IsPaused)
             return;

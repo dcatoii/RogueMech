@@ -6,9 +6,9 @@ public class TriggerActionDestroySelf : TriggeredAction {
 
     public GameObject DeathEffect;
 
-    public override void Activate()
+    public override void Activate(Mob source)
     {
-        base.Activate();
+        base.Activate(source);
         if (DeathEffect != null)
         {
             GameObject FXObject = GameObject.Instantiate(DeathEffect);
