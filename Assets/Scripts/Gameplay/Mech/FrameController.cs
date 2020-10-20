@@ -121,12 +121,12 @@ public class FrameController : MonoBehaviour {
         Vector3 target = Camera.main.transform.position + (Camera.main.transform.forward * ControlledFrame.RightHandWeapon.FunctionalRange);
         RaycastHit CameraRayInfo = new RaycastHit();
 
-        RogueMechUtils.SetChildLayerRecursively(gameObject, LayerMask.NameToLayer("Ignore Raycast"));
+        RogueMechUtils.SetChildLayerRecursively(ControlledFrame.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
         if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out CameraRayInfo, ControlledFrame.RightHandWeapon.FunctionalRange, LayerMask.GetMask(new string[] { "Terrain", "Units" })))
         {
             target = CameraRayInfo.point;
         }
-        RogueMechUtils.SetChildLayerRecursively(gameObject, LayerMask.NameToLayer("Units"));
+        RogueMechUtils.SetChildLayerRecursively(ControlledFrame.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
 
         ControlledFrame.RightHandWeapon.OnFireDown(target);
         /*
