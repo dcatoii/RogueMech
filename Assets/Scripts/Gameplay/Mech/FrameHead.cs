@@ -8,7 +8,7 @@ public class FrameHead : FrameComponent {
     public int EnergyCost = 200;
 
     public GameObject CrosshairPrefab;
-    string ReticleStyle = "Crosshair";
+    public string ReticleStyle = "Crosshair";
 
     public override void OnHit(Projectile projectile)
     {
