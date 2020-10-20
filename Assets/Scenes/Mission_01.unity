@@ -725,6 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202200640}
   - component: {fileID: 202200641}
+  - component: {fileID: 202200642}
   m_Layer: 0
   m_Name: Tank Objective
   m_TagString: Untagged
@@ -762,8 +763,22 @@ MonoBehaviour:
   failOnComplete: 0
   MissionTextFormat: '{0} destroyed: {1}'
   SecondaryObjectives: []
+  ObjectiveStartTriggers:
+  - {fileID: 202200642}
   EnemyID: T.A.M.C.
   TargetCount: 20
+--- !u!114 &202200642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202200639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24138d737af62a4b8f9b5044fe7f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToShow: {fileID: 114563996285269496, guid: 0c693b11c5bb2594e8fa60f8bc24ca99, type: 2}
 --- !u!1 &210008638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,6 +3292,7 @@ MonoBehaviour:
   MissionTextFormat: 'Bonus: Clear mission quickly: {0}'
   SecondaryObjectives:
   - {fileID: 1935112672}
+  ObjectiveStartTriggers: []
   TimeLimit: 300
 --- !u!1 &1362500238
 GameObject:
@@ -3979,7 +3995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -80}
+  m_AnchoredPosition: {x: 0, y: -80}
   m_SizeDelta: {x: 85, y: 390}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1791180702
@@ -4677,6 +4693,7 @@ MonoBehaviour:
   failOnComplete: 1
   MissionTextFormat: 'Time Remaining: {0}'
   SecondaryObjectives: []
+  ObjectiveStartTriggers: []
   TimeLimit: 300
 --- !u!1 &1975796250
 GameObject:

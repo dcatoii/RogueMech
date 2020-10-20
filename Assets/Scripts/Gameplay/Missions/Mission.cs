@@ -140,7 +140,7 @@ public class Mission : MonoBehaviour {
 
        if (Input.GetAxis("Cancel") > 0)
         {
-            ApplicationContext.Pause();
+            ApplicationContext.OpenPauseMenu();
         }
     }
 }

@@ -29,13 +29,18 @@ public class ApplicationContext : ScriptableObject
         Cursor.lockState = CursorLockMode.Confined;
     }
 
+    public static void OpenPauseMenu()
+    {
+        Pause();
+        GameObject.Instantiate(instance.PausePrefab, PopupRoot.transform);
+    }
+
     public static void Pause()
     {
         if (Game.IsPaused)
             return;
 
         Game.IsPaused = true;
-        GameObject.Instantiate(instance.PausePrefab, PopupRoot.transform);
         Time.timeScale = 0f;
         UnlockCursor();
     }

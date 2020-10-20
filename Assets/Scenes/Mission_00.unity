@@ -5706,6 +5706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202200640}
   - component: {fileID: 202200641}
+  - component: {fileID: 202200642}
   m_Layer: 0
   m_Name: WalkObjective
   m_TagString: Untagged
@@ -5745,8 +5746,22 @@ MonoBehaviour:
   MissionTextFormat: Walk to the target location to open the door
   SecondaryObjectives:
   - {fileID: 1941203361}
+  ObjectiveStartTriggers:
+  - {fileID: 202200642}
   TriggerID: FirstMovement
   ActivationsToCompelte: 1
+--- !u!114 &202200642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 202200639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24138d737af62a4b8f9b5044fe7f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToShow: {fileID: 114979171812253774, guid: 4359d912d1e3ebc4f9a04b8fffe001e5, type: 2}
 --- !u!1 &204180828
 GameObject:
   m_ObjectHideFlags: 0
@@ -15582,6 +15597,94 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509131513}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &518589060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518589061}
+  - component: {fileID: 518589065}
+  - component: {fileID: 518589064}
+  - component: {fileID: 518589063}
+  - component: {fileID: 518589062}
+  m_Layer: 12
+  m_Name: DodgeTutorialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518589061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518589060}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 390, y: 10, z: 200}
+  m_LocalScale: {x: 21, y: 21, z: 21}
+  m_Children: []
+  m_Father: {fileID: 1108519840}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518589062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518589060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffect: {fileID: 0}
+--- !u!114 &518589063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518589060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24138d737af62a4b8f9b5044fe7f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToShow: {fileID: 114563996285269496, guid: 3ccd4c4b7ba587e4d85e6a7e046f4df5, type: 2}
+--- !u!114 &518589064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518589060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940308388d6eaac4996e44812f60a4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerID: ThrusterBoostTutorial
+  isActivatedByPlayer: 1
+  isActivatedByEnemy: 0
+  shouldActivate: 1
+  shouldDeactivate: 0
+  EnterActions:
+  - {fileID: 518589063}
+  - {fileID: 518589062}
+  ExitActions: []
+--- !u!65 &518589065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518589060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &520571955
 GameObject:
   m_ObjectHideFlags: 0
@@ -27159,6 +27262,94 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946067512}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &948305857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948305858}
+  - component: {fileID: 948305862}
+  - component: {fileID: 948305861}
+  - component: {fileID: 948305860}
+  - component: {fileID: 948305859}
+  m_Layer: 12
+  m_Name: WeaponTutorialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &948305858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948305857}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -60, y: 10, z: 140}
+  m_LocalScale: {x: 21, y: 21, z: 10}
+  m_Children: []
+  m_Father: {fileID: 1227178791}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948305859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948305857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffect: {fileID: 0}
+--- !u!114 &948305860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948305857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24138d737af62a4b8f9b5044fe7f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToShow: {fileID: 114563996285269496, guid: 9d682f794cd94dc41a259eb3fb109fed, type: 2}
+--- !u!114 &948305861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948305857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940308388d6eaac4996e44812f60a4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerID: ThrusterBoostTutorial
+  isActivatedByPlayer: 1
+  isActivatedByEnemy: 0
+  shouldActivate: 1
+  shouldDeactivate: 0
+  EnterActions:
+  - {fileID: 948305860}
+  - {fileID: 948305859}
+  ExitActions: []
+--- !u!65 &948305862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948305857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &950890011
 GameObject:
   m_ObjectHideFlags: 0
@@ -29612,6 +29803,7 @@ MonoBehaviour:
   MissionTextFormat: 'Use your weapon to destroy the red spheres: {1}'
   SecondaryObjectives:
   - {fileID: 1299442288}
+  ObjectiveStartTriggers: []
   EnemyID: TargetSphere
   TargetCount: 3
 --- !u!4 &1024037985
@@ -32181,6 +32373,7 @@ Transform:
   - {fileID: 1747710511}
   - {fileID: 1186285742}
   - {fileID: 1429332316}
+  - {fileID: 518589061}
   m_Father: {fileID: 1319847151}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36074,6 +36267,8 @@ Transform:
   - {fileID: 1438667475}
   - {fileID: 2099777943}
   - {fileID: 146724734}
+  - {fileID: 1604170538}
+  - {fileID: 948305858}
   m_Father: {fileID: 1319847151}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38294,6 +38489,7 @@ MonoBehaviour:
   failOnComplete: 0
   MissionTextFormat: Great Job!
   SecondaryObjectives: []
+  ObjectiveStartTriggers: []
   TimeLimit: 2
 --- !u!4 &1299442289
 Transform:
@@ -39787,6 +39983,7 @@ MonoBehaviour:
   MissionTextFormat: 'Use your weapon to destroy the red spheres: {1}'
   SecondaryObjectives:
   - {fileID: 1907630558}
+  ObjectiveStartTriggers: []
   EnemyID: TargetSphere2
   TargetCount: 3
 --- !u!1001 &1346095218
@@ -40825,6 +41022,7 @@ Transform:
   - {fileID: 896942573}
   - {fileID: 189044920}
   - {fileID: 1017597524}
+  - {fileID: 1843940535}
   m_Father: {fileID: 1319847151}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42137,6 +42335,7 @@ MonoBehaviour:
     orbs
   SecondaryObjectives:
   - {fileID: 1572540701}
+  ObjectiveStartTriggers: []
   TriggerID: DodgeRoomObjectiveCompelte
   ActivationsToCompelte: 1
 --- !u!4 &1425355986
@@ -45958,6 +46157,7 @@ MonoBehaviour:
   MissionTextFormat: Use your thruster to ascend the platforms!
   SecondaryObjectives:
   - {fileID: 1024037984}
+  ObjectiveStartTriggers: []
   TriggerID: VerticalRoomComplete
   ActivationsToCompelte: 1
 --- !u!4 &1572540702
@@ -46655,6 +46855,94 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1602127494}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1604170537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604170538}
+  - component: {fileID: 1604170542}
+  - component: {fileID: 1604170541}
+  - component: {fileID: 1604170540}
+  - component: {fileID: 1604170539}
+  m_Layer: 12
+  m_Name: LiftTutorialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1604170538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604170537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 10, z: 0}
+  m_LocalScale: {x: 21, y: 21, z: 21}
+  m_Children: []
+  m_Father: {fileID: 1227178791}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1604170539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604170537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffect: {fileID: 0}
+--- !u!114 &1604170540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604170537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24138d737af62a4b8f9b5044fe7f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToShow: {fileID: 114563996285269496, guid: e352671034b8cfd4a92766c2836743e1, type: 2}
+--- !u!114 &1604170541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604170537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940308388d6eaac4996e44812f60a4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerID: ThrusterBoostTutorial
+  isActivatedByPlayer: 1
+  isActivatedByEnemy: 0
+  shouldActivate: 1
+  shouldDeactivate: 0
+  EnterActions:
+  - {fileID: 1604170540}
+  - {fileID: 1604170539}
+  ExitActions: []
+--- !u!65 &1604170542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604170537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1606827370
 GameObject:
   m_ObjectHideFlags: 0
@@ -53225,6 +53513,94 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1840700852}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1843940534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843940535}
+  - component: {fileID: 1843940539}
+  - component: {fileID: 1843940538}
+  - component: {fileID: 1843940537}
+  - component: {fileID: 1843940536}
+  m_Layer: 12
+  m_Name: BoostTutorialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843940535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843940534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 10, z: 0}
+  m_LocalScale: {x: 21, y: 21, z: 21}
+  m_Children: []
+  m_Father: {fileID: 1381991061}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1843940536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843940534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathEffect: {fileID: 0}
+--- !u!114 &1843940537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843940534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24138d737af62a4b8f9b5044fe7f851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToShow: {fileID: 114563996285269496, guid: cccc72e5dfbd8c74fbdf4f23a016a6d5, type: 2}
+--- !u!114 &1843940538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843940534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940308388d6eaac4996e44812f60a4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerID: ThrusterBoostTutorial
+  isActivatedByPlayer: 1
+  isActivatedByEnemy: 0
+  shouldActivate: 1
+  shouldDeactivate: 0
+  EnterActions:
+  - {fileID: 1843940537}
+  - {fileID: 1843940536}
+  ExitActions: []
+--- !u!65 &1843940539
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843940534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1848987254
 GameObject:
   m_ObjectHideFlags: 0
@@ -55156,6 +55532,7 @@ MonoBehaviour:
   failOnComplete: 0
   MissionTextFormat: Great Job!
   SecondaryObjectives: []
+  ObjectiveStartTriggers: []
   TimeLimit: 2
 --- !u!1 &1909261468
 GameObject:
@@ -55957,6 +56334,7 @@ MonoBehaviour:
   MissionTextFormat: Use your thruster to get past those pistons
   SecondaryObjectives:
   - {fileID: 1425355985}
+  ObjectiveStartTriggers: []
   TriggerID: PistonObjectiveComplete
   ActivationsToCompelte: 1
 --- !u!1 &1942685388

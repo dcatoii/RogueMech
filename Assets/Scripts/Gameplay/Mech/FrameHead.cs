@@ -8,6 +8,7 @@ public class FrameHead : FrameComponent {
     public int EnergyCost = 200;
 
     public GameObject CrosshairPrefab;
+    string ReticleStyle = "Crosshair";
 
     public override void OnHit(Projectile projectile)
     {
@@ -26,6 +27,7 @@ public class FrameHead : FrameComponent {
         List<string> returnList = base.GetAttributeNamesForStore();
         returnList.Add("Energy Cost");
         returnList.Add("Weight");
+        returnList.Add("Reticle Style");
         return returnList;
     }
 
@@ -35,6 +37,7 @@ public class FrameHead : FrameComponent {
 
         returnList.Add(EnergyCost.ToString());
         returnList.Add(Weight.ToString());
+        returnList.Add(ReticleStyle);
 
         return returnList;
     }

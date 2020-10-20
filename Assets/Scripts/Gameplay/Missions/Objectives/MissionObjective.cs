@@ -10,10 +10,14 @@ public class MissionObjective : MonoBehaviour {
     public bool failOnComplete = false;
     public string MissionTextFormat;
     public List<MissionObjective> SecondaryObjectives;
+    public List<TriggeredAction> ObjectiveStartTriggers;
+
 
     public virtual void OnMissionStart()
     {
         isMissionActive = true;
+        foreach (TriggeredAction action in ObjectiveStartTriggers)
+            action.Activate(null);
     }
 
     public virtual string GetMissionText()
