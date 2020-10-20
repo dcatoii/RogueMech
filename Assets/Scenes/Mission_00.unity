@@ -4579,6 +4579,14 @@ Prefab:
       propertyPath: m_Name
       value: TargetSphere (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1065899940462354, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130627180971252, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
   m_IsPrefabAsset: 0
@@ -5261,6 +5269,14 @@ Prefab:
     - target: {fileID: 1065899940462354, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
       propertyPath: m_Name
       value: TargetSphere (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065899940462354, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130627180971252, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
@@ -8718,11 +8734,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1381991061}
     m_Modifications:
-    - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
-        type: 2}
-      propertyPath: EnterActions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4725169739774732, guid: a9879f9d5bf6e674c9df7b46185ea39e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 60
@@ -8757,37 +8768,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
         type: 2}
-      propertyPath: triggerID
-      value: PistonObjectiveComplete
-      objectReference: {fileID: 0}
-    - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
-        type: 2}
       propertyPath: EnterActions.Array.data[1]
       value: 
       objectReference: {fileID: 2020056466}
-    - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
-        type: 2}
-      propertyPath: EnterActions.Array.data[0]
-      value: 
-      objectReference: {fileID: 413558371}
-    - target: {fileID: 1680801867626044, guid: a9879f9d5bf6e674c9df7b46185ea39e, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1924524257704414, guid: a9879f9d5bf6e674c9df7b46185ea39e, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23770823023615322, guid: a9879f9d5bf6e674c9df7b46185ea39e,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23769043007306360, guid: a9879f9d5bf6e674c9df7b46185ea39e,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9879f9d5bf6e674c9df7b46185ea39e, type: 2}
   m_IsPrefabAsset: 0
@@ -12142,12 +12125,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410825315}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &413558371 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114357746540243416, guid: a9879f9d5bf6e674c9df7b46185ea39e,
-    type: 2}
-  m_PrefabInternal: {fileID: 298007070}
-  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
 --- !u!1 &413830824
 GameObject:
   m_ObjectHideFlags: 0
@@ -22922,6 +22899,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1065899940462354, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130627180971252, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803fd68adcb13c84f87e8592e936c216, type: 2}
   m_IsPrefabAsset: 0
@@ -31555,6 +31540,16 @@ Prefab:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
+        type: 2}
+      propertyPath: EnterActions.Array.data[1]
+      value: 
+      objectReference: {fileID: 2066268851}
+    - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
+        type: 2}
+      propertyPath: triggerID
+      value: FirstMovement
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9879f9d5bf6e674c9df7b46185ea39e, type: 2}
   m_IsPrefabAsset: 0
@@ -39882,6 +39877,12 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5a9799ace0f356445bec7730fe6d5444, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1347267821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114357746540243416, guid: a9879f9d5bf6e674c9df7b46185ea39e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2099777942}
+  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
 --- !u!1 &1348219591
 GameObject:
   m_ObjectHideFlags: 0
@@ -59744,6 +59745,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2064721369}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2066268851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114357746540243416, guid: a9879f9d5bf6e674c9df7b46185ea39e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1096837952}
+  m_Script: {fileID: 11500000, guid: d5a722d9e09e3d640a1002b04055e0db, type: 3}
 --- !u!1 &2066628414
 GameObject:
   m_ObjectHideFlags: 0
@@ -60930,6 +60937,11 @@ Prefab:
       propertyPath: EnterActions.Array.data[2]
       value: 
       objectReference: {fileID: 1136898300}
+    - target: {fileID: 114995852255223986, guid: a9879f9d5bf6e674c9df7b46185ea39e,
+        type: 2}
+      propertyPath: EnterActions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1347267821}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9879f9d5bf6e674c9df7b46185ea39e, type: 2}
   m_IsPrefabAsset: 0
