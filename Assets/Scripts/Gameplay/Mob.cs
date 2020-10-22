@@ -18,4 +18,9 @@ public class Mob : MonoBehaviour {
         Object.Destroy(this.gameObject);
         GameObject.Instantiate(DeathParticles, transform.position, Quaternion.identity);
     }
+
+    public virtual void ResetOrientation()
+    {
+
+    }
 }

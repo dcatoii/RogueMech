@@ -11,7 +11,10 @@ public class TeleportTriggerAction : TriggeredAction {
     {
         source.transform.position = TargetPoint.position;
         if (ForceRotation)
+        {
             source.transform.rotation = TargetPoint.rotation;
+            source.ResetOrientation();
+        }
     }
 
 }

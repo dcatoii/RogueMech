@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114909182539201888}
   - component: {fileID: 114652082671152728}
   - component: {fileID: 114917041638727730}
+  - component: {fileID: 114857975750780756}
   m_Layer: 12
   m_Name: ResetOrb
   m_TagString: Untagged
@@ -158,6 +159,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRotation: {x: 30, y: 0, z: 0}
   MinRotation: {x: 30, y: 0, z: 0}
+--- !u!114 &114857975750780756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076803785115334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57497c074e0bcce4fb2ca150f1bf06b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FX: {fileID: 1815915070197014, guid: f94b865980c39e649b32e32d895d1aca, type: 2}
+  Parent: {fileID: 0}
+  UsePopupAsParent: 1
+  IsParentIdentity: 0
+  IsSourceIdentity: 0
 --- !u!114 &114882278634075962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,6 +194,7 @@ MonoBehaviour:
   EnterActions:
   - {fileID: 114606261143924874}
   - {fileID: 114652082671152728}
+  - {fileID: 114857975750780756}
   ExitActions: []
 --- !u!114 &114909182539201888
 MonoBehaviour:

@@ -177,4 +177,12 @@ public class FrameController : MonoBehaviour {
             Aim(x, y);
         }
     }
+
+    public void ResetOrientation()
+    {
+        //set all rotations to 0
+        CoreRotX = CoreRotY = LegRot = 0.0f;
+        ControlledFrame.Legs.transform.localRotation = Quaternion.identity;
+        ControlledFrame.Core.transform.localRotation = Quaternion.identity;
+    }
 }

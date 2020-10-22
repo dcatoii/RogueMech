@@ -139,4 +139,11 @@ public class MechFrame : Mob {
         totalEnergyCost += RightHandWeapon.EnergyCost;
         Core.Energy = Core.MaxEnergy = Core.EnergyCapacity - totalEnergyCost;
     }
+
+    public override void ResetOrientation()
+    {
+        FrameController controller = GetComponent<FrameController>();
+        if (controller != null)
+            controller.ResetOrientation();
+    }
 }
