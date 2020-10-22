@@ -102,7 +102,7 @@ public class MissionCompletePopup : MonoBehaviour {
     private void ShowButtons()
     {
         GarageButton.SetActive(true);
-        ReplayButton.SetActive(true);
+        ReplayButton.SetActive(ApplicationContext.Game.CurrentState == GameContext.Gamestate.Mission);
     }
 
 }
