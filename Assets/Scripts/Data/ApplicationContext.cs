@@ -49,7 +49,8 @@ public class ApplicationContext : ScriptableObject
     {
         Time.timeScale = 1f;
         Game.IsPaused = false;
-        if (Game.CurrentState == GameContext.Gamestate.Mission)
+        if (Game.CurrentState == GameContext.Gamestate.Mission ||
+            Game.CurrentState == GameContext.Gamestate.Tutorial)
             LockCursor();
     }
 
