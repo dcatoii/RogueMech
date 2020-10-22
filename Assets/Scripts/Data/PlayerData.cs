@@ -10,6 +10,12 @@ public class PlayerData {
         set { PlayerPrefs.SetInt("ActiveSaveState", value ? 1 : 0); }
     }
 
+    public static bool HasCompletedTutorial
+    {
+        get { return PlayerPrefs.GetInt("HasCompletedTutorial", 0) == 1; }
+        set { PlayerPrefs.SetInt("HasCompletedTutorial", value ? 1 : 0); }
+    }
+
     public static int Currency {  get { return PlayerPrefs.GetInt("PlayerCurrency", 0); }
         set { PlayerPrefs.SetInt("PlayerCurrency", value); }
     }

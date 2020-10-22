@@ -114,6 +114,10 @@ public class Mission : MonoBehaviour {
 
             HUD.MissionSuccess(BaseAward, BonusAmount, RepairCost, FinalReward);
             PlayerFrame.GetComponent<PlayerInputManager>().enabled = false;
+
+            //if this is the tutorial mission, mark the tutorial as cleared
+            if (isTutorialMission)
+                PlayerData.HasCompletedTutorial = true;
         }
         else
             HUD.MissionFailed();

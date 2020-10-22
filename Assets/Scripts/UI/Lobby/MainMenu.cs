@@ -35,7 +35,10 @@ public class MainMenu : MonoBehaviour {
 
     public void Continue()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Garage");
+        if(PlayerData.HasCompletedTutorial)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Garage");
+        else
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Mission_00");
     }
 
     
