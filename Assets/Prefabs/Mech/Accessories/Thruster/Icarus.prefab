@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 785b9dc773b7380468cdde7f3aa8afab, type: 3}
-  StoreDescription: Trades boost efficiency for basic thrust efficiency
+  StoreDescription: Trades lift efficiency for basic thrust efficiency
   Weight: 0
   EnergyCost: 0
   ThrusterMaxSpeed: 3
@@ -747,7 +747,7 @@ MonoBehaviour:
   EnergyCost: 100
   ThrusterMaxSpeed: 0.5
   AccelerationRate: 0
-  AscentSpeed: -2
+  AscentSpeed: -1
   PowerUsage: -50
   AscentPowerUsage: -75
 --- !u!198 &198003935940328576

@@ -585,11 +585,11 @@ MonoBehaviour:
   StoreDescription: Burns fuel faster to reach higher max speeds
   Weight: 0
   EnergyCost: 0
-  ThrusterMaxSpeed: 3
+  ThrusterMaxSpeed: 3.5
   AccelerationRate: 0
-  AscentSpeed: 0
+  AscentSpeed: 2.5
   PowerUsage: 125
-  AscentPowerUsage: 125
+  AscentPowerUsage: 150
 --- !u!114 &114167632727507586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,7 +610,7 @@ MonoBehaviour:
   AccelerationRate: 0
   AscentSpeed: 1
   PowerUsage: -25
-  AscentPowerUsage: -25
+  AscentPowerUsage: -15
 --- !u!114 &114190301069694786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -723,11 +723,11 @@ MonoBehaviour:
   ThrusterSpeed: 0
   ThrusterMaxSpeed: 7
   AccelerationRate: 14
-  AscentSpeed: 3
+  AscentSpeed: 4
   Weight: 300
   EnergyCost: 350
   PowerUsage: 150
-  AscentPowerUsage: 400
+  AscentPowerUsage: 240
   Thrusting: 0
   Ascending: 0
 --- !u!114 &114943728479505268

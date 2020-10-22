@@ -581,7 +581,7 @@ MonoBehaviour:
   EnergyCost: 50
   ThrusterMaxSpeed: 0
   AccelerationRate: 0
-  AscentSpeed: 2
+  AscentSpeed: 1.5
   PowerUsage: 0
   AscentPowerUsage: 0
 --- !u!114 &114155872046164618
@@ -671,11 +671,11 @@ MonoBehaviour:
   ThrusterSpeed: 0
   ThrusterMaxSpeed: 5
   AccelerationRate: 20
-  AscentSpeed: 5
+  AscentSpeed: 6
   Weight: 500
   EnergyCost: 200
   PowerUsage: 200
-  AscentPowerUsage: 300
+  AscentPowerUsage: 325
   Thrusting: 0
   Ascending: 0
 --- !u!114 &114499806293442740
@@ -726,7 +726,7 @@ MonoBehaviour:
   EnergyCost: 0
   ThrusterMaxSpeed: -1
   AccelerationRate: -8
-  AscentSpeed: -1.5
+  AscentSpeed: -0.5
   PowerUsage: -25
   AscentPowerUsage: -25
 --- !u!114 &114899097760279550
