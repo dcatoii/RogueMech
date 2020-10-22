@@ -12,6 +12,8 @@ public class Mission : MonoBehaviour {
     public MechFrame PlayerFrame;
     public int BaseAward = 25000;
     int BonusAmount = 0;
+    public bool isTutorialMission = false;
+
 
 	// Use this for initialization
 	void Start ()
@@ -20,7 +22,7 @@ public class Mission : MonoBehaviour {
         //begin tracking the starting goals
         InitializeGoals(StartingGoals);
         //safety call to make sure no lingering pauses interfere
-        ApplicationContext.Game.CurrentState = GameContext.Gamestate.Mission;
+        ApplicationContext.Game.CurrentState = isTutorialMission ? GameContext.Gamestate.Tutorial : GameContext.Gamestate.Mission;
         ApplicationContext.Resume();
 
     }

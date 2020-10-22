@@ -8,6 +8,7 @@ public class GameContext : ScriptableObject {
     public enum Gamestate
     {
         MainMenu,
+        Tutorial,
         Garage,
         Mission
     }

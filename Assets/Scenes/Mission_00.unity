@@ -51892,6 +51892,7 @@ MonoBehaviour:
   HUD: {fileID: 1787747267}
   PlayerFrame: {fileID: 1072583074}
   BaseAward: 10000
+  isTutorialMission: 1
 --- !u!4 &1797519791
 Transform:
   m_ObjectHideFlags: 0
