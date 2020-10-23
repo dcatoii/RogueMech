@@ -30,7 +30,9 @@ public class Inventory : MonoBehaviour {
         //this terrible code is intended to force a refresh of the values on startup
         CategoryDropdown.value = 1;
         CategoryDropdown.value = 0;
+        //Inform the gamestate that the garage has been initialized and ensure the cursor is usable
         ApplicationContext.Game.CurrentState = GameContext.Gamestate.Garage;
+        ApplicationContext.UnlockCursor();
     }
 
     public void UpdateActiveCatalogue()
