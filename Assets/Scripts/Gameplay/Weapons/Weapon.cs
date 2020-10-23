@@ -16,10 +16,10 @@ public class Weapon : FrameAccessory {
     public WeaponHUD HUDPrefab;
 
     // Use this for initialization
-    protected override void Start () {
+    protected override void Start() {
         base.Start();
-	}
-	
+    }
+
     public virtual void OnFireDown(Vector3 target)
     {
         if (TimeSinceLastFire < RefireTime)
@@ -60,5 +60,35 @@ public class Weapon : FrameAccessory {
         returnList.Add(Weight.ToString());
 
         return returnList;
+    }
+
+    public Vector3 GetTargetWithCameraRay(Vector3 endPoint)
+    {
+        Vector3 target = endPoint;
+        RaycastHit[] CameraRayInfo;
+
+        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
+
+        CameraRayInfo = Physics.RaycastAll(Camera.main.transform.position,
+                                            (target - Camera.main.transform.position).normalized,
+                                            Mech.RightHandWeapon.FunctionalRange,
+                                            LayerMask.GetMask(new string[] { "Terrain", "Units" }));
+
+        if (CameraRayInfo.Length > 0)
+        {
+            CameraRayInfo = RogueMechUtils.SortRaycastArrayByDistance(CameraRayInfo);
+            foreach (RaycastHit hitInfo in CameraRayInfo)
+            {
+                //make sure the weapon can actually aim at the target
+                if (Vector3.Dot(transform.forward, (hitInfo.point - FirePoint.transform.position)) > 0)
+                {
+                    target = hitInfo.point;
+                    break;
+                }
+            }
+        }
+        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
+
+        return target;
     }
 }

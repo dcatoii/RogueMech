@@ -81,14 +81,7 @@ public class TexasChainsaw : Weapon
         target.y += Random.Range(-bloom, bloom);
         target.z += Random.Range(-bloom, bloom);
 
-        RaycastHit CameraRayInfo = new RaycastHit();
-
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
-        if (Physics.Raycast(Camera.main.transform.position, (target - Camera.main.transform.position).normalized, out CameraRayInfo, Mech.RightHandWeapon.FunctionalRange, LayerMask.GetMask(new string[] { "Terrain", "Units" })))
-        {
-            target = CameraRayInfo.point;
-        }
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
+        target = GetTargetWithCameraRay(target);
 
         //create and fire projectile
         GameObject newProjectileObject = (GameObject.Instantiate(ProjectilePrefab, FirePoint.transform.position, Quaternion.identity) as GameObject);

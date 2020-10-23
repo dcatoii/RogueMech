@@ -12,4 +12,27 @@ public class RogueMechUtils {
             SetChildLayerRecursively(child.gameObject, newLayer);
         }
     }
+
+    public static RaycastHit[] SortRaycastArrayByDistance(RaycastHit[] unsorted)
+    {
+        List<RaycastHit> outArray = new List<RaycastHit>();
+        for(int i = 0; i < unsorted.Length; i++)
+        {
+            for (int j = 0; i < unsorted.Length; i++)
+            {
+                if (j >= outArray.Count)
+                {
+                    outArray.Add(unsorted[i]);
+                    break;
+                }
+                else if(unsorted[i].distance < outArray[j].distance)
+                {
+                    outArray.Insert(j, unsorted[i]);
+                    break;
+                }
+
+            }
+        }
+        return outArray.ToArray();
+    }
 }

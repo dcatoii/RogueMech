@@ -46,15 +46,7 @@ public class Longbow : Weapon {
         if (!IsCharging)
             return;
 
-        target = Camera.main.transform.position + (Camera.main.transform.forward * Mech.RightHandWeapon.FunctionalRange);
-        RaycastHit CameraRayInfo = new RaycastHit();
-
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out CameraRayInfo, Mech.RightHandWeapon.FunctionalRange, LayerMask.GetMask(new string[] { "Terrain", "Units" })))
-        {
-            target = CameraRayInfo.point;
-        }
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
+        target = GetTargetWithCameraRay(Camera.main.transform.position + (Camera.main.transform.forward * FunctionalRange));
 
         chargeProjectile.transform.parent = null;
         chargeProjectile.Source = Mech;

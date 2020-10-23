@@ -73,16 +73,7 @@ public class Xiphos : Weapon {
     void FireProjectile()
     {
         //Raycast
-        Vector3 target = Camera.main.transform.position + (Camera.main.transform.forward * FunctionalRange);
-        
-        RaycastHit CameraRayInfo = new RaycastHit();
-
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
-        if (Physics.Raycast(Camera.main.transform.position, (target - Camera.main.transform.position).normalized, out CameraRayInfo, Mech.RightHandWeapon.FunctionalRange, LayerMask.GetMask(new string[] { "Terrain", "Units" })))
-        {
-            target = CameraRayInfo.point;
-        }
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
+        Vector3 target = GetTargetWithCameraRay(Camera.main.transform.position + (Camera.main.transform.forward * FunctionalRange));
 
         //create and fire projectile
         GameObject newProjectileObject = (GameObject.Instantiate(ProjectilePrefab, FirePoint.transform.position, Quaternion.identity) as GameObject);
