@@ -640,11 +640,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 631559a710b49244ebcace100e0dc254, type: 3}
   StoreDescription: Using lighter metals reduces max weight and armor
-  MaxArmor: 1500
+  MaxArmor: -1500
   EnergyCapacity: 0
   RechargeRate: 0
   RechargeCooldown: 0
-  Weight: 500
+  Weight: -500
 --- !u!114 &114329215228900380
 MonoBehaviour:
   m_ObjectHideFlags: 1

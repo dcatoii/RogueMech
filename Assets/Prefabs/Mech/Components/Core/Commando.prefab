@@ -640,7 +640,7 @@ MonoBehaviour:
   MaxArmor: 0
   EnergyCapacity: 0
   RechargeRate: 30
-  RechargeCooldown: 0.15
+  RechargeCooldown: -0.15
   Weight: 0
 --- !u!114 &114294438686199146
 MonoBehaviour:
@@ -744,7 +744,7 @@ MonoBehaviour:
   StoreDescription: Using super-conductive wires reduces recharge delay and max energy
     capacity
   MaxArmor: 0
-  EnergyCapacity: 350
+  EnergyCapacity: -350
   RechargeRate: 0
   RechargeCooldown: -0.5
   Weight: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   EnergyCapacity: 0
   RechargeRate: 0
   RechargeCooldown: 0
-  Weight: 900
+  Weight: -800
 --- !u!114 &114884028836964296
 MonoBehaviour:
   m_ObjectHideFlags: 1

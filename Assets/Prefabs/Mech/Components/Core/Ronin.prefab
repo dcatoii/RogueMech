@@ -625,7 +625,7 @@ MonoBehaviour:
   MaxArmor: 0
   EnergyCapacity: 0
   RechargeRate: 50
-  RechargeCooldown: 0.25
+  RechargeCooldown: -0.25
   Weight: 0
 --- !u!114 &114149106492102830
 MonoBehaviour:
@@ -694,7 +694,7 @@ MonoBehaviour:
   StoreDescription: Using super-conductive wires reduces recharge delay and max energy
     capacity
   MaxArmor: 0
-  EnergyCapacity: 400
+  EnergyCapacity: -400
   RechargeRate: 0
   RechargeCooldown: -0.5
   Weight: 0
@@ -710,12 +710,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 0b343d174dafc3446815bd99c4fa3ff8, type: 3}
-  StoreDescription: High-durability core increases armor and energy capacity
+  StoreDescription: High-durability core increases armor, energy capacity, and weight
   MaxArmor: 1500
   EnergyCapacity: 400
   RechargeRate: 0
   RechargeCooldown: 0
-  Weight: 0
+  Weight: 300
 --- !u!114 &114664814234081054
 MonoBehaviour:
   m_ObjectHideFlags: 1
