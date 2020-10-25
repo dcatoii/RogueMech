@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour {
         //Inform the gamestate that the garage has been initialized and ensure the cursor is usable
         ApplicationContext.Game.CurrentState = GameContext.Gamestate.Garage;
         ApplicationContext.UnlockCursor();
+        ApplicationContext.Game.IsPaused = false;
     }
 
     public void UpdateActiveCatalogue()
