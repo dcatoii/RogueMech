@@ -18,7 +18,7 @@ public class RogueMechUtils {
         List<RaycastHit> outArray = new List<RaycastHit>();
         for(int i = 0; i < unsorted.Length; i++)
         {
-            for (int j = 0; i < unsorted.Length; i++)
+            for (int j = 0; j < unsorted.Length; j++)
             {
                 if (j >= outArray.Count)
                 {

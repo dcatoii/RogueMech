@@ -65,14 +65,34 @@ public class Weapon : FrameAccessory {
     public Vector3 GetTargetWithCameraRay(Vector3 endPoint)
     {
         Vector3 target = endPoint;
-        RaycastHit[] CameraRayInfo;
+        RaycastHit[] TerrainRayInfo, UnitRayInfo, CameraRayInfo;
 
         RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
 
-        CameraRayInfo = Physics.RaycastAll(Camera.main.transform.position,
+        //The correct way, but we cannot use this due to a unity-level bug for now
+        /*CameraRayInfo = Physics.RaycastAll(Camera.main.transform.position,
                                             (target - Camera.main.transform.position).normalized,
                                             Mech.RightHandWeapon.FunctionalRange,
                                             LayerMask.GetMask(new string[] { "Terrain", "Units" }));
+                                            */
+
+        /////////////////////////TODO: Write and use my own RaycastAll function//////////////////////
+
+        //////////////////unity raycast bug workaround/////////////////////////
+        TerrainRayInfo = Physics.RaycastAll(Camera.main.transform.position,
+                                            (target - Camera.main.transform.position).normalized,
+                                            Mech.RightHandWeapon.FunctionalRange,
+                                            LayerMask.GetMask(new string[] { "Terrain" }));
+
+        UnitRayInfo = Physics.RaycastAll(Camera.main.transform.position,
+                                            (target - Camera.main.transform.position).normalized,
+                                            Mech.RightHandWeapon.FunctionalRange,
+                                            LayerMask.GetMask(new string[] { "Units" }));
+
+        List<RaycastHit> AllHits = new List<RaycastHit>(TerrainRayInfo);
+        AllHits.AddRange(UnitRayInfo);
+        CameraRayInfo = AllHits.ToArray();
+        ////////////////////////END WORKAROUND/////////////////////
 
         if (CameraRayInfo.Length > 0)
         {

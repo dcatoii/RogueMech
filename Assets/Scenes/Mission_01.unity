@@ -2647,6 +2647,14 @@ Prefab:
       propertyPath: m_Name
       value: PlayerSpawnFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 1261489491305700, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679386687979082, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
   m_IsPrefabAsset: 0
@@ -4147,6 +4155,7 @@ MonoBehaviour:
   HUD: {fileID: 1787747267}
   PlayerFrame: {fileID: 1072583074}
   BaseAward: 25000
+  isTutorialMission: 0
 --- !u!4 &1797519791
 Transform:
   m_ObjectHideFlags: 0
