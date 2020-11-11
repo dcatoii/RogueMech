@@ -4396,7 +4396,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: MISSION START
+  m_text: MISSION SELECT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4464,7 +4464,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 894896498}
-    characterCount: 13
+    characterCount: 14
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -6464,7 +6464,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 905657922}
   m_Direction: 2
   m_Value: 0.99999857
-  m_Size: 0.9250001
+  m_Size: 0.925
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

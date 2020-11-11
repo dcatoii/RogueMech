@@ -28,7 +28,10 @@ public class MissionSelectManager : MonoBehaviour {
         if (selectedCell != null) //missing info pane is up. 
             return;
 
-        if(highlightCell != null)
+        if (ApplicationContext.Game.IsPaused)
+            return;
+
+        if (highlightCell != null)
             highlightCell.Highlight.SetActive(false);
 
         highlightCell = RaycastMap();
@@ -40,7 +43,12 @@ public class MissionSelectManager : MonoBehaviour {
         {
             SelectCell(highlightCell);
         }
-	}
+
+        if (Input.GetAxis("Cancel") > 0)
+        {
+            ApplicationContext.OpenPauseMenu();
+        }
+    }
 
     MissionSelectCell RaycastMap()
     {
