@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,5 +35,11 @@ public class RogueMechUtils {
             }
         }
         return outArray.ToArray();
+    }
+
+    public static string intToCurrency(int value)
+    {
+        string CashString = "$" + String.Format("{0:n0}", value);
+        return CashString;
     }
 }

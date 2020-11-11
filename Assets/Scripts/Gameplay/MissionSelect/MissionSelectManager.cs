@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class MissionSelectManager : MonoBehaviour {
 
     public MissionSelectMap Map;
     public MissionSelectCamera SelectCamera;
+    public MissionDataUI MissionData;
+    LTDescr animation = null;
     MissionSelectCell highlightCell = null;
     MissionSelectCell selectedCell = null;
 
@@ -14,7 +17,9 @@ public class MissionSelectManager : MonoBehaviour {
         //Set up the game context for a menu state
         ApplicationContext.Game.CurrentState = GameContext.Gamestate.MissionSelect;
         ApplicationContext.Resume();
-        ApplicationContext.UnlockCursor();	
+        ApplicationContext.UnlockCursor();
+        SelectCamera.transform.position = Map.StartingCell.CameraCenter.position;
+        MissionData.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -54,16 +59,47 @@ public class MissionSelectManager : MonoBehaviour {
 
     void SelectCell (MissionSelectCell selected)
     {
+        //only 1 selected cell at a time
+        if (animation != null)
+            return;
+
         selectedCell = selected;
-        //For inital testing purposes. Change this to bring up mission info instead.
-        StartMission();
+        animation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraFocus.position, 1.0f);
+        animation.setOnComplete(ShowMissionData);
     }
 
-    void StartMission()
+    void ShowMissionData()
+    {
+        MissionData.Show(selectedCell);
+        animation = null;
+    }
+
+    public void StartMission()
     {
         if (selectedCell == null)
             return;
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(selectedCell.SceneName);
+    }
+
+    public void CloseMissionInfo()
+    {
+        MissionData.Hide();
+        if (animation != null)
+        {
+            animation.pause();
+            animation.callOnCompletes();
+        }
+
+        animation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraCenter.position, 1.0f);
+        animation.setOnComplete(UnselectCell);
+
+
+    }
+
+    private void UnselectCell()
+    {
+        selectedCell = null;
+        animation = null;
     }
 }
