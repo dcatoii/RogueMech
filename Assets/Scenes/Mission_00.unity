@@ -51933,6 +51933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cc01dcb5c7eb04baa2af499e670717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MissionID: Chapter_00_Mission_00
   StartingGoals:
   - {fileID: 202200641}
   HUD: {fileID: 1787747267}

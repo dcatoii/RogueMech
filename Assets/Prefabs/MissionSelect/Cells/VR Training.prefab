@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114030950415562882}
   - component: {fileID: 65761797376810840}
   m_Layer: 0
-  m_Name: VRCell
+  m_Name: VR Training
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,13 +301,6 @@ MonoBehaviour:
   Highlight: {fileID: 1702613616078038}
   CameraCenter: {fileID: 4438940528090006}
   CameraFocus: {fileID: 4009702921283366}
-  MissionName: Weaken Their Defenses
-  SceneName: Mission_00
-  MissionDetails: 
-  MissionLocation: VR Training
-  BaseReward: 15000
-  FirstTimeBonus: 10000
-  HasBeenCleared: 0
   Connections: []
   CurrentState: 0
 --- !u!120 &120156889790490632

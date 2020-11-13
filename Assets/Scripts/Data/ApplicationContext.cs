@@ -19,6 +19,9 @@ public class ApplicationContext : ScriptableObject
     public static PopupManager popupRoot;
     public static PopupManager PopupRoot { get { return popupRoot; } set { popupRoot = value; } }
 
+    public MissionContext missionContext;
+    public static MissionContext MissionData { get { return instance.missionContext; } set { instance.missionContext = value; } }
+
     [SerializeField]
     PauseScreen PausePrefab;
 

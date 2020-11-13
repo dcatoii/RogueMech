@@ -8,17 +8,6 @@ public class MissionSelectCell : MonoBehaviour {
     public Transform CameraCenter;
     public Transform CameraFocus;
 
-    public struct MissionData
-    {
-        public string MissionName;
-        public string SceneName;
-        public string MissionDetails;
-        public string Location;
-        public int BaseReward;
-        public int FirstTimeBonus;
-        public bool HasBeenCleared;
-    }
-
     public enum CellState
     {
         Hidden, // not visible
@@ -29,17 +18,11 @@ public class MissionSelectCell : MonoBehaviour {
     //this will be the correct way to do it
     //public MissionData MissionInfo;
 
-    //Temp for variable testing
-    public string MissionName = "Weaken Their Defenses";
-    public string SceneName = "Mission_01";
-    public string MissionDetails = "";
-    public string MissionLocation = "Canyon";
-    public int BaseReward = 15000;
-    public int FirstTimeBonus = 10000;
-    public bool HasBeenCleared = false;
+    public MissionContext MissionInfo;
 
     public List<MissionSelectCell> Connections;
     public CellState CurrentState = CellState.Hidden;
+
     public
 
 	// Use this for initialization

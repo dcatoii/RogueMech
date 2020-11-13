@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114290149053076406}
   - component: {fileID: 65266992844639486}
   m_Layer: 0
-  m_Name: CanyonCell
+  m_Name: Canyon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,12 +271,5 @@ MonoBehaviour:
   Highlight: {fileID: 1430570231949532}
   CameraCenter: {fileID: 4402116436627514}
   CameraFocus: {fileID: 4656844107677670}
-  MissionName: Weaken Their Defenses
-  SceneName: Mission_01
-  MissionDetails: 
-  MissionLocation: Canyon
-  BaseReward: 15000
-  FirstTimeBonus: 10000
-  HasBeenCleared: 0
   Connections: []
   CurrentState: 0

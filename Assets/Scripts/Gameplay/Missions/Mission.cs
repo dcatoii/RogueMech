@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mission : MonoBehaviour {
 
     public static Mission instance;
+    public string MissionID;
     public List<MissionObjective> StartingGoals;
     List<MissionObjective> CompletedObjectives = new List<MissionObjective>();
     List<MissionObjective> CriticalActiveGoals = new List<MissionObjective>();
@@ -25,6 +26,14 @@ public class Mission : MonoBehaviour {
         ApplicationContext.Game.CurrentState = isTutorialMission ? GameContext.Gamestate.Tutorial : GameContext.Gamestate.Mission;
         ApplicationContext.Resume();
 
+        //Load mission context information
+        if(ApplicationContext.MissionData != null)
+        {
+            MissionID = ApplicationContext.MissionData.MissionID;
+            BaseAward = ApplicationContext.MissionData.BaseReward;
+            if (!ApplicationContext.MissionData.HasBeenCleared)
+                BaseAward += ApplicationContext.MissionData.FirstTimeBonus;
+        }
     }
 
     private void InitializeGoals(List<MissionObjective> Goals)
@@ -104,6 +113,9 @@ public class Mission : MonoBehaviour {
 
         if (wasMissionSuccessful)
         {
+            //Mark Mission complete
+            PlayerData.CompelteMission(MissionID);
+
             //add currency for mission, subtracting for damage taken
             int RepairCost = PlayerFrame.Core.MaxArmor - PlayerFrame.Core.ArmorPoints;
             RepairCost += PlayerFrame.Legs.MaxArmor - PlayerFrame.Legs.ArmorPoints;

@@ -8,7 +8,7 @@ public class MissionSelectManager : MonoBehaviour {
     public MissionSelectMap Map;
     public MissionSelectCamera SelectCamera;
     public MissionDataUI MissionData;
-    LTDescr animation = null;
+    LTDescr ltAnimation = null;
     MissionSelectCell highlightCell = null;
     MissionSelectCell selectedCell = null;
 
@@ -18,6 +18,7 @@ public class MissionSelectManager : MonoBehaviour {
         ApplicationContext.Game.CurrentState = GameContext.Gamestate.MissionSelect;
         ApplicationContext.Resume();
         ApplicationContext.UnlockCursor();
+        Map.LoadMap();
         SelectCamera.transform.position = Map.StartingCell.CameraCenter.position;
         MissionData.gameObject.SetActive(false);
 	}
@@ -68,18 +69,18 @@ public class MissionSelectManager : MonoBehaviour {
     void SelectCell (MissionSelectCell selected)
     {
         //only 1 selected cell at a time
-        if (animation != null)
+        if (ltAnimation != null)
             return;
 
         selectedCell = selected;
-        animation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraFocus.position, 1.0f);
-        animation.setOnComplete(ShowMissionData);
+        ltAnimation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraFocus.position, 1.0f);
+        ltAnimation.setOnComplete(ShowMissionData);
     }
 
     void ShowMissionData()
     {
         MissionData.Show(selectedCell);
-        animation = null;
+        ltAnimation = null;
     }
 
     public void StartMission()
@@ -87,20 +88,21 @@ public class MissionSelectManager : MonoBehaviour {
         if (selectedCell == null)
             return;
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(selectedCell.SceneName);
+        ApplicationContext.MissionData = selectedCell.MissionInfo;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(selectedCell.MissionInfo.SceneName);
     }
 
     public void CloseMissionInfo()
     {
         MissionData.Hide();
-        if (animation != null)
+        if (ltAnimation != null)
         {
-            animation.pause();
-            animation.callOnCompletes();
+            ltAnimation.pause();
+            ltAnimation.callOnCompletes();
         }
 
-        animation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraCenter.position, 1.0f);
-        animation.setOnComplete(UnselectCell);
+        ltAnimation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraCenter.position, 1.0f);
+        ltAnimation.setOnComplete(UnselectCell);
 
 
     }
@@ -108,6 +110,6 @@ public class MissionSelectManager : MonoBehaviour {
     private void UnselectCell()
     {
         selectedCell = null;
-        animation = null;
+        ltAnimation = null;
     }
 }

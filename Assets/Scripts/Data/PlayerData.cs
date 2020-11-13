@@ -35,6 +35,9 @@ public class PlayerData {
     public static bool IsPartUnlocked(string partID) { return PlayerPrefs.GetInt(partID + "_unlocked", 0) == 1; }
     public static void UnlockPart(string partID) { PlayerPrefs.SetInt(partID + "_unlocked", 1); }
 
+    public static bool IsMissionComplete(string missionID) { return PlayerPrefs.GetInt(missionID + "_completed", 0) == 1; }
+    public static void CompelteMission(string missionID) { PlayerPrefs.SetInt(missionID + "_completed", 1); }
+
     public static string GetPartUpgradeData(string partID)
     {
          return PlayerPrefs.GetString(partID + "_level", "");
@@ -54,5 +57,45 @@ public class PlayerData {
     {
         PlayerPrefs.DeleteAll();
     }
+
+    /*
+    Dictionary<string, bool> LevelCompleteFlags = new Dictionary<string, bool>();
+
+    public bool isLevelComplete(string LevelName)
+    {
+        if(!LevelCompleteFlags.ContainsKey(LevelName))
+        {
+            LevelCompleteFlags.Add(LevelName, false);
+        }
+        return LevelCompleteFlags[LevelName];
+    }
+
+    public void SetLevelComplete(string LevelName)
+    {
+        LevelCompleteFlags[LevelName] = true;
+    }
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

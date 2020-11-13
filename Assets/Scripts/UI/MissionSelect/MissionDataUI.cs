@@ -14,12 +14,12 @@ public class MissionDataUI : MonoBehaviour {
 
     public void Show(MissionSelectCell selected)
     {
-        MissionName.text = selected.MissionName;
-        MissionDetails.text = selected.MissionDetails;
+        MissionName.text = selected.MissionInfo.MissionName;
+        MissionDetails.text = selected.MissionInfo.MissionDetails;
         //MissionImage;
-        Location.text = "Location: " + selected.MissionLocation;
-        BaseReward.text = "Reward: " + RogueMechUtils.intToCurrency(selected.BaseReward);
-        FirstTimeBonus.text = "First-Time Bonus: " + (selected.HasBeenCleared ? "CLEARED" : RogueMechUtils.intToCurrency(selected.FirstTimeBonus));
+        Location.text = "Location: " + selected.MissionInfo.Location;
+        BaseReward.text = "Reward: " + RogueMechUtils.intToCurrency(selected.MissionInfo.BaseReward);
+        FirstTimeBonus.text = "First-Time Bonus: " + (selected.MissionInfo.HasBeenCleared ? "CLEARED" : RogueMechUtils.intToCurrency(selected.MissionInfo.FirstTimeBonus));
 
         //TODO: Animate In
         gameObject.SetActive(true);
