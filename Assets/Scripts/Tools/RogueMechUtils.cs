@@ -42,4 +42,20 @@ public class RogueMechUtils {
         string CashString = "$" + String.Format("{0:n0}", value);
         return CashString;
     }
+
+    public static string GetTimeString(int totalSeconds)
+    {
+        int sec = totalSeconds % 60;
+        int min = totalSeconds / 60;
+        int hr = totalSeconds / 3600;
+        string timeString = (hr > 0) ? hr.ToString() + " : " : "";
+        timeString += ((min > 9) ? "" : "0") + min.ToString() + " : ";
+        timeString += ((sec > 9) ? "" : "0") + sec.ToString();
+        return timeString;
+    }
+
+    public static string GetTimeString(float totalSeconds)
+    {
+        return GetTimeString((int)totalSeconds);
+    }
 }

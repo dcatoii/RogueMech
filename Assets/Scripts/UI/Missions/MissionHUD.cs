@@ -40,10 +40,11 @@ public class MissionHUD : MonoBehaviour {
         GameObject.Instantiate(MissionFailurePopup, transform);
     }
 
-    public void MissionSuccess(int reward, int bonus, int repair, int total)
+    public void MissionSuccess(float MissionTime, int reward, int bonus, int repair, int total)
     {
 
         MissionCompletePopup popup = GameObject.Instantiate(CompletePopup.gameObject, transform).GetComponent<MissionCompletePopup>();
+        popup.MissionTimeText.text = "Mission Time:   " + RogueMechUtils.GetTimeString(MissionTime);
         popup.RewardValue = reward;
         popup.BonusValue = bonus;
         popup.RepairValue = repair;
