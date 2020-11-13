@@ -1260,6 +1260,7 @@ MonoBehaviour:
   BloomCooldown: 0
   MinHeatMultiplier: 0
   MaxHeatMultiplier: 0
+  RecoilPerBullet: 0
 --- !u!114 &114236365214316876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1301,6 +1302,7 @@ MonoBehaviour:
   BloomCooldown: 1
   MinHeatMultiplier: 1
   MaxHeatMultiplier: 1
+  RecoilPerBullet: 1
 --- !u!114 &114437981602044666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1329,6 +1331,7 @@ MonoBehaviour:
   BloomCooldown: 0
   MinHeatMultiplier: 0
   MaxHeatMultiplier: 0
+  RecoilPerBullet: 0
 --- !u!114 &114549945710553182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1357,6 +1360,7 @@ MonoBehaviour:
   BloomCooldown: 0
   MinHeatMultiplier: 0
   MaxHeatMultiplier: 0
+  RecoilPerBullet: 0
 --- !u!114 &114550863478138136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1415,6 +1419,7 @@ MonoBehaviour:
   BloomCooldown: 0
   MinHeatMultiplier: -0.5
   MaxHeatMultiplier: 1
+  RecoilPerBullet: 0
 --- !u!114 &114856962875005596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1459,6 +1464,7 @@ MonoBehaviour:
   BloomCooldown: 0
   MinHeatMultiplier: 0
   MaxHeatMultiplier: 0
+  RecoilPerBullet: 0
 --- !u!114 &114988575006894892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1487,3 +1493,4 @@ MonoBehaviour:
   BloomCooldown: 0
   MinHeatMultiplier: 0
   MaxHeatMultiplier: 0
+  RecoilPerBullet: 0
