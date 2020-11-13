@@ -32,7 +32,7 @@ public class Mission : MonoBehaviour {
             MissionID = ApplicationContext.MissionData.MissionID;
             BaseAward = ApplicationContext.MissionData.BaseReward;
             if (!ApplicationContext.MissionData.HasBeenCleared)
-                BaseAward += ApplicationContext.MissionData.FirstTimeBonus;
+                BonusAmount += ApplicationContext.MissionData.FirstTimeBonus;
         }
     }
 
