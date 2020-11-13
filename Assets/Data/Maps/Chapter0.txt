@@ -18,6 +18,15 @@
       "Location": "Canyon",
       "BaseReward": 10000,
       "FirstTimeBonus": 15000,
+    },
+	{
+      "MissionName": "Destroy More TAMCs",
+      "MissionID": "Chapter_00_Mission_02",
+      "SceneName": "Mission_01",
+      "MissionDetails": "- Our enemy has deployed Tactical Assault Mobile Cannon (T.A.M.C.) units throughout this canyon as part of their occupation.\n\n-Your mission is to clear out the T.A.M.C. units before the enemy has a chance to marshall their defenses.\n\n- You have 10 minutes to complete the mission, and you will earn a bonus if you complete it in 5 minutes or less.",
+      "Location": "Canyon",
+      "BaseReward": 5000,
+      "FirstTimeBonus": 45000,
     }
   ]
 }
