@@ -40,7 +40,7 @@ public class MissionSelectManager : MonoBehaviour {
         if (highlightCell != null)
             highlightCell.Highlight.SetActive(true);
 
-        if (highlightCell != null && Input.GetAxis("Submit") > 0)
+        if (highlightCell != null && Input.GetAxis("MapClick") > 0)
         {
             SelectCell(highlightCell);
         }
