@@ -7,6 +7,7 @@ using System;
 
 public class MissionCompletePopup : MonoBehaviour {
 
+    public TMP_Text MissionTimeText;
     public TMP_Text RewardText;
     public TMP_Text BonusText;
     public TMP_Text RepairText;

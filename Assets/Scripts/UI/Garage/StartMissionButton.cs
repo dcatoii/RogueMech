@@ -9,7 +9,7 @@ public class StartMissionButton : MonoBehaviour {
 
     public void StartMission()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/Mission_01");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/MissionSelect");
     }
 
     private void FixedUpdate()

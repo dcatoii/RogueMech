@@ -11,7 +11,7 @@ public class PauseScreen : MonoBehaviour {
 	void Start ()
     {
         RestartButton.SetActive(ApplicationContext.Game.CurrentState == GameContext.Gamestate.Mission);
-        QuitMissionButton.SetActive(ApplicationContext.Game.CurrentState == GameContext.Gamestate.Mission);
+        QuitMissionButton.SetActive(ApplicationContext.Game.CurrentState == GameContext.Gamestate.Mission || ApplicationContext.Game.CurrentState == GameContext.Gamestate.MissionSelect);
     }
 
     public void Close()

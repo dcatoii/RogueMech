@@ -22,6 +22,8 @@ public class TexasChainsaw : Weapon
     public float MinHeatMultiplier = 1.0f;
     public float MaxHeatMultiplier = 1.0f;
 
+    public float RecoilPerBullet = 0.1f;
+
     public override void OnFireDown(Vector3 target)
     {
         if (isOverheated)
@@ -78,7 +80,7 @@ public class TexasChainsaw : Weapon
 
         //bloom
         target.x += Random.Range(-bloom, bloom);
-        target.y += Random.Range(-bloom, bloom);
+        target.y += (Random.Range(-bloom, bloom) / 4); //dividing by 4 to reduce vertical bloom
         target.z += Random.Range(-bloom, bloom);
 
         target = GetTargetWithCameraRay(target);
@@ -88,6 +90,8 @@ public class TexasChainsaw : Weapon
         newProjectileObject.GetComponent<Projectile>().Source = GetComponentInParent<MechFrame>();
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
         newProjectileObject.GetComponent<Projectile>().SetDamage((int)(damage * LeanTween.easeInQuad(MinHeatMultiplier, MaxHeatMultiplier, heat/MaxHeat)));
+
+        Mech.GetComponent<FrameController>().Aim(0.0f, RecoilPerBullet);
 
         TimeSinceLastFire = 0.0f;
     }

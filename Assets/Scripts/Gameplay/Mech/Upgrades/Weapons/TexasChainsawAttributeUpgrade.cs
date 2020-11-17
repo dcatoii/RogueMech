@@ -14,6 +14,7 @@ public class TexasChainsawAttributeUpgrade : WeaponAttributeUpgrade {
     public float BloomCooldown = 0.0f;
     public float MinHeatMultiplier = 0.0f;
     public float MaxHeatMultiplier = 0.0f;
+    public float RecoilPerBullet = 0.0f;
 
     public override void Apply(FramePart Part)
     {
@@ -40,6 +41,7 @@ public class TexasChainsawAttributeUpgrade : WeaponAttributeUpgrade {
         weapon.BloomCooldown += BloomCooldown;
         weapon.MinHeatMultiplier += MinHeatMultiplier;
         weapon.MaxHeatMultiplier += MaxHeatMultiplier;
+        weapon.RecoilPerBullet += RecoilPerBullet;
 
     }
 
@@ -68,6 +70,7 @@ public class TexasChainsawAttributeUpgrade : WeaponAttributeUpgrade {
         weapon.BloomCooldown -= BloomCooldown;
         weapon.MinHeatMultiplier -= MinHeatMultiplier;
         weapon.MaxHeatMultiplier -= MaxHeatMultiplier;
+        weapon.RecoilPerBullet -= RecoilPerBullet;
 
     }
 }

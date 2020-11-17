@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mission : MonoBehaviour {
 
     public static Mission instance;
+    public string MissionID;
     public List<MissionObjective> StartingGoals;
     List<MissionObjective> CompletedObjectives = new List<MissionObjective>();
     List<MissionObjective> CriticalActiveGoals = new List<MissionObjective>();
@@ -13,6 +14,7 @@ public class Mission : MonoBehaviour {
     public int BaseAward = 25000;
     int BonusAmount = 0;
     public bool isTutorialMission = false;
+    public float MissionTime = 0.0f;
 
 
 	// Use this for initialization
@@ -25,6 +27,14 @@ public class Mission : MonoBehaviour {
         ApplicationContext.Game.CurrentState = isTutorialMission ? GameContext.Gamestate.Tutorial : GameContext.Gamestate.Mission;
         ApplicationContext.Resume();
 
+        //Load mission context information
+        if(ApplicationContext.MissionData != null)
+        {
+            MissionID = ApplicationContext.MissionData.MissionID;
+            BaseAward = ApplicationContext.MissionData.BaseReward;
+            if (!ApplicationContext.MissionData.HasBeenCleared)
+                BonusAmount += ApplicationContext.MissionData.FirstTimeBonus;
+        }
     }
 
     private void InitializeGoals(List<MissionObjective> Goals)
@@ -104,6 +114,9 @@ public class Mission : MonoBehaviour {
 
         if (wasMissionSuccessful)
         {
+            //Mark Mission complete
+            PlayerData.CompelteMission(MissionID);
+
             //add currency for mission, subtracting for damage taken
             int RepairCost = PlayerFrame.Core.MaxArmor - PlayerFrame.Core.ArmorPoints;
             RepairCost += PlayerFrame.Legs.MaxArmor - PlayerFrame.Legs.ArmorPoints;
@@ -112,7 +125,7 @@ public class Mission : MonoBehaviour {
             int FinalReward = BaseAward + BonusAmount - RepairCost;
             PlayerData.Currency += FinalReward;
 
-            HUD.MissionSuccess(BaseAward, BonusAmount, RepairCost, FinalReward);
+            HUD.MissionSuccess(MissionTime, BaseAward, BonusAmount, RepairCost, FinalReward);
             PlayerFrame.GetComponent<PlayerInputManager>().enabled = false;
 
             //if this is the tutorial mission, mark the tutorial as cleared
@@ -148,5 +161,7 @@ public class Mission : MonoBehaviour {
         {
             ApplicationContext.OpenPauseMenu();
         }
+
+        MissionTime += Time.fixedDeltaTime;
     }
 }
