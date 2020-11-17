@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MissionSelectCell : MonoBehaviour {
 
-    public GameObject Highlight;
+    public GameObject HighlightEffect;
+    public GameObject SelectEffect;
     public Transform CameraCenter;
     public Transform CameraFocus;
 

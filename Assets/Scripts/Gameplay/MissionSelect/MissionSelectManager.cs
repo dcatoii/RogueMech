@@ -26,19 +26,19 @@ public class MissionSelectManager : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        if (selectedCell != null) //missing info pane is up. 
-            return;
+        //if (selectedCell != null) //missing info pane is up. 
+        //  return;
 
         if (ApplicationContext.Game.IsPaused)
             return;
 
         if (highlightCell != null)
-            highlightCell.Highlight.SetActive(false);
+            highlightCell.HighlightEffect.SetActive(false);
 
         highlightCell = RaycastMap();
 
-        if (highlightCell != null)
-            highlightCell.Highlight.SetActive(true);
+        if (highlightCell != null && highlightCell != selectedCell)
+            highlightCell.HighlightEffect.SetActive(true);
 
         if (highlightCell != null && Input.GetAxis("MapClick") > 0)
         {
@@ -70,17 +70,24 @@ public class MissionSelectManager : MonoBehaviour {
     {
         //only 1 selected cell at a time
         if (ltAnimation != null)
-            return;
+        {
+            ltAnimation.pause();
+            ltAnimation.callOnCompletes();
+        }
+
+        //turn off the old selection, if any
+        UnselectCell();
 
         selectedCell = selected;
-        ltAnimation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraFocus.position, 1.0f);
+        selectedCell.SelectEffect.SetActive(true);
+        ltAnimation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraFocus.position, 0.5f);
         ltAnimation.setOnComplete(ShowMissionData);
     }
 
     void ShowMissionData()
     {
         MissionData.Show(selectedCell);
-        ltAnimation = null;
+        AnimationComplete();
     }
 
     public void StartMission()
@@ -102,14 +109,22 @@ public class MissionSelectManager : MonoBehaviour {
         }
 
         ltAnimation = LeanTween.move(SelectCamera.gameObject, selectedCell.CameraCenter.position, 1.0f);
-        ltAnimation.setOnComplete(UnselectCell);
+        UnselectCell();
+        ltAnimation.setOnComplete(AnimationComplete);
 
 
     }
 
     private void UnselectCell()
     {
+        if (selectedCell != null)
+            selectedCell.SelectEffect.SetActive(false);
+
         selectedCell = null;
+    }
+
+    private void AnimationComplete()
+    {
         ltAnimation = null;
     }
 }
