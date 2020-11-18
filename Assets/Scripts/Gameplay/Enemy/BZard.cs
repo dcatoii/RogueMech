@@ -15,6 +15,16 @@ public class BZard : Mob {
     public float OrbitDistance;
     public float OrbitDistanceSq { get { return OrbitDistance * OrbitDistance; } }
     public Vector3 targetLastPosition;
+    float orbitTime;
+    float orbitDuration;
+    public float MinOrbitDuration = 3.0f;
+    public float MaxOrbitDuration = 10.0f;
+    public GameObject ChargeEffect;
+    public float ChargeTime = 1.0f;
+    float chargeDuration = 0.0f;
+    public float FiringTime = 2.5f;
+    float fireDuration = 0.0f;
+    public float FireTrackingSpeed = 18.0f;
 
 
     static Dictionary<Mob, BZard> AttachedBzards = new Dictionary<Mob, BZard>();
@@ -86,12 +96,16 @@ public class BZard : Mob {
         //If I am close to my target, 
         else if (currentState == BZARDState.Orbit)
         {
-            //and my weapon is ready, begin charging my weapon
-            //Otherwise If my weapon is on cooldown, orbit my target
-            RotateAroundTarget();
+            Orbit();
         }
-        //If my weapon is not firing, adjust my height
-
+        else if (currentState == BZARDState.Charge)
+        {
+            ChargeWeapon();
+        }
+        else if (currentState == BZARDState.Fire)
+        {
+            FiringWeapon();
+        }
     }
 
     private void Idle()
@@ -101,7 +115,7 @@ public class BZard : Mob {
 
     }
 
-    void TurnTowardsTarget()
+    void TurnTowardsTarget(float trackSpeed)
     {
         //get the angle between look and target
         /*
@@ -119,7 +133,7 @@ public class BZard : Mob {
         Vector3 targetDirection = Target.transform.position - transform.position;
 
         // The step size is equal to speed times frame time.
-        float singleStep = TurnSpeed * Time.fixedDeltaTime;
+        float singleStep = trackSpeed * Time.fixedDeltaTime;
 
         // Rotate the forward vector towards the target direction by one step
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
@@ -163,7 +177,7 @@ public class BZard : Mob {
     void ChaseTarget()
     {
         //try to face the right direction
-        TurnTowardsTarget();
+        TurnTowardsTarget(TurnSpeed);
         
         //get an x/z forward vector
         Vector3 move = transform.forward;
@@ -181,6 +195,8 @@ public class BZard : Mob {
         {
             currentState = BZARDState.Orbit;
             targetLastPosition = Target.transform.position;
+            orbitDuration = 0.0f;
+            orbitTime = UnityEngine.Random.Range(MinOrbitDuration, MaxOrbitDuration);
         }
 
     }
@@ -193,6 +209,42 @@ public class BZard : Mob {
         else
             transform.position -= movement;
 
+    }
+
+    void Orbit()
+    {
+        orbitDuration += Time.fixedDeltaTime;
+        RotateAroundTarget();
+        if (orbitDuration >= orbitTime)
+        {
+            GameObject.Instantiate(ChargeEffect, beam.FirePoint.transform);
+            chargeDuration = 0.0f;
+            currentState = BZARDState.Charge;
+        }
+    }
+
+    void ChargeWeapon()
+    {
+        chargeDuration += Time.fixedDeltaTime;
+        TurnTowardsTarget(FireTrackingSpeed);
+        //Idle();
+        if (chargeDuration >= ChargeTime)
+        {
+            beam.OnFireDown(Vector3.zero);
+            fireDuration = 0.0f;
+            currentState = BZARDState.Fire;
+        }
+    }
+
+    void FiringWeapon()
+    {
+        TurnTowardsTarget(FireTrackingSpeed);
+        fireDuration += Time.fixedDeltaTime;
+        if (fireDuration >= FiringTime)
+        {
+            beam.OnFireUp(Vector3.zero);
+            currentState = BZARDState.Chase;
+        }
     }
 
 }
