@@ -483,7 +483,7 @@ MonoBehaviour:
   LiftSpeed: 7.5
   hoverHeight: 15
   OrbitSpeed: 90
-  TurnSpeed: 180
+  TurnSpeed: 1
   Target: {fileID: 0}
   OrbitDistance: 25
   targetLastPosition: {x: 0, y: 0, z: 0}
@@ -493,7 +493,8 @@ MonoBehaviour:
     type: 2}
   ChargeTime: 1
   FiringTime: 2.5
-  FireTrackingSpeed: 18
+  FireTrackingSpeed: 0.1
+  Nest: {fileID: 0}
 --- !u!114 &114910759278392372
 MonoBehaviour:
   m_ObjectHideFlags: 1

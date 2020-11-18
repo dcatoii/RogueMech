@@ -25,6 +25,7 @@ public class BZard : Mob {
     public float FiringTime = 2.5f;
     float fireDuration = 0.0f;
     public float FireTrackingSpeed = 18.0f;
+    public BZardNest Nest;
 
 
     static Dictionary<Mob, BZard> AttachedBzards = new Dictionary<Mob, BZard>();
@@ -73,6 +74,8 @@ public class BZard : Mob {
 
     private void FixedUpdate()
     {
+        if (ApplicationContext.Game.IsPaused)
+            return;
         //dying units do nothing
         if (currentState == BZARDState.Dying)
             return;
@@ -247,4 +250,13 @@ public class BZard : Mob {
         }
     }
 
+    protected override void Die()
+    {
+        if (Nest != null)
+        {
+            Nest.HandleSpawnDeath(this);
+            Nest = null;
+        }
+        base.Die();
+    }
 }
