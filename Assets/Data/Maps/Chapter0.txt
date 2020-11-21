@@ -23,7 +23,7 @@
       "MissionName": "Purge BZARD NESTs",
       "MissionID": "Chapter_00_Mission_02",
       "SceneName": "Mission_02",
-      "MissionDetails": "- Swarms of Battlezone Aerial Retalliation Drones (B.Z.A.R.D.) are wreaking havok on our forces. Head into the canyon and addle them at their source. \n\nWe've discovred a hotspot of BZARD Network System Transmitters (NESTS). Deploy into the hotzone and destory the NESTs.\n\nA bonus will be awarded for swift completion of the mission objective"
+      "MissionDetails": "- Swarms of Battlezone Aerial Retalliation Drones (B.Z.A.R.D.) are wreaking havok on our forces. Head into the canyon and addle them at their source. \n\nWe've discovred a hotspot of BZARD Network System Transmitters (NESTS). Deploy into the hotzone and destory the NESTs.\n\nA bonus will be awarded for swift completion of the mission objective",
       "Location": "Canyon",
       "BaseReward": 15000,
       "FirstTimeBonus": 35000,
