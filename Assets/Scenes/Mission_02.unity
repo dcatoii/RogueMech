@@ -2418,7 +2418,7 @@ MonoBehaviour:
   ObjectiveStartTriggers:
   - {fileID: 981650635}
   EnemyID: BzardNest
-  TargetCount: 20
+  TargetCount: 10
 --- !u!1001 &992135078
 Prefab:
   m_ObjectHideFlags: 0
