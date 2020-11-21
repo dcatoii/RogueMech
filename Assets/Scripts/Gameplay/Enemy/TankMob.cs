@@ -5,7 +5,7 @@ using UnityEngine;
 public class TankMob : Mob {
     public int Health = 1000;
     public Weapon TankGun;
-
+    public bool Activated = false;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,7 +14,8 @@ public class TankMob : Mob {
             Projectile colProjectile = collision.gameObject.GetComponent<Projectile>();
             //if(colProjectile.Source)
             Health -= colProjectile.Damage;
-            if(Health <= 0)
+            Activated = true;
+            if (Health <= 0)
             {
                 Die();
             }
@@ -26,7 +27,20 @@ public class TankMob : Mob {
         if (Mission.instance.PlayerFrame == null || ApplicationContext.Game.IsPaused)
             return;
 
-        if ((Mission.instance.PlayerFrame.gameObject.transform.position - TankGun.FirePoint.transform.position).sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))
+        if (!Activated)
+        {
+            Vector3 toPlayer = Mission.instance.PlayerFrame.gameObject.transform.position - transform.position;
+            if (toPlayer.sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))
+            {
+                //Line-of-Sight check
+                if (!Physics.Linecast(TankGun.FirePoint.transform.position, Mission.instance.PlayerFrame.gameObject.transform.position, LayerMask.GetMask(new string[] { "Terrain" })))
+                {
+                    Activated = true;
+                }
+            }
+        }
+
+        else
         {
             TurnTowardsPlayer();
             TankGun.OnFireDown(Mission.instance.PlayerFrame.Core.gameObject.transform.position);

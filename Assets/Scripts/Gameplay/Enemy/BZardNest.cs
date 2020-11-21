@@ -20,23 +20,31 @@ public class BZardNest : Mob {
         if (ApplicationContext.Game.IsPaused)
             return;
 
-        if(!Activated)
+        if (!Activated)
         {
-            if ((Mission.instance.PlayerFrame.gameObject.transform.position - transform.position).sqrMagnitude < (ActivationRange * ActivationRange))
+            Vector3 toPlayer = Mission.instance.PlayerFrame.Core.gameObject.transform.position - spawnPoint.position;
+            if (toPlayer.sqrMagnitude < (ActivationRange * ActivationRange))
             {
-                Activated = true;
-            }
-            else
-            {
-                return;
+                //Line-of-Sight check
+                if (Physics.Raycast(spawnPoint.position, toPlayer.normalized, toPlayer.magnitude, LayerMask.GetMask(new string[] { "Terrain" }))) 
+                {
+                    Debug.DrawLine(spawnPoint.position, Mission.instance.PlayerFrame.transform.position, Color.red);
+                }
+                else
+                {
+                    Debug.DrawLine(spawnPoint.position, Mission.instance.PlayerFrame.transform.position, Color.blue);
+                    Activated = true;
+                }
             }
         }
-
-        timeSinceLastSpawn += Time.fixedDeltaTime;
-        if(timeSinceLastSpawn >= SpawnTime)
+        else
         {
-            Spawn();
-            timeSinceLastSpawn = 0.0f;
+            timeSinceLastSpawn += Time.fixedDeltaTime;
+            if (timeSinceLastSpawn >= SpawnTime)
+            {
+                Spawn();
+                timeSinceLastSpawn = 0.0f;
+            }
         }
     }
 
