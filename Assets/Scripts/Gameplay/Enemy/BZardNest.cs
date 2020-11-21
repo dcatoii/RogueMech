@@ -40,7 +40,7 @@ public class BZardNest : Mob {
         else
         {
             timeSinceLastSpawn += Time.fixedDeltaTime;
-            if (timeSinceLastSpawn >= SpawnTime)
+            if (timeSinceLastSpawn >= SpawnTime && mySpawn.Count < MaxSpawn)
             {
                 Spawn();
                 timeSinceLastSpawn = 0.0f;

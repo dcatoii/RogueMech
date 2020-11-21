@@ -36,6 +36,9 @@ public class Beam : Projectile {
         //sort the components by mob
         foreach(KeyValuePair<Collider, FrameComponent> mobCollider in UnitsInDamageArea)
         {
+            if (mobCollider.Value == null)
+                return;
+
             Mob target = mobCollider.Value.GetComponentInParent<Mob>();
             if (target == null)
                 continue;
