@@ -202,13 +202,14 @@ MonoBehaviour:
   MobID: BzardNest
   DeathParticles: {fileID: 1956471136618758, guid: c805e34c67f8ca343ae486d4e12c3608,
     type: 2}
-  Health: 5000
+  Health: 3500
   MaxSpawn: 4
   ActivationRange: 250
   SpawnTime: 5
   spawnPoint: {fileID: 4446015867734268}
   prefab: {fileID: 114228096270085378, guid: a2e0fea4a6ad5bf4f83c31a5134b931f, type: 2}
   Activated: 0
+  CountSpawnTimeWhileMaxSpawns: 0
 --- !u!136 &136567547433437220
 CapsuleCollider:
   m_ObjectHideFlags: 1
