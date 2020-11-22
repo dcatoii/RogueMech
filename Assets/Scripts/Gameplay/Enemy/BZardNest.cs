@@ -12,6 +12,7 @@ public class BZardNest : Mob {
     public Transform spawnPoint;
     public BZard prefab;
     public bool Activated = false;
+    public bool CountSpawnTimeWhileMaxSpawns = false;
 
     List<BZard> mySpawn = new List<BZard>();
 
@@ -39,7 +40,9 @@ public class BZardNest : Mob {
         }
         else
         {
-            timeSinceLastSpawn += Time.fixedDeltaTime;
+            if(mySpawn.Count < MaxSpawn || CountSpawnTimeWhileMaxSpawns)
+                timeSinceLastSpawn += Time.fixedDeltaTime;
+
             if (timeSinceLastSpawn >= SpawnTime && mySpawn.Count < MaxSpawn)
             {
                 Spawn();
