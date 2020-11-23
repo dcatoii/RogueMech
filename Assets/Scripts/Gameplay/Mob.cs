@@ -19,7 +19,7 @@ public class Mob : MonoBehaviour {
         if (isDying)
             return;
 
-        Mission.instance.BroadcastMessage("OnEnemyDestroyed", MobID);
+        Mission.instance.BroadcastMessage("OnEnemyDestroyed", MobID, SendMessageOptions.DontRequireReceiver);
         Object.Destroy(this.gameObject);
         GameObject.Instantiate(DeathParticles, transform.position, Quaternion.identity);
         isDying = true;

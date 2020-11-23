@@ -6,6 +6,7 @@ public class ReplayMissionButton : MonoBehaviour {
 
 	public void ReplayMission()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Mission_01");
+        //reload current mission scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
