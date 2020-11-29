@@ -66,14 +66,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261489491305700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 261.7, y: 65, z: 127.8}
+  m_LocalRotation: {x: -0, y: 0.4994176, z: -0, w: 0.8663615}
+  m_LocalPosition: {x: 80.4, y: 48.4, z: 104.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4387538548917886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 59.923004, z: 0}
 --- !u!54 &54737180303672696
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MobID: 
+  Faction: 0
   DeathParticles: {fileID: 1524785067068044, guid: f8a1237270b09794ea2d7333e48d1e63,
     type: 2}
   Core: {fileID: 0}

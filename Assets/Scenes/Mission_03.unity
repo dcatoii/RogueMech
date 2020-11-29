@@ -1621,6 +1621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MobID: C.A.R.G.O Train
+  Faction: 0
   DeathParticles: {fileID: 0}
   EscortVolume: {fileID: 1840337706}
   Path: {fileID: 1754584345}
@@ -4027,6 +4028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975271776}
   - component: {fileID: 975271777}
+  - component: {fileID: 975271778}
   m_Layer: 12
   m_Name: Waypoint
   m_TagString: Untagged
@@ -4041,7 +4043,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 975271775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 243.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1754584344}
@@ -4059,6 +4061,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &975271778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975271775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975dc639c612e2240be479710f644010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerClose: 0
+  NoEnemies: 0
+  Speed: 20
 --- !u!1 &1008508021
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,15 +4317,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 118.4
+      value: 80.4
       objectReference: {fileID: 0}
     - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 48.4
       objectReference: {fileID: 0}
     - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 81
+      value: 104.8
       objectReference: {fileID: 0}
     - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4334,10 +4350,6 @@ Prefab:
     - target: {fileID: 1261489491305700, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
       propertyPath: m_Name
       value: PlayerSpawnFrame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741999588144324, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 59.923004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11de9e2b884e5de4590a8c66e39971fa, type: 2}
@@ -6543,7 +6555,7 @@ GameObject:
   - component: {fileID: 1754584344}
   - component: {fileID: 1754584345}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TrainPath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6577,6 +6589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waypoints:
+  - {fileID: 1906365594}
   - {fileID: 1906365594}
   - {fileID: 1464666584}
 --- !u!1 &1787747266

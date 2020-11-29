@@ -21,6 +21,9 @@ public class MechFrame : Mob {
     int totalEnergyCost = 0;
     int totalLegsWeight = 0;
 
+
+    public override Transform targetPoint { get { return Core.transform; } }
+
     // Use this for initialization
     void Start()
     {
