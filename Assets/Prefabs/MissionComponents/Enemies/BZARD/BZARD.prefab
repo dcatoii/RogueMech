@@ -56,6 +56,8 @@ GameObject:
   - component: {fileID: 136598390951854374}
   - component: {fileID: 65273931820817566}
   - component: {fileID: 65659438710419056}
+  - component: {fileID: 114282731997620146}
+  - component: {fileID: 114015507765228338}
   m_Layer: 10
   m_Name: BZARD
   m_TagString: Untagged
@@ -179,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433600091800128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.14352, y: 0, z: 345.9695}
+  m_LocalPosition: {x: -94.431046, y: 240.02643, z: 489.30582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4373227362649684}
@@ -482,6 +484,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114015507765228338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433600091800128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 114282731997620146}
 --- !u!114 &114228096270085378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -494,8 +508,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MobID: BZAARD
+  Faction: 1
   DeathParticles: {fileID: 1452758733877936, guid: 193bd58c6755c8647b71ed342bffd0ac,
     type: 2}
+  Core: {fileID: 114282731997620146}
   Health: 300
   beam: {fileID: 114910759278392372}
   Speed: 15
@@ -514,6 +530,38 @@ MonoBehaviour:
   FiringTime: 2.5
   FireTrackingSpeed: 0.1
   Nest: {fileID: 0}
+--- !u!114 &114282731997620146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433600091800128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 300
+  ArmorPoints: 300
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
 --- !u!114 &114910759278392372
 MonoBehaviour:
   m_ObjectHideFlags: 1

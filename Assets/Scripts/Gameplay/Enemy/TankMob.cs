@@ -3,26 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TankMob : Mob {
-    public int Health = 1000;
     public Weapon TankGun;
     public bool Activated = false;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Weapons"))
-        {
-            Projectile colProjectile = collision.gameObject.GetComponent<Projectile>();
-            //if(colProjectile.Source)
-            Health -= colProjectile.Damage;
-            Activated = true;
-            if (Health <= 0)
-            {
-                Die();
-            }
-        }
-    }
-
-    private void FixedUpdate()
+   private void FixedUpdate()
     {
         if (Mission.instance.PlayerFrame == null || ApplicationContext.Game.IsPaused)
             return;

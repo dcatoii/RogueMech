@@ -81,12 +81,12 @@ public class Weapon : FrameAccessory {
         //////////////////unity raycast bug workaround/////////////////////////
         TerrainRayInfo = Physics.RaycastAll(Camera.main.transform.position,
                                             (target - Camera.main.transform.position).normalized,
-                                            Mech.RightHandWeapon.FunctionalRange,
+                                            FunctionalRange,
                                             LayerMask.GetMask(new string[] { "Terrain" }));
 
         UnitRayInfo = Physics.RaycastAll(Camera.main.transform.position,
                                             (target - Camera.main.transform.position).normalized,
-                                            Mech.RightHandWeapon.FunctionalRange,
+                                            FunctionalRange,
                                             LayerMask.GetMask(new string[] { "Units" }));
 
         List<RaycastHit> AllHits = new List<RaycastHit>(TerrainRayInfo);

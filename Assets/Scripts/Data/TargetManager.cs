@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TargetManager {
 
-    private Dictionary<Mob.MobFaction, List<Mob>> ValidTargets;
+    private Dictionary<Mob.MobFaction, List<Mob>> ValidTargets = new Dictionary<Mob.MobFaction, List<Mob>>();
     
     public void RegisterMob(Mob mob)
     {

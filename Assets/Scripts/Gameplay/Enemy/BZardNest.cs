@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BZardNest : Mob {
 
-    public int Health = 5000;
     public int MaxSpawn = 4;
     public float ActivationRange = 250.0f;
     public float SpawnTime = 5.0f;
@@ -63,17 +62,4 @@ public class BZardNest : Mob {
         mySpawn.Remove(bzard);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Weapons"))
-        {
-            Activated = true;
-            Projectile colProjectile = collision.gameObject.GetComponent<Projectile>();
-            Health -= colProjectile.Damage;
-            if (Health <= 0)
-            {
-                Die();
-            }
-        }
-    }
 }

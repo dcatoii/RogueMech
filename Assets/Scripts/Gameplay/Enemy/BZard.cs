@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BZard : Mob {
-    public int Health = 300;
     public Weapon beam;
     public float Speed = 15.0f;
     public float LiftSpeed = 7.5f;
@@ -43,33 +42,21 @@ public class BZard : Mob {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Weapons"))
-        {
-            Projectile colProjectile = collision.gameObject.GetComponent<Projectile>();
-            if (colProjectile.Source == this)
-                return;
-
-            Health -= colProjectile.Damage;
-            if (Health <= 0)
-            {
-                currentState = BZARDState.Dying;
-                //let physics take over
-                GetComponent<Rigidbody>().useGravity = true;
-                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-                //bop it!
-                //TODO: Try sending in the direction opposite the collision point instead
-                float randForceX = UnityEngine.Random.Range(0.0f, 10.0f);
-                float randForceY = UnityEngine.Random.Range(0.0f, 5.0f);
-                float randForceZ = UnityEngine.Random.Range(-3.0f, -10.0f);
-                GetComponent<Rigidbody>().AddForce(randForceX,randForceY,randForceZ, ForceMode.Impulse);
-
-            }
-        }
-        //when dying, crash when we hit the ground
-        else if (currentState == BZARDState.Dying && collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
+       //when dying, crash when we hit the ground
+       if (currentState == BZARDState.Dying && collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
         {
             Die();
         }
+    }
+
+    void BopIt()
+    {
+        //bop it!
+        //TODO: Try sending in the direction opposite the collision point instead
+        float randForceX = UnityEngine.Random.Range(0.0f, 10.0f);
+        float randForceY = UnityEngine.Random.Range(0.0f, 5.0f);
+        float randForceZ = UnityEngine.Random.Range(-3.0f, -10.0f);
+        GetComponent<Rigidbody>().AddForce(randForceX, randForceY, randForceZ, ForceMode.Impulse);
     }
 
     private void FixedUpdate()
@@ -258,5 +245,20 @@ public class BZard : Mob {
             Nest = null;
         }
         base.Die();
+    }
+
+    protected override void CoreDamaged(int amount)
+    {
+        base.CoreDamaged(amount);
+
+        if (Core.IsDestroyed)
+            BopIt();
+    }
+
+    protected override void CoreBroken()
+    {
+        GetComponent<Rigidbody>().useGravity = true;
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        currentState = BZARDState.Dying;
     }
 }

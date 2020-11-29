@@ -50,7 +50,8 @@ public class FrameCore : FrameComponent {
 
     private void StopAllEnergySystems()
     {
-        thruster.OnThrusterUp();
+        if(thruster != null)
+            thruster.OnThrusterUp();
     }
 
     public override void OnHit(Projectile projectile)

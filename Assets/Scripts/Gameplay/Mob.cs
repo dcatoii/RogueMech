@@ -12,6 +12,7 @@ public class Mob : MonoBehaviour {
     }
 
     public string MobID;
+    public Transform MechRoot;
     public MobFaction Faction = MobFaction.Enemy;
     public GameObject DeathParticles;
     protected bool isDying = false;
