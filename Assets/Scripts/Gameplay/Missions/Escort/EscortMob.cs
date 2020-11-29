@@ -13,10 +13,11 @@ public class EscortMob : Mob {
     bool HasReachedDestination {  get { return hasReachedDestination; } }
     public float TurnSpeed = 0.1f;
 
-    protected void Start()
+    protected override void Start()
     {
         hasReachedDestination = false;
         CurrentWaypointIndex = 0;
+        base.Start();
     }
 
     protected virtual void FixedUpdate()

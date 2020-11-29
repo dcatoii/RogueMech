@@ -17,6 +17,8 @@ public class Mob : MonoBehaviour {
     protected bool isDying = false;
     public virtual Transform targetPoint { get { return transform; } }
 
+    public FrameCore Core;
+
     void OnDestroy()
     {
         
@@ -42,8 +44,18 @@ public class Mob : MonoBehaviour {
 
     protected virtual void Start()
     {
-        ApplicationContext.AIManager.RegisterMob(this);
+        if(Core != null)
+            ApplicationContext.AIManager.RegisterMob(this);
     }
 
+    protected virtual void CoreDamaged(int amount)
+    {
+        Core.TakeDamage(amount);
+    }
+
+    protected virtual void CoreBroken()
+    {
+        Die();
+    }
 
 }

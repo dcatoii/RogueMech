@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MechFrame : Mob {
 
-    public FrameCore Core;
     public FrameHead Head;
     public FrameArms Arms;
     public FrameLegs Legs;
@@ -25,9 +24,10 @@ public class MechFrame : Mob {
     public override Transform targetPoint { get { return Core.transform; } }
 
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
         myAnimator = GetComponent<Animator>();
+        base.Start();
     }
 
     /// <summary>
@@ -35,10 +35,7 @@ public class MechFrame : Mob {
     /// Could later experiment with the core only taking overflow damage from other parts
     /// </summary>
     /// <param name="amount"></param>
-    void CoreDamaged(int amount)
-    {
-        Core.TakeDamage(amount);
-    }
+   
 
     void LegsDamaged(int amount)
     {
@@ -58,11 +55,7 @@ public class MechFrame : Mob {
         CoreDamaged(amount);
     }
 
-    void CoreBroken()
-    {
-        Die();
-    }
-
+    
     void ArmsBroken()
     {
         Mission.instance.BadNotification("Arms Destroyed");
