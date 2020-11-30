@@ -51,7 +51,7 @@ public class EscortMob : Mob {
 
     public void WaypointReached(EscortWaypoint waypoint)
     {
-        if (waypoint != CurrentWaypoint)
+        if (HasReachedDestination || waypoint != CurrentWaypoint)
             return;
 
         CurrentWaypointIndex++;

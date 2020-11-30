@@ -539,6 +539,55 @@ Transform:
   m_Father: {fileID: 2105019346}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &74430049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 74430050}
+  - component: {fileID: 74430051}
+  m_Layer: 0
+  m_Name: ProtectCargoMin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &74430050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74430049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 401084399}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &74430051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74430049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bd13ac8bdf4ef41a3db019a3827829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreValue: 5000
+  isBonusObjective: 1
+  isMissionActive: 0
+  failOnComplete: 1
+  MissionTextFormat: Prevent further damage to the CARGO
+  SecondaryObjectives: []
+  ObjectiveStartTriggers: []
+  EnemyID: CARGO
+  TargetCount: 2
 --- !u!1 &85719852
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +726,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &94040583
 BoxCollider:
@@ -833,6 +882,94 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156092764}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &162029033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 162029034}
+  - component: {fileID: 162029037}
+  - component: {fileID: 162029036}
+  - component: {fileID: 162029035}
+  m_Layer: 10
+  m_Name: EngineCore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &162029034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162029033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 566659745}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162029035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162029033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 162029036}
+--- !u!114 &162029036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162029033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 5000
+  ArmorPoints: 5000
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!136 &162029037
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162029033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.5
+  m_Height: 12
+  m_Direction: 2
+  m_Center: {x: 0, y: 2.5, z: -6}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  component: {fileID: 0}
+  component: {fileID: 221821893}
 --- !u!114 &221821893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,7 +1654,7 @@ Transform:
   - {fileID: 965743632}
   - {fileID: 1263991330}
   m_Father: {fileID: 566659745}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396323234
 GameObject:
@@ -1623,6 +1760,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &401084398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401084399}
+  - component: {fileID: 401084400}
+  m_Layer: 0
+  m_Name: ProtectCargoRegular
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &401084399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401084398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 74430050}
+  m_Father: {fileID: 1228122686}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &401084400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401084398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bd13ac8bdf4ef41a3db019a3827829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreValue: 10000
+  isBonusObjective: 1
+  isMissionActive: 0
+  failOnComplete: 1
+  MissionTextFormat: Prevent further damage to the CARGO
+  SecondaryObjectives:
+  - {fileID: 74430051}
+  ObjectiveStartTriggers: []
+  EnemyID: CARGO
+  TargetCount: 2
 --- !u!1 &406624341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,8 +2292,6 @@ GameObject:
   - component: {fileID: 566659746}
   - component: {fileID: 566659751}
   - component: {fileID: 566659750}
-  - component: {fileID: 566659749}
-  - component: {fileID: 566659748}
   - component: {fileID: 566659747}
   m_Layer: 14
   m_Name: CARGO Engine
@@ -2124,6 +2310,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 162029034}
   - {fileID: 332605407}
   - {fileID: 1840337708}
   m_Father: {fileID: 400734799}
@@ -2237,50 +2424,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &566659748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 566659744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  component: {fileID: 566659749}
---- !u!114 &566659749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 566659744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cost: 0
-  StoreImage: {fileID: 0}
-  Manufacturer: GeneriCon
-  PartID: 
-  UpgradeLevels: []
-  AppliedUpgrades: []
-  MaxArmor: 5000
-  ArmorPoints: 5000
-  RightArmSocket: {fileID: 0}
-  LeftArmSocket: {fileID: 0}
-  HeadSocket: {fileID: 0}
-  ThrusterSocket: {fileID: 0}
-  CameraAnchor: {fileID: 0}
-  thruster: {fileID: 0}
-  Energy: 0
-  EnergyCapacity: 0
-  MaxEnergy: 0
-  RechargeRate: 0
-  RechargeCooldown: 2
-  TimeSinceLastEnergyUsed: 0
-  Weight: 2000
 --- !u!114 &566659750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,8 +2438,9 @@ MonoBehaviour:
   MobID: C.A.R.G.O Train
   MechRoot: {fileID: 0}
   Faction: 0
-  DeathParticles: {fileID: 0}
-  Core: {fileID: 0}
+  DeathParticles: {fileID: 1744492312578928, guid: 7b829eda61d43ab44adde01f90a775b7,
+    type: 2}
+  Core: {fileID: 162029036}
   EscortVolume: {fileID: 1840337706}
   Path: {fileID: 1754584345}
   TurnSpeed: 0.1
@@ -2313,7 +2457,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &581938753
 GameObject:
@@ -2513,7 +2657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  component: {fileID: 0}
+  component: {fileID: 596119132}
 --- !u!114 &596119132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2635,6 +2779,55 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 600398455}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &625241443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625241444}
+  - component: {fileID: 625241445}
+  m_Layer: 0
+  m_Name: ProtectEngine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625241444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625241443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1797519791}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &625241445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625241443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bd13ac8bdf4ef41a3db019a3827829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreValue: 0
+  isBonusObjective: 0
+  isMissionActive: 0
+  failOnComplete: 1
+  MissionTextFormat: Do not allow the Train Egnine to be destroyed
+  SecondaryObjectives: []
+  ObjectiveStartTriggers: []
+  EnemyID: C.A.R.G.O Train
+  TargetCount: 1
 --- !u!1 &637206126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  component: {fileID: 0}
+  component: {fileID: 744777911}
 --- !u!114 &744777911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5141,7 +5334,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1185022076
 BoxCollider:
@@ -5332,6 +5525,57 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196506304}
   m_CullTransparentMesh: 0
+--- !u!1 &1228122685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228122686}
+  - component: {fileID: 1228122687}
+  m_Layer: 0
+  m_Name: ProtectCargoMax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228122686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228122685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 401084399}
+  m_Father: {fileID: 1797519791}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228122687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228122685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bd13ac8bdf4ef41a3db019a3827829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreValue: 20000
+  isBonusObjective: 1
+  isMissionActive: 0
+  failOnComplete: 1
+  MissionTextFormat: Ensure all cargo arrives safely
+  SecondaryObjectives:
+  - {fileID: 401084400}
+  ObjectiveStartTriggers: []
+  EnemyID: CARGO
+  TargetCount: 1
 --- !u!1 &1235513606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,7 +5857,7 @@ MonoBehaviour:
   isBonusObjective: 0
   isMissionActive: 0
   failOnComplete: 0
-  MissionTextFormat: Escort the {1} to its destination
+  MissionTextFormat: Escort the {0} to its destination
   SecondaryObjectives: []
   ObjectiveStartTriggers: []
   TargetCount: 1
@@ -6929,7 +7173,6 @@ MonoBehaviour:
   Waypoints:
   - {fileID: 975271778}
   - {fileID: 1906365594}
-  - {fileID: 1464666584}
 --- !u!1 &1787747266
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7359,8 @@ MonoBehaviour:
   MissionID: Chapter_00_Mission_01
   StartingGoals:
   - {fileID: 1292856346}
+  - {fileID: 625241445}
+  - {fileID: 1228122687}
   HUD: {fileID: 1787747267}
   PlayerFrame: {fileID: 1072583074}
   BaseAward: 25000
@@ -7132,6 +7377,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1292856345}
+  - {fileID: 625241444}
+  - {fileID: 1228122686}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7349,7 +7596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 566659745}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857585043
 GameObject:
@@ -7589,7 +7836,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906365592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 500}
+  m_LocalPosition: {x: 0, y: 0, z: 321.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1754584344}
@@ -8214,7 +8461,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &2105019349
 BoxCollider:
