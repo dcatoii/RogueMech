@@ -18,7 +18,7 @@ public class EscortFollowerMob : EscortMob {
 
         if(Leader.IsMoving)
         {
-            MoveForward();
+            MoveForward(Leader.CurrentWaypoint.Speed);
             isMoving = true;
         }
         else

@@ -30,11 +30,11 @@ public class EscortMob : Mob {
 
         if (CurrentWaypoint.FlagMask == EscortFlags.AutoScroll)
         {
-            MoveForward();
+            MoveForward(CurrentWaypoint.Speed);
         }
         else if ((CurrentWaypoint.FlagMask & EscortVolume.EscortFlag) == CurrentWaypoint.FlagMask)
         {
-            MoveForward();
+            MoveForward(CurrentWaypoint.Speed);
         }
         else
         {
@@ -42,10 +42,10 @@ public class EscortMob : Mob {
         }
     }
 
-    protected void MoveForward()
+    protected void MoveForward(float speed)
     {
         TurnTowardsWaypoint();
-        transform.position += transform.forward * CurrentWaypoint.Speed * Time.fixedDeltaTime;
+        transform.position += transform.forward * speed * Time.fixedDeltaTime;
         isMoving = true;
     }
 
@@ -62,6 +62,7 @@ public class EscortMob : Mob {
     protected void OnDestinationReached()
     {
         hasReachedDestination = true;
+        isMoving = false;
         Mission.instance.BroadcastMessage("OnEscortComplete", this, SendMessageOptions.DontRequireReceiver);
     }
 
