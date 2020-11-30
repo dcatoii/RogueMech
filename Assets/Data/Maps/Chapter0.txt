@@ -27,6 +27,15 @@
       "Location": "Canyon",
       "BaseReward": 15000,
       "FirstTimeBonus": 35000,
+    },
+	{
+      "MissionName": "Guard Precious CARGO",
+      "MissionID": "Chapter_00_Mission_03",
+      "SceneName": "Mission_03",
+      "MissionDetails": "A Critical Armaments Resources and Gear Order shipment is on the way, but as you've seen the canyon has become very dangerous terrain. The C.A.R.G.O. train is going to need your protection in order to deliver the goods to our base.\n\n Meet up with with the train and ensure the contents get delivered. The driver's safety is of the utmost importance. If the lead engine car is destroyed that C.A.R.G.O. is dead on the rocks.\n\n-A bonus payout will be awarded based on the amount of C.A.R.G.O. successfully delivered.",
+      "Location": "Canyon",
+      "BaseReward": 5000,
+      "FirstTimeBonus": 25000,
     }
   ]
 }
