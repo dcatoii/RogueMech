@@ -28,6 +28,7 @@ public class Weapon : FrameAccessory {
         GameObject newProjectileObject = (GameObject.Instantiate(ProjectilePrefab, FirePoint.transform.position, Quaternion.identity) as GameObject);
         newProjectileObject.GetComponent<Projectile>().Source = GetComponentInParent<MechFrame>();
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
+        newProjectileObject.GetComponent<Projectile>().SetDamage(damage);
         TimeSinceLastFire = 0.0f;
     }
 
