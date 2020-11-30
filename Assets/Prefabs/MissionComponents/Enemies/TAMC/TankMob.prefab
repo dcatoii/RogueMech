@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524785067068044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 449.94272, y: 16.004395, z: 325.18527}
+  m_LocalPosition: {x: 201.97748, y: 585.5021, z: 307.5533}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4196878834898190}
@@ -345,7 +345,7 @@ MonoBehaviour:
   TimeSinceLastFire: 0
   Weight: 1000
   EnergyCost: 400
-  damage: 0
+  damage: 600
   HUDPrefab: {fileID: 0}
 --- !u!114 &114173838963007472
 MonoBehaviour:
@@ -408,5 +408,7 @@ MonoBehaviour:
   DeathParticles: {fileID: 1524785067068044, guid: f8a1237270b09794ea2d7333e48d1e63,
     type: 2}
   Core: {fileID: 114247037287536574}
-  TankGun: {fileID: 114063633995818550}
+  Target: {fileID: 0}
   Activated: 0
+  TargetMode: 1
+  TankGun: {fileID: 114063633995818550}
