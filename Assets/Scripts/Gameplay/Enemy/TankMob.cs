@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankMob : Mob {
+public class TankMob : AIMob {
     public Weapon TankGun;
-    public bool Activated = false;
 
    private void FixedUpdate()
     {
@@ -13,8 +12,9 @@ public class TankMob : Mob {
 
         if (!Activated)
         {
-            Vector3 toPlayer = Mission.instance.PlayerFrame.gameObject.transform.position - transform.position;
-            if (toPlayer.sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))
+            SelectTarget();
+            Vector3 toTarget = Target.transform.position - transform.position;
+            if (toTarget.sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))
             {
                 //Line-of-Sight check
                 if (!Physics.Linecast(TankGun.FirePoint.transform.position, Mission.instance.PlayerFrame.gameObject.transform.position, LayerMask.GetMask(new string[] { "Terrain" })))
@@ -24,16 +24,24 @@ public class TankMob : Mob {
             }
         }
 
+        else if (Target != null)
+        {
+            TurnTowardsTarget();
+            if (TankGun.TimeSinceLastFire > TankGun.RefireTime)
+            {
+                TankGun.OnFireDown(Target.transform.position);
+                SelectTarget();
+            }
+        }
         else
         {
-            TurnTowardsPlayer();
-            TankGun.OnFireDown(Mission.instance.PlayerFrame.Core.gameObject.transform.position);
+            SelectTarget();
         }
     }
 
-    void TurnTowardsPlayer()
+    void TurnTowardsTarget()
     {
-        Vector3 target = Mission.instance.PlayerFrame.gameObject.transform.position;
+        Vector3 target = Target.transform.position;
         target.y = transform.position.y;
         float strength = .5f;
 

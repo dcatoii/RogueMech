@@ -6,13 +6,59 @@ public class AIMob : Mob {
 
     public Mob Target;
     public bool Activated = false;
-
-	protected virtual void SelectTarget()
+    public enum TargetModes
     {
-        SelectRandomTarget();
+        
+        None, //Select no target
+        Player, // Always choose the player as target
+        Locked, // Stay on single target until it gets destroyed
+        Random, // Choose a random target each cycle
+        Nearest, // Choose nearest target each cycle
+        Custom, //use child-specific implementation if one exists. Used as the default 
     }
 
-    public void SelectNearestTarget()
+    public TargetModes TargetMode =  TargetModes.Player;
+
+    protected virtual void SelectCustomTarget()
+    {
+        //default choose nearest
+        SelectNearestTarget();
+    }
+
+	protected void SelectTarget()
+    {
+        
+
+        if (TargetMode == TargetModes.Locked)
+        {
+            //if our locked-on target is dead, we need to find a new one, 
+            if (Target == null) 
+                SelectCustomTarget();
+            //otherwise do not change target
+        }
+        else if (TargetMode == TargetModes.None)
+        {
+            Target = null;
+        }
+        else if (TargetMode == TargetModes.Player)
+        {
+            Target = Mission.instance.PlayerFrame;
+        }
+        else if (TargetMode == TargetModes.Nearest)
+        {
+            SelectNearestTarget();
+        }
+        else if (TargetMode == TargetModes.Random)
+        {
+            SelectRandomTarget();
+        }
+        else if (TargetMode == TargetModes.Custom)
+        {
+            SelectCustomTarget();
+        }
+    }
+
+    protected void SelectNearestTarget()
     {
         List<Mob> TargetOptions = ApplicationContext.AIManager.GetValidTargets(this);
         Target = null;
@@ -37,12 +83,12 @@ public class AIMob : Mob {
         }
     }
 
-    public void SelectPlayerAsTarget()
+    protected void SelectPlayerAsTarget()
     {
         Target = Mission.instance.PlayerFrame;
     }
 
-    public void SelectRandomTarget()
+    protected void SelectRandomTarget()
     {
         List<Mob> TargetOptions = ApplicationContext.AIManager.GetValidTargets(this);
         if (TargetOptions.Count == 0)
@@ -52,8 +98,10 @@ public class AIMob : Mob {
         Target = TargetOptions[random];
     }
 
-    public void ForceTarget(Mob target)
+    public void ForceTarget(Mob target, bool locked = false)
     {
         Target = target;
+        if (locked)
+            TargetMode = TargetModes.Locked;
     }
 }
