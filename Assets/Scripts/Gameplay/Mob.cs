@@ -33,7 +33,7 @@ public class Mob : MonoBehaviour {
 
         Mission.instance.BroadcastMessage("OnEnemyDestroyed", MobID, SendMessageOptions.DontRequireReceiver);
         Object.Destroy(this.gameObject);
-        GameObject.Instantiate(DeathParticles, transform.position, Quaternion.identity);
+        GameObject.Instantiate(DeathParticles, transform.position, Quaternion.identity, transform.parent);
         isDying = true;
         ApplicationContext.AIManager.UnregisterMob(this);
     }

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 18352270}
   - component: {fileID: 18352272}
   - component: {fileID: 18352271}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 67005609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 94040580}
-  m_Layer: 0
+  - component: {fileID: 94040583}
+  - component: {fileID: 94040582}
+  - component: {fileID: 94040581}
+  m_Layer: 14
   m_Name: CARGO Palette (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,6 +644,53 @@ Transform:
   m_Father: {fileID: 400734799}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &94040581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94040579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3119edd2b03783047ac0240df7e38612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: 
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 0}
+  Core: {fileID: 0}
+  EscortVolume: {fileID: 1840337706}
+  Path: {fileID: 1754584345}
+  TurnSpeed: 0.1
+  Leader: {fileID: 566659750}
+--- !u!54 &94040582
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94040579}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
+--- !u!65 &94040583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94040579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2, z: 15}
+  m_Center: {x: 0, y: 1, z: -7.5}
 --- !u!1 &121625410
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +771,7 @@ GameObject:
   - component: {fileID: 156092765}
   - component: {fileID: 156092767}
   - component: {fileID: 156092766}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +909,7 @@ GameObject:
   - component: {fileID: 201274024}
   - component: {fileID: 201274026}
   - component: {fileID: 201274025}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +1049,10 @@ GameObject:
   m_Component:
   - component: {fileID: 221821890}
   - component: {fileID: 221821891}
-  m_Layer: 0
+  - component: {fileID: 221821894}
+  - component: {fileID: 221821893}
+  - component: {fileID: 221821892}
+  m_Layer: 10
   m_Name: Cargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,6 +1085,67 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 12}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &221821892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221821889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 0}
+--- !u!114 &221821893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221821889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 2500
+  ArmorPoints: 2500
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!114 &221821894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221821889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9f8962aee490c4bbd1119f1a4a4e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: CARGO
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 1744492312578928, guid: 7b829eda61d43ab44adde01f90a775b7,
+    type: 2}
+  Core: {fileID: 221821893}
 --- !u!1 &222271512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1208,7 @@ GameObject:
   - component: {fileID: 230068007}
   - component: {fileID: 230068009}
   - component: {fileID: 230068008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1352,7 @@ GameObject:
   - component: {fileID: 265344087}
   - component: {fileID: 265344089}
   - component: {fileID: 265344088}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1415,7 +1529,7 @@ GameObject:
   - component: {fileID: 396323235}
   - component: {fileID: 396323237}
   - component: {fileID: 396323236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1485,10 +1599,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400734799}
-  - component: {fileID: 400734803}
-  - component: {fileID: 400734802}
-  - component: {fileID: 400734801}
-  - component: {fileID: 400734800}
   m_Layer: 14
   m_Name: CARGO Train
   m_TagString: Untagged
@@ -1510,150 +1620,9 @@ Transform:
   - {fileID: 2105019346}
   - {fileID: 94040580}
   - {fileID: 1185022073}
-  - {fileID: 1840337708}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &400734800
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400734798}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6f3ddc790efa70b4091cb9b6462ea738, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &400734801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400734798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62fd3c48333e3f14a9e6e4e290874fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MobID: C.A.R.G.O Train
-  Faction: 0
-  DeathParticles: {fileID: 0}
-  EscortVolume: {fileID: 1840337706}
-  Path: {fileID: 1754584345}
-  TurnSpeed: 0.1
---- !u!54 &400734802
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400734798}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 0
---- !u!136 &400734803
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 400734798}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3
-  m_Height: 60
-  m_Direction: 2
-  m_Center: {x: 0, y: 3, z: -29.6}
 --- !u!1 &406624341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +1788,7 @@ GameObject:
   - component: {fileID: 414300691}
   - component: {fileID: 414300693}
   - component: {fileID: 414300692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2102,12 @@ GameObject:
   m_Component:
   - component: {fileID: 566659745}
   - component: {fileID: 566659746}
-  m_Layer: 0
+  - component: {fileID: 566659751}
+  - component: {fileID: 566659750}
+  - component: {fileID: 566659749}
+  - component: {fileID: 566659748}
+  - component: {fileID: 566659747}
+  m_Layer: 14
   m_Name: CARGO Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2151,6 +2125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 332605407}
+  - {fileID: 1840337708}
   m_Father: {fileID: 400734799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2167,6 +2142,179 @@ CapsuleCollider:
   m_Height: 12
   m_Direction: 2
   m_Center: {x: 0, y: 2.5, z: -6}
+--- !u!82 &566659747
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566659744}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6f3ddc790efa70b4091cb9b6462ea738, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &566659748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566659744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 566659749}
+--- !u!114 &566659749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566659744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 5000
+  ArmorPoints: 5000
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!114 &566659750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566659744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fd3c48333e3f14a9e6e4e290874fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: C.A.R.G.O Train
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 0}
+  Core: {fileID: 0}
+  EscortVolume: {fileID: 1840337706}
+  Path: {fileID: 1754584345}
+  TurnSpeed: 0.1
+--- !u!54 &566659751
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566659744}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1 &581938753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2466,10 @@ GameObject:
   m_Component:
   - component: {fileID: 596119129}
   - component: {fileID: 596119130}
-  m_Layer: 0
+  - component: {fileID: 596119133}
+  - component: {fileID: 596119132}
+  - component: {fileID: 596119131}
+  m_Layer: 10
   m_Name: Cargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,6 +2502,67 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 12}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &596119131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596119128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 0}
+--- !u!114 &596119132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596119128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 2500
+  ArmorPoints: 2500
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!114 &596119133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596119128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9f8962aee490c4bbd1119f1a4a4e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: CARGO
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 1744492312578928, guid: 7b829eda61d43ab44adde01f90a775b7,
+    type: 2}
+  Core: {fileID: 596119132}
 --- !u!1 &600398455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,7 +2713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 638807431}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2752,7 @@ GameObject:
   - component: {fileID: 643814378}
   - component: {fileID: 643814380}
   - component: {fileID: 643814379}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,7 +3035,10 @@ GameObject:
   m_Component:
   - component: {fileID: 744777908}
   - component: {fileID: 744777909}
-  m_Layer: 0
+  - component: {fileID: 744777912}
+  - component: {fileID: 744777911}
+  - component: {fileID: 744777910}
+  m_Layer: 10
   m_Name: Cargo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2856,6 +3071,67 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 12}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &744777910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744777907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 0}
+--- !u!114 &744777911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744777907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 2500
+  ArmorPoints: 2500
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!114 &744777912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744777907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9f8962aee490c4bbd1119f1a4a4e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: CARGO
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 1744492312578928, guid: 7b829eda61d43ab44adde01f90a775b7,
+    type: 2}
+  Core: {fileID: 744777911}
 --- !u!1 &754159510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +3140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754159511}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3014,7 +3290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795377527}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3258,7 +3534,7 @@ GameObject:
   - component: {fileID: 858227555}
   - component: {fileID: 858227557}
   - component: {fileID: 858227556}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3719,7 @@ GameObject:
   - component: {fileID: 873459858}
   - component: {fileID: 873459860}
   - component: {fileID: 873459859}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3585,7 +3861,7 @@ GameObject:
   - component: {fileID: 893267914}
   - component: {fileID: 893267916}
   - component: {fileID: 893267915}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3706,6 +3982,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
@@ -3782,7 +4062,7 @@ GameObject:
   - component: {fileID: 916895030}
   - component: {fileID: 916895032}
   - component: {fileID: 916895031}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4085,7 +4365,7 @@ GameObject:
   - component: {fileID: 1008508022}
   - component: {fileID: 1008508024}
   - component: {fileID: 1008508023}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4364,7 +4644,7 @@ GameObject:
   - component: {fileID: 1133169642}
   - component: {fileID: 1133169644}
   - component: {fileID: 1133169643}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4803,7 +5083,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185022073}
-  m_Layer: 0
+  - component: {fileID: 1185022076}
+  - component: {fileID: 1185022075}
+  - component: {fileID: 1185022074}
+  m_Layer: 14
   m_Name: CARGO Palette (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4825,6 +5108,53 @@ Transform:
   m_Father: {fileID: 400734799}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1185022074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185022072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3119edd2b03783047ac0240df7e38612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: 
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 0}
+  Core: {fileID: 0}
+  EscortVolume: {fileID: 1840337706}
+  Path: {fileID: 1754584345}
+  TurnSpeed: 0.1
+  Leader: {fileID: 566659750}
+--- !u!54 &1185022075
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185022072}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
+--- !u!65 &1185022076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185022072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2, z: 15}
+  m_Center: {x: 0, y: 1, z: -7.5}
 --- !u!1 &1187516582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,7 +5342,7 @@ GameObject:
   - component: {fileID: 1235513607}
   - component: {fileID: 1235513609}
   - component: {fileID: 1235513608}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5082,7 +5412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237091673}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5177,7 +5507,7 @@ GameObject:
   - component: {fileID: 1273992581}
   - component: {fileID: 1273992583}
   - component: {fileID: 1273992582}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5370,7 +5700,7 @@ GameObject:
   - component: {fileID: 1304759798}
   - component: {fileID: 1304759800}
   - component: {fileID: 1304759799}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5442,7 +5772,7 @@ GameObject:
   - component: {fileID: 1321654461}
   - component: {fileID: 1321654463}
   - component: {fileID: 1321654462}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5512,7 +5842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324723429}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5911,6 +6241,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
@@ -5930,7 +6264,7 @@ GameObject:
   - component: {fileID: 1422374800}
   - component: {fileID: 1422374802}
   - component: {fileID: 1422374801}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6058,7 +6392,7 @@ GameObject:
   - component: {fileID: 1475810794}
   - component: {fileID: 1475810796}
   - component: {fileID: 1475810795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6130,7 +6464,7 @@ GameObject:
   - component: {fileID: 1479626188}
   - component: {fileID: 1479626190}
   - component: {fileID: 1479626189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6392,6 +6726,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
@@ -6411,7 +6749,7 @@ GameObject:
   - component: {fileID: 1610874841}
   - component: {fileID: 1610874843}
   - component: {fileID: 1610874842}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6483,7 +6821,7 @@ GameObject:
   - component: {fileID: 1740829693}
   - component: {fileID: 1740829695}
   - component: {fileID: 1740829694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tire (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6589,7 +6927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waypoints:
-  - {fileID: 1906365594}
+  - {fileID: 975271778}
   - {fileID: 1906365594}
   - {fileID: 1464666584}
 --- !u!1 &1787747266
@@ -7006,12 +7344,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1840337705}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400734799}
-  m_RootOrder: 4
+  m_Father: {fileID: 566659745}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857585043
 GameObject:
@@ -7165,7 +7503,7 @@ GameObject:
   - component: {fileID: 1886638660}
   - component: {fileID: 1886638662}
   - component: {fileID: 1886638661}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7268,7 +7606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975dc639c612e2240be479710f644010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerClose: 0
+  PlayerClose: 1
   NoEnemies: 0
   Speed: 15
 --- !u!135 &1906365595
@@ -7450,7 +7788,7 @@ GameObject:
   - component: {fileID: 1951605090}
   - component: {fileID: 1951605092}
   - component: {fileID: 1951605091}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7748,7 +8086,7 @@ GameObject:
   - component: {fileID: 2069903992}
   - component: {fileID: 2069903994}
   - component: {fileID: 2069903993}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackHook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7818,7 +8156,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105019346}
-  m_Layer: 0
+  - component: {fileID: 2105019349}
+  - component: {fileID: 2105019348}
+  - component: {fileID: 2105019347}
+  m_Layer: 14
   m_Name: CARGO Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7840,6 +8181,53 @@ Transform:
   m_Father: {fileID: 400734799}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2105019347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105019345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3119edd2b03783047ac0240df7e38612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MobID: 
+  MechRoot: {fileID: 0}
+  Faction: 0
+  DeathParticles: {fileID: 0}
+  Core: {fileID: 0}
+  EscortVolume: {fileID: 1840337706}
+  Path: {fileID: 1754584345}
+  TurnSpeed: 0.1
+  Leader: {fileID: 566659750}
+--- !u!54 &2105019348
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105019345}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
+--- !u!65 &2105019349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105019345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2, z: 15}
+  m_Center: {x: 0, y: 1, z: -7.5}
 --- !u!1 &2122242695
 GameObject:
   m_ObjectHideFlags: 0
@@ -7850,7 +8238,7 @@ GameObject:
   - component: {fileID: 2122242696}
   - component: {fileID: 2122242698}
   - component: {fileID: 2122242697}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

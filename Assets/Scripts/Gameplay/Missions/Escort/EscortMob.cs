@@ -12,10 +12,13 @@ public class EscortMob : Mob {
     bool hasReachedDestination = false;
     bool HasReachedDestination {  get { return hasReachedDestination; } }
     public float TurnSpeed = 0.1f;
+    protected bool isMoving = false;
+    public bool IsMoving {  get { return isMoving; } }
 
     protected override void Start()
     {
         hasReachedDestination = false;
+        isMoving = false;
         CurrentWaypointIndex = 0;
         base.Start();
     }
@@ -33,12 +36,17 @@ public class EscortMob : Mob {
         {
             MoveForward();
         }
+        else
+        {
+            isMoving = false;
+        }
     }
 
     protected void MoveForward()
     {
         TurnTowardsWaypoint();
         transform.position += transform.forward * CurrentWaypoint.Speed * Time.fixedDeltaTime;
+        isMoving = true;
     }
 
     public void WaypointReached(EscortWaypoint waypoint)
