@@ -26,7 +26,6 @@ public class Mission : MonoBehaviour {
         //safety call to make sure no lingering pauses interfere
         ApplicationContext.Game.CurrentState = isTutorialMission ? GameContext.Gamestate.Tutorial : GameContext.Gamestate.Mission;
         ApplicationContext.Resume();
-
         //Load mission context information
         if(ApplicationContext.MissionData != null)
         {
@@ -111,6 +110,7 @@ public class Mission : MonoBehaviour {
     {
         ApplicationContext.Game.IsPaused = true;
         ApplicationContext.UnlockCursor();
+        ApplicationContext.AIManager.Reset();
 
         if (wasMissionSuccessful)
         {

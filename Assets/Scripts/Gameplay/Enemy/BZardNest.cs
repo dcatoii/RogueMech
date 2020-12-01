@@ -12,6 +12,7 @@ public class BZardNest : Mob {
     public BZard prefab;
     public bool Activated = false;
     public bool CountSpawnTimeWhileMaxSpawns = false;
+    public AIMob.TargetModes BzardTargetSetting = AIMob.TargetModes.Player;
 
     List<BZard> mySpawn = new List<BZard>();
 
@@ -55,11 +56,18 @@ public class BZardNest : Mob {
         GameObject newObj = (GameObject.Instantiate(prefab.gameObject, spawnPoint.position, spawnPoint.rotation) as GameObject);
         mySpawn.Add(newObj.GetComponent<BZard>());
         newObj.GetComponent<BZard>().Nest = this;
+        newObj.GetComponent<BZard>().TargetMode = BzardTargetSetting;
     }
 
     public void HandleSpawnDeath(BZard bzard)
     {
         mySpawn.Remove(bzard);
+    }
+
+    protected override void CoreDamaged(int amount)
+    {
+        Activated = true;
+        base.CoreDamaged(amount);
     }
 
 }

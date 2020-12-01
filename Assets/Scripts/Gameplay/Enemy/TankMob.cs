@@ -13,6 +13,8 @@ public class TankMob : AIMob {
         if (!Activated)
         {
             SelectTarget();
+            if (Target == null)
+                return;
             Vector3 toTarget = Target.transform.position - transform.position;
             if (toTarget.sqrMagnitude < (TankGun.FunctionalRange * TankGun.FunctionalRange))
             {
@@ -26,6 +28,12 @@ public class TankMob : AIMob {
 
         else if (Target != null)
         {
+            if (Target == null)
+            {
+                SelectTarget();
+                return;
+            }
+
             TurnTowardsTarget();
             if (TankGun.TimeSinceLastFire > TankGun.RefireTime)
             {
@@ -48,6 +56,12 @@ public class TankMob : AIMob {
         Quaternion targetRotation = Quaternion.LookRotation(target - transform.position);
         float str = Mathf.Min(strength * Time.deltaTime, 1);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, str);
+    }
+
+    protected override void CoreDamaged(int amount)
+    {
+        Activated = true;
+        base.CoreDamaged(amount);
     }
 
 }

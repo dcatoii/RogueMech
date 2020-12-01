@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BZard : Mob {
+public class BZard : AIMob {
     public Weapon beam;
     public float Speed = 15.0f;
     public float LiftSpeed = 7.5f;
     public float hoverHeight = 25.0f;
     public float OrbitSpeed = 180.0f;
     public float TurnSpeed = 180.0f;
-    public Mob Target;
     public float OrbitDistance;
     public float OrbitDistanceSq { get { return OrbitDistance * OrbitDistance; } }
     public Vector3 targetLastPosition;
@@ -69,9 +68,7 @@ public class BZard : Mob {
         //if I have no target, look for one
         if(Target == null)
         {
-            //TODO: Use tracker system
-            Target = Mission.instance.PlayerFrame;
-            currentState = BZARDState.Chase;
+            SelectTarget();
         }
         //if we still don't have a target, just chill
         if (Target == null)
@@ -234,6 +231,7 @@ public class BZard : Mob {
         {
             beam.OnFireUp(Vector3.zero);
             currentState = BZARDState.Chase;
+            SelectTarget();
         }
     }
 
