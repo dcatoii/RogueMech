@@ -963,7 +963,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &106678579
 Transform:
@@ -1018,7 +1018,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &108940983
 MonoBehaviour:
@@ -1185,7 +1185,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 228.5
+      value: 228.03
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1227,6 +1227,16 @@ Prefab:
         type: 2}
       propertyPath: TargetMode
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063633995818550, guid: b4865cd8a98f42943bd549cf9169eb4d,
+        type: 2}
+      propertyPath: RefireTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063633995818550, guid: b4865cd8a98f42943bd549cf9169eb4d,
+        type: 2}
+      propertyPath: damage
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
@@ -1291,8 +1301,8 @@ MonoBehaviour:
   PartID: 
   UpgradeLevels: []
   AppliedUpgrades: []
-  MaxArmor: 5000
-  ArmorPoints: 5000
+  MaxArmor: 8000
+  ArmorPoints: 8000
   RightArmSocket: {fileID: 0}
   LeftArmSocket: {fileID: 0}
   HeadSocket: {fileID: 0}
@@ -1406,19 +1416,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.36234
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.932046
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_RootOrder
@@ -1442,6 +1452,10 @@ Prefab:
         type: 2}
       propertyPath: RefireTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 42.488003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
@@ -1613,7 +1627,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221821889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.75, z: -7}
+  m_LocalPosition: {x: 0, y: 3.75, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1576195845}
@@ -1631,7 +1645,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 12}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &221821892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,8 +1675,8 @@ MonoBehaviour:
   PartID: 
   UpgradeLevels: []
   AppliedUpgrades: []
-  MaxArmor: 2500
-  ArmorPoints: 2500
+  MaxArmor: 4500
+  ArmorPoints: 4500
   RightArmSocket: {fileID: 0}
   LeftArmSocket: {fileID: 0}
   HeadSocket: {fileID: 0}
@@ -2450,7 +2464,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 227.4
+      value: 226.59
       objectReference: {fileID: 0}
     - target: {fileID: 4434087380127628, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2492,6 +2506,24 @@ Prefab:
         type: 2}
       propertyPath: TargetMode
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006194897157492, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006194897157492, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063633995818550, guid: b4865cd8a98f42943bd549cf9169eb4d,
+        type: 2}
+      propertyPath: RefireTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114063633995818550, guid: b4865cd8a98f42943bd549cf9169eb4d,
+        type: 2}
+      propertyPath: damage
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4865cd8a98f42943bd549cf9169eb4d, type: 2}
@@ -2977,7 +3009,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &522227345
 MonoBehaviour:
@@ -3339,7 +3371,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596119128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.75, z: -7}
+  m_LocalPosition: {x: 0, y: 3.75, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 512993497}
@@ -3357,7 +3389,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 12}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &596119131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3387,8 +3419,8 @@ MonoBehaviour:
   PartID: 
   UpgradeLevels: []
   AppliedUpgrades: []
-  MaxArmor: 2500
-  ArmorPoints: 2500
+  MaxArmor: 4500
+  ArmorPoints: 4500
   RightArmSocket: {fileID: 0}
   LeftArmSocket: {fileID: 0}
   HeadSocket: {fileID: 0}
@@ -4129,7 +4161,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 744777907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.75, z: -7}
+  m_LocalPosition: {x: 0, y: 3.75, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1416516780}
@@ -4147,7 +4179,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 12}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &744777910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4177,8 +4209,8 @@ MonoBehaviour:
   PartID: 
   UpgradeLevels: []
   AppliedUpgrades: []
-  MaxArmor: 2500
-  ArmorPoints: 2500
+  MaxArmor: 4500
+  ArmorPoints: 4500
   RightArmSocket: {fileID: 0}
   LeftArmSocket: {fileID: 0}
   HeadSocket: {fileID: 0}
@@ -5115,7 +5147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5413,7 +5445,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &943413181
 MonoBehaviour:
@@ -5574,7 +5606,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &975271778
 MonoBehaviour:
@@ -7298,7 +7330,7 @@ Prefab:
     - target: {fileID: 114466026666250812, guid: b4865cd8a98f42943bd549cf9169eb4d,
         type: 2}
       propertyPath: TargetMode
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114063633995818550, guid: b4865cd8a98f42943bd549cf9169eb4d,
         type: 2}
@@ -7457,7 +7489,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1288360817
 MonoBehaviour:
@@ -7891,7 +7923,7 @@ Prefab:
     - target: {fileID: 114466026666250812, guid: b4865cd8a98f42943bd549cf9169eb4d,
         type: 2}
       propertyPath: TargetMode
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114063633995818550, guid: b4865cd8a98f42943bd549cf9169eb4d,
         type: 2}
@@ -8160,7 +8192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8345,7 +8377,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1475810793
 GameObject:
@@ -8701,7 +8733,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa7109f2b1223984d91652c2b463eb51, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8872,7 +8904,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1670902012
 MonoBehaviour:
@@ -8928,7 +8960,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1672184049
 MonoBehaviour:
@@ -9262,7 +9294,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1754573449
 MonoBehaviour:
@@ -10118,7 +10150,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1880913990
 MonoBehaviour:
@@ -10260,7 +10292,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1912901451
 Prefab:
@@ -10767,7 +10799,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2042582007
 MonoBehaviour:
