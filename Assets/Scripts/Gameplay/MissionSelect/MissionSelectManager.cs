@@ -96,6 +96,7 @@ public class MissionSelectManager : MonoBehaviour {
             return;
 
         ApplicationContext.MissionData = selectedCell.MissionInfo;
+        ApplicationContext.AIManager.Reset(); // clear the AI manager for the new level
         UnityEngine.SceneManagement.SceneManager.LoadScene(selectedCell.MissionInfo.SceneName);
     }
 
