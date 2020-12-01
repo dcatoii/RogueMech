@@ -23,7 +23,7 @@ public class EscortTriggerVolume : MonoBehaviour {
 
         if (mob.tag == "Player")
             AlliesInVolume.Add(mob);
-        else
+        else if(mob.Faction == Mob.MobFaction.Enemy)
             enemiesInVolume.Add(mob);
     }
 
