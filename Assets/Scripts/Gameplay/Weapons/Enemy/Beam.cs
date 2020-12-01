@@ -71,7 +71,7 @@ public class Beam : Projectile {
     {
         //if the unit is a mob collider, add it to the damage area list
         MechComponentCollisionDetector MobCollider = other.GetComponent<MechComponentCollisionDetector>();
-        if (MobCollider != null)
+        if (MobCollider != null && MobCollider.GetComponentInParent<Mob>() != Source)
         {
             if (!UnitsInDamageArea.ContainsKey(other))
                 UnitsInDamageArea.Add(other, MobCollider.component);
@@ -84,7 +84,7 @@ public class Beam : Projectile {
         MechComponentCollisionDetector MobCollider = other.GetComponent<MechComponentCollisionDetector>();
         if (MobCollider != null)
         {
-            if (!UnitsInDamageArea.ContainsKey(other))
+            if (UnitsInDamageArea.ContainsKey(other))
                 UnitsInDamageArea.Remove(other);
         }
     }

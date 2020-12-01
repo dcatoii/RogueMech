@@ -12,6 +12,8 @@ public class BZard : AIMob {
     public float TurnSpeed = 180.0f;
     public float OrbitDistance;
     public float OrbitDistanceSq { get { return OrbitDistance * OrbitDistance; } }
+    public float DetachDistance;
+    public float DetachDistanceSq { get { return DetachDistance * DetachDistance; } }
     public Vector3 targetLastPosition;
     float orbitTime;
     float orbitDuration;
@@ -147,16 +149,16 @@ public class BZard : AIMob {
         //keep up with target y
         ChaseTargetY();
 
-        if ((Target.transform.position - transform.position).sqrMagnitude > OrbitDistanceSq)
+        if ((Target.transform.position - transform.position).sqrMagnitude > DetachDistanceSq)
         {
             currentState = BZARDState.Chase;
             return;
         }
 
-        Vector3 rotateOirigin = Mission.instance.PlayerFrame.gameObject.transform.position;
+        Vector3 rotateOirigin = Target.transform.position;
         //spin around the target unit
         transform.RotateAround(rotateOirigin, Vector3.up, OrbitSpeed * Time.fixedDeltaTime);
-        transform.LookAt(Mission.instance.PlayerFrame.gameObject.transform);
+        transform.LookAt(Target.transform);
 
         targetLastPosition = Target.transform.position;
     }
