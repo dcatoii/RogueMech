@@ -35,19 +35,22 @@ public class InventoryCatalogue : MonoBehaviour {
         int LibID = 0;
         foreach (FramePart part in parts)
         {
-            GameObject newSKUObj = GameObject.Instantiate(SKUPrefab.gameObject, transform);
-            InventorySKU newSKU = newSKUObj.GetComponent<InventorySKU>();
-            newSKU.Catalogue = this;
-            newSKU.toggle.group = Toggles;
-            newSKU.SkuID = part.name;
-            newSKU.partPrefab = part;
-            newSKU.PreviewModel = part.gameObject;
-            newSKU.StoreImage = part.StoreImage;
-            newSKU.LibraryID = LibID;
-            newSKU.isLocked = !PlayerData.IsPartUnlocked(part.PartID);
-            LibID++;
+            if (PlayerData.IsPartBlueprintUnlocked(part))
+            {
+                GameObject newSKUObj = GameObject.Instantiate(SKUPrefab.gameObject, transform);
+                InventorySKU newSKU = newSKUObj.GetComponent<InventorySKU>();
+                newSKU.Catalogue = this;
+                newSKU.toggle.group = Toggles;
+                newSKU.SkuID = part.name;
+                newSKU.partPrefab = part;
+                newSKU.PreviewModel = part.gameObject;
+                newSKU.StoreImage = part.StoreImage;
+                newSKU.LibraryID = LibID;
+                newSKU.isLocked = !PlayerData.IsPartUnlocked(part.PartID);
+                LibID++;
 
-            Skus.Add(newSKU);
+                Skus.Add(newSKU);
+            }
         }
     }
 

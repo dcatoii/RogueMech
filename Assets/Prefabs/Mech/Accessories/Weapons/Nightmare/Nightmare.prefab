@@ -1443,6 +1443,7 @@ MonoBehaviour:
   StoreImage: {fileID: 21300000, guid: fdd2c921c62d2cd43b815fa60199d5de, type: 3}
   Manufacturer: AmeriCorp
   PartID: Nightmare
+  IsBlueprintUnlockedByDefault: 0
   UpgradeLevels:
   - {fileID: 114846231927883942}
   - {fileID: 114128879418824200}

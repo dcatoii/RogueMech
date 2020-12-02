@@ -35,6 +35,9 @@ public class PlayerData {
     public static bool IsPartUnlocked(string partID) { return PlayerPrefs.GetInt(partID + "_unlocked", 0) == 1; }
     public static void UnlockPart(string partID) { PlayerPrefs.SetInt(partID + "_unlocked", 1); }
 
+    public static bool IsPartBlueprintUnlocked(FramePart partID) { return PlayerPrefs.GetInt(partID.PartID + "_blueprint", partID.IsBlueprintUnlockedByDefault?1:0) == 1; }
+    public static void UnlockPartBlueprint (FramePart partID) { PlayerPrefs.SetInt(partID.PartID + "_blueprint", 1); }
+
     public static bool IsMissionComplete(string missionID) { return PlayerPrefs.GetInt(missionID + "_completed", 0) == 1; }
     public static void CompelteMission(string missionID) { PlayerPrefs.SetInt(missionID + "_completed", 1); }
 

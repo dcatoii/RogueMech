@@ -8,6 +8,7 @@ public class FramePart : MonoBehaviour {
     public Sprite StoreImage;
     public string Manufacturer = "GeneriCon";
     public string PartID;
+    public bool IsBlueprintUnlockedByDefault = true;
     public List<UpgradeLevel> UpgradeLevels;
 
     public List<PartUpgrade> AppliedUpgrades = new List<PartUpgrade>();

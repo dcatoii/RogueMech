@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class Mission : MonoBehaviour {
     public static Mission instance;
     public string MissionID;
     public List<MissionObjective> StartingGoals;
+
     List<MissionObjective> CompletedObjectives = new List<MissionObjective>();
     List<MissionObjective> CriticalActiveGoals = new List<MissionObjective>();
     public MissionHUD HUD;
@@ -15,7 +17,7 @@ public class Mission : MonoBehaviour {
     int BonusAmount = 0;
     public bool isTutorialMission = false;
     public float MissionTime = 0.0f;
-
+    List<FramePart> blueprintsFound = new List<FramePart>();
 
 	// Use this for initialization
 	void Start ()
@@ -116,6 +118,10 @@ public class Mission : MonoBehaviour {
         {
             //Mark Mission complete
             PlayerData.CompelteMission(MissionID);
+            foreach(FramePart blueprint in blueprintsFound)
+            {
+                PlayerData.UnlockPartBlueprint(blueprint);
+            }
 
             //add currency for mission, subtracting for damage taken
             int RepairCost = PlayerFrame.Core.MaxArmor - PlayerFrame.Core.ArmorPoints;
@@ -163,5 +169,15 @@ public class Mission : MonoBehaviour {
         }
 
         MissionTime += Time.fixedDeltaTime;
+    }
+
+    public void BonusCollected(int amount)
+    {
+        BonusAmount += amount;
+    }
+
+    public void BlueprintFound(FramePart part)
+    {
+        blueprintsFound.Add(part);
     }
 }
