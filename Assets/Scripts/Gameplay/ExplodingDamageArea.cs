@@ -11,6 +11,7 @@ public class ExplodingDamageArea : Projectile {
     public bool DestroyOnComplete = false;
 
     public bool isDamageOverTime = false;
+    List<Mob> alreadyHit = new List<Mob>();
 
     protected override void FixedUpdate()
     {
@@ -29,7 +30,20 @@ public class ExplodingDamageArea : Projectile {
 
     protected override void OnCollisionEnter(Collision collision)
     {
-        //do nothing
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Units") && Source != collision.collider.GetComponentInParent<Mob>())
+        {
+            if (collision.collider.tag == "Player")
+                return;
+            MechComponentCollisionDetector frameCollision = collision.collider.GetComponent<MechComponentCollisionDetector>();
+            if (frameCollision != null && frameCollision.component.GetComponentInParent<Mob>() != Source) //we collided with a UNIT
+            {
+                if (!alreadyHit.Contains(frameCollision.component.GetComponentInParent<Mob>()))
+                {
+                    frameCollision.component.OnHit(this);
+                    alreadyHit.Add(frameCollision.component.GetComponentInParent<Mob>());
+                }
+            }
+        }
     }
 
 }

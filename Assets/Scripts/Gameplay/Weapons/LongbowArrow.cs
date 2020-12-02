@@ -16,7 +16,7 @@ public class LongbowArrow : Projectile {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
         {
             Object.Destroy(this.gameObject);
-            GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Explode();
         }
         else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Units") && Source != collision.collider.GetComponentInParent<Mob>())
         {
@@ -28,10 +28,16 @@ public class LongbowArrow : Projectile {
             {
                 frameCollision.component.OnHit(this);
             }
-            Object.Destroy(this.gameObject);
-            GameObject explosionObj = GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
-            ExplodingDamageArea explosion = explosionObj.GetComponentInChildren<ExplodingDamageArea>();
-            explosion.SetDamage(explosionDamage);
+            Explode();
         }
+    }
+
+    void Explode()
+    {
+        Object.Destroy(this.gameObject);
+        GameObject explosionObj = GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
+        ExplodingDamageArea explosion = explosionObj.GetComponentInChildren<ExplodingDamageArea>();
+        explosion.SetDamage(explosionDamage);
+        explosion.Source = Source;
     }
 }
