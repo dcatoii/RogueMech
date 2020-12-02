@@ -21,6 +21,7 @@ public class MissionSelectManager : MonoBehaviour {
         Map.LoadMap();
         SelectCamera.transform.position = Map.StartingCell.CameraCenter.position;
         MissionData.gameObject.SetActive(false);
+        SelectCell(Map.StartingCell);
 	}
 	
 	// Update is called once per frame
