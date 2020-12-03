@@ -1349,7 +1349,6 @@ MonoBehaviour:
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
-  MaxBeamLength: 0
 --- !u!114 &114474456448310976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1385,7 +1384,6 @@ MonoBehaviour:
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
-  MaxBeamLength: 0
 --- !u!114 &114748821319245528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1406,7 +1404,6 @@ MonoBehaviour:
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
-  MaxBeamLength: 0
 --- !u!114 &114749442456448372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1427,7 +1424,6 @@ MonoBehaviour:
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
-  MaxBeamLength: 0
 --- !u!114 &114754587494732202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1465,7 +1461,6 @@ MonoBehaviour:
   ChargeFXPrefab: {fileID: 1285906073949244, guid: 7c774f5917feeaa47bb78e2f4b3b56c7,
     type: 2}
   ChargeTime: 0
-  MaxBeamLength: 50
 --- !u!114 &114799669019839018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1486,7 +1481,6 @@ MonoBehaviour:
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
-  MaxBeamLength: 0
 --- !u!114 &114846231927883942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1522,4 +1516,3 @@ MonoBehaviour:
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
-  MaxBeamLength: 0

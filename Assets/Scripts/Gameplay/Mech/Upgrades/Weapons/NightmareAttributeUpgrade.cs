@@ -6,7 +6,6 @@ public class NightmareAttributeUpgrade : WeaponAttributeUpgrade {
 
     public float EnergyRate = 0f;
     public float ChargeDelay = 0f;
-    public float MaxBeamLength = 0f;
 
     public override void Apply(FramePart Part)
     {
@@ -25,7 +24,6 @@ public class NightmareAttributeUpgrade : WeaponAttributeUpgrade {
         weapon.damage += damage;
         weapon.EnergyRate += EnergyRate;
         weapon.ChargeDelay += ChargeDelay;
-        weapon.MaxBeamLength += MaxBeamLength;
     }
 
     public override void Remove(FramePart Part)
@@ -45,7 +43,6 @@ public class NightmareAttributeUpgrade : WeaponAttributeUpgrade {
         weapon.damage -= damage;
         weapon.EnergyRate -= EnergyRate;
         weapon.ChargeDelay -= ChargeDelay;
-        weapon.MaxBeamLength -= MaxBeamLength;
 
     }
 }

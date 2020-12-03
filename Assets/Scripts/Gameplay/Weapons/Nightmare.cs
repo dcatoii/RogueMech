@@ -13,7 +13,6 @@ public class  Nightmare : Weapon
     bool isFiring = false;
     bool isCharging = false;
     Beam activeBeam = null;
-    public float MaxBeamLength = 50;
 
     public override void OnFireDown(Vector3 target)
     {
@@ -83,7 +82,7 @@ public class  Nightmare : Weapon
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
         newProjectileObject.GetComponent<Projectile>().SetDamage(damage);
         activeBeam = newProjectileObject.GetComponent<Beam>();
-        activeBeam.MaxLength = MaxBeamLength;
+        activeBeam.MaxLength = FunctionalRange;
         TimeSinceLastFire = 0.0f;
     }
 
@@ -93,6 +92,7 @@ public class  Nightmare : Weapon
         returnList.Add("Power");
         returnList.Add("Charge Up Time");
         returnList.Add("Sustained Beam Energy");
+        returnList.Add("Beam Range");
         return returnList;
     }
 
@@ -102,6 +102,7 @@ public class  Nightmare : Weapon
         returnList.Add(CalculatePower().ToString());
         returnList.Add(((int)(ChargeDelay * 1000)).ToString());
         returnList.Add(((int)(EnergyRate)).ToString());
+        returnList.Add(((int)FunctionalRange).ToString());
         return returnList;
     }
 
