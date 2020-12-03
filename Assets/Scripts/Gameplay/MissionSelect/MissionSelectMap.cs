@@ -45,6 +45,20 @@ public class MissionSelectMap : MonoBehaviour {
         gameObject.name = data.MapName;
         foreach(MissionContext context in data.MissionList)
         {
+            //verify the mission has been unlocked
+            bool requirementsMet = true;
+            foreach(string req in context.Prerequisites)
+            {
+                if(!PlayerData.IsMissionComplete(req))
+                {
+                    requirementsMet = false;
+                }
+            }
+            //if the mission is not unlocked do not create a cell for it
+            if (!requirementsMet)
+                return;
+
+            //if the mission is unlocked creaate the cell
             context.HasBeenCleared = PlayerData.IsMissionComplete(context.MissionID);
 
             GameObject cellObj = GameObject.Instantiate(cellDictionary[context.Location].gameObject, transform);

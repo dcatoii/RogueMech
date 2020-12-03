@@ -12,4 +12,5 @@ public class MissionContext {
     public int BaseReward;
     public int FirstTimeBonus;
     public bool HasBeenCleared;
+    public List<string> Prerequisites = new List<string>();
 }

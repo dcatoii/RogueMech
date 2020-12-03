@@ -27,6 +27,7 @@
       "Location": "Canyon",
       "BaseReward": 15000,
       "FirstTimeBonus": 35000,
+	  "Prerequisites":[ "Chapter_00_Mission_01" ]
     },
 	{
       "MissionName": "Guard Precious CARGO",
@@ -36,6 +37,7 @@
       "Location": "Canyon",
       "BaseReward": 5000,
       "FirstTimeBonus": 25000,
+	  "Prerequisites":[ "Chapter_00_Mission_01" ]
     }
   ]
 }
