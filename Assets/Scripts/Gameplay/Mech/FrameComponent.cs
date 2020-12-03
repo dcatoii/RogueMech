@@ -15,6 +15,8 @@ public class FrameComponent : FramePart
     public virtual void OnHit(Projectile projectile)
     {
         isInvulnerable = true;
+        if (Mech == null)
+            Start(); // if we get hit before initialization, force init now
     }
 
     protected virtual void FixedUpdate()
