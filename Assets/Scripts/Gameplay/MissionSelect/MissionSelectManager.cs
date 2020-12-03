@@ -21,6 +21,7 @@ public class MissionSelectManager : MonoBehaviour {
         Map.LoadMap();
         SelectCamera.transform.position = Map.StartingCell.CameraCenter.position;
         MissionData.gameObject.SetActive(false);
+        SelectCell(Map.StartingCell);
 	}
 	
 	// Update is called once per frame
@@ -96,6 +97,7 @@ public class MissionSelectManager : MonoBehaviour {
             return;
 
         ApplicationContext.MissionData = selectedCell.MissionInfo;
+        ApplicationContext.AIManager.Reset(); // clear the AI manager for the new level
         UnityEngine.SceneManagement.SceneManager.LoadScene(selectedCell.MissionInfo.SceneName);
     }
 

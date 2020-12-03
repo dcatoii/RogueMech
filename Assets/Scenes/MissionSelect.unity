@@ -993,7 +993,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Back to Map
+  m_text: Back to Garage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1069,11 +1069,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1351,13 +1351,12 @@ RectTransform:
 --- !u!114 &1118970345
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114241142219656122, guid: 0c693b11c5bb2594e8fa60f8bc24ca99,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118970343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c01257df1613436438137fb66f4ec8b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 926b3e2a3d3c34e429e29f7c764dca64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1118970346
@@ -1400,8 +1399,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127308543}
-        m_MethodName: CloseMissionInfo
+      - m_Target: {fileID: 1118970345}
+        m_MethodName: EnterGarage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

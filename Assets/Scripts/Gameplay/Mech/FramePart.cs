@@ -8,15 +8,16 @@ public class FramePart : MonoBehaviour {
     public Sprite StoreImage;
     public string Manufacturer = "GeneriCon";
     public string PartID;
+    public bool IsBlueprintUnlockedByDefault = true;
     public List<UpgradeLevel> UpgradeLevels;
 
     public List<PartUpgrade> AppliedUpgrades = new List<PartUpgrade>();
 
-    protected MechFrame Mech;
+    protected Mob Mech;
 
     protected virtual void Start()
     {
-        Mech = GetComponentInParent<MechFrame>();
+        Mech = GetComponentInParent<Mob>();
     }
 
     public virtual List<string> GetAttributeNamesForStore()

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BZardNest : Mob {
 
-    public int Health = 5000;
     public int MaxSpawn = 4;
     public float ActivationRange = 250.0f;
     public float SpawnTime = 5.0f;
@@ -13,6 +12,7 @@ public class BZardNest : Mob {
     public BZard prefab;
     public bool Activated = false;
     public bool CountSpawnTimeWhileMaxSpawns = false;
+    public AIMob.TargetModes BzardTargetSetting = AIMob.TargetModes.Player;
 
     List<BZard> mySpawn = new List<BZard>();
 
@@ -56,6 +56,7 @@ public class BZardNest : Mob {
         GameObject newObj = (GameObject.Instantiate(prefab.gameObject, spawnPoint.position, spawnPoint.rotation) as GameObject);
         mySpawn.Add(newObj.GetComponent<BZard>());
         newObj.GetComponent<BZard>().Nest = this;
+        newObj.GetComponent<BZard>().TargetMode = BzardTargetSetting;
     }
 
     public void HandleSpawnDeath(BZard bzard)
@@ -63,17 +64,10 @@ public class BZardNest : Mob {
         mySpawn.Remove(bzard);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected override void CoreDamaged(int amount)
     {
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Weapons"))
-        {
-            Activated = true;
-            Projectile colProjectile = collision.gameObject.GetComponent<Projectile>();
-            Health -= colProjectile.Damage;
-            if (Health <= 0)
-            {
-                Die();
-            }
-        }
+        Activated = true;
+        base.CoreDamaged(amount);
     }
+
 }

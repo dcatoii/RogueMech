@@ -28,6 +28,7 @@ public class Weapon : FrameAccessory {
         GameObject newProjectileObject = (GameObject.Instantiate(ProjectilePrefab, FirePoint.transform.position, Quaternion.identity) as GameObject);
         newProjectileObject.GetComponent<Projectile>().Source = GetComponentInParent<MechFrame>();
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
+        newProjectileObject.GetComponent<Projectile>().SetDamage(damage);
         TimeSinceLastFire = 0.0f;
     }
 
@@ -81,12 +82,12 @@ public class Weapon : FrameAccessory {
         //////////////////unity raycast bug workaround/////////////////////////
         TerrainRayInfo = Physics.RaycastAll(Camera.main.transform.position,
                                             (target - Camera.main.transform.position).normalized,
-                                            Mech.RightHandWeapon.FunctionalRange,
+                                            FunctionalRange,
                                             LayerMask.GetMask(new string[] { "Terrain" }));
 
         UnitRayInfo = Physics.RaycastAll(Camera.main.transform.position,
                                             (target - Camera.main.transform.position).normalized,
-                                            Mech.RightHandWeapon.FunctionalRange,
+                                            FunctionalRange,
                                             LayerMask.GetMask(new string[] { "Units" }));
 
         List<RaycastHit> AllHits = new List<RaycastHit>(TerrainRayInfo);

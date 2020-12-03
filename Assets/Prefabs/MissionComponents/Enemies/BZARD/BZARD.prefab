@@ -54,10 +54,28 @@ GameObject:
   - component: {fileID: 54736671431132916}
   - component: {fileID: 114228096270085378}
   - component: {fileID: 136598390951854374}
-  - component: {fileID: 65273931820817566}
-  - component: {fileID: 65659438710419056}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: BZARD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1567671644759834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4487838095644616}
+  - component: {fileID: 65140898247154322}
+  - component: {fileID: 65096541210112682}
+  - component: {fileID: 136244394028464286}
+  - component: {fileID: 114256372219655530}
+  - component: {fileID: 114526178920424776}
+  m_Layer: 10
+  m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +188,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4431557411559584}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4431557411559584
 Transform:
@@ -179,9 +197,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433600091800128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.14352, y: 0, z: 345.9695}
+  m_LocalPosition: {x: 228.3139, y: 8.646835, z: 1145.5087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4487838095644616}
   - {fileID: 4373227362649684}
   - {fileID: 4812019619121602}
   - {fileID: 4782642523747176}
@@ -201,6 +220,19 @@ Transform:
   m_Father: {fileID: 4812019619121602}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 35, y: 0, z: -15}
+--- !u!4 &4487838095644616
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567671644759834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4431557411559584}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4756230947745492
 Transform:
   m_ObjectHideFlags: 1
@@ -225,7 +257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4431557411559584}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4812019619121602
 Transform:
@@ -242,7 +274,7 @@ Transform:
   - {fileID: 4096162644018368}
   - {fileID: 4450250712931002}
   m_Father: {fileID: 4431557411559584}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4859159089178014
 Transform:
@@ -440,30 +472,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
---- !u!65 &65273931820817566
+--- !u!65 &65096541210112682
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433600091800128}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 3, z: 1}
-  m_Center: {x: 4, y: 1, z: 0}
---- !u!65 &65659438710419056
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1433600091800128}
+  m_GameObject: {fileID: 1567671644759834}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 3, z: 1}
   m_Center: {x: -4, y: 1, z: 0}
+--- !u!65 &65140898247154322
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567671644759834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 3, z: 1}
+  m_Center: {x: 4, y: 1, z: 0}
 --- !u!95 &95414642791389166
 Animator:
   serializedVersion: 3
@@ -494,17 +526,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MobID: BZAARD
+  MechRoot: {fileID: 0}
+  Faction: 1
   DeathParticles: {fileID: 1452758733877936, guid: 193bd58c6755c8647b71ed342bffd0ac,
     type: 2}
-  Health: 300
+  Core: {fileID: 114256372219655530}
+  Target: {fileID: 0}
+  Activated: 0
+  TargetMode: 1
   beam: {fileID: 114910759278392372}
   Speed: 15
   LiftSpeed: 7.5
   hoverHeight: 15
   OrbitSpeed: 90
   TurnSpeed: 1
-  Target: {fileID: 0}
   OrbitDistance: 25
+  DetachDistance: 35
   targetLastPosition: {x: 0, y: 0, z: 0}
   MinOrbitDuration: 3
   MaxOrbitDuration: 10
@@ -514,6 +551,50 @@ MonoBehaviour:
   FiringTime: 2.5
   FireTrackingSpeed: 0.1
   Nest: {fileID: 0}
+--- !u!114 &114256372219655530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567671644759834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 300
+  ArmorPoints: 300
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!114 &114526178920424776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567671644759834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 114256372219655530}
 --- !u!114 &114910759278392372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,6 +622,19 @@ MonoBehaviour:
   EnergyCost: 400
   damage: 300
   HUDPrefab: {fileID: 0}
+--- !u!136 &136244394028464286
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1567671644759834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 5
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136598390951854374
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -22,6 +22,9 @@ public class ApplicationContext : ScriptableObject
     public MissionContext missionContext;
     public static MissionContext MissionData { get { return instance.missionContext; } set { instance.missionContext = value; } }
 
+    public  TargetManager targetMgr;
+    public static TargetManager AIManager { get { return instance.targetMgr; } set { instance.targetMgr = value; } }
+
     [SerializeField]
     PauseScreen PausePrefab;
 
@@ -30,6 +33,8 @@ public class ApplicationContext : ScriptableObject
     {
         instance = Resources.LoadAll<ApplicationContext>("")[0];
         Cursor.lockState = CursorLockMode.Confined;
+        AIManager = new TargetManager();
+        AIManager.Reset();        
     }
 
     public static void OpenPauseMenu()
@@ -67,6 +72,7 @@ public class ApplicationContext : ScriptableObject
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
+        
     }
 
 }

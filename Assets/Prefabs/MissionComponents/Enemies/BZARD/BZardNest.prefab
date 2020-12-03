@@ -37,6 +37,8 @@ GameObject:
   - component: {fileID: 114059793524991292}
   - component: {fileID: 54147987969504242}
   - component: {fileID: 136567547433437220}
+  - component: {fileID: 114692415404572056}
+  - component: {fileID: 114755925706170688}
   m_Layer: 10
   m_Name: BZardNest
   m_TagString: Untagged
@@ -96,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504265132739686}
   m_LocalRotation: {x: -0, y: 0.7925876, z: -0, w: 0.60975814}
-  m_LocalPosition: {x: 71.4, y: 31.7, z: 160.57}
+  m_LocalPosition: {x: -101.81093, y: 222.35455, z: 504.32144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4446015867734268}
@@ -200,8 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MobID: BzardNest
+  Faction: 1
   DeathParticles: {fileID: 1956471136618758, guid: c805e34c67f8ca343ae486d4e12c3608,
     type: 2}
+  Core: {fileID: 114692415404572056}
   Health: 3500
   MaxSpawn: 4
   ActivationRange: 250
@@ -210,6 +214,50 @@ MonoBehaviour:
   prefab: {fileID: 114228096270085378, guid: a2e0fea4a6ad5bf4f83c31a5134b931f, type: 2}
   Activated: 0
   CountSpawnTimeWhileMaxSpawns: 0
+--- !u!114 &114692415404572056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504265132739686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c1a248fe5d4aa41bed11a7d743b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cost: 0
+  StoreImage: {fileID: 0}
+  Manufacturer: GeneriCon
+  PartID: 
+  UpgradeLevels: []
+  AppliedUpgrades: []
+  MaxArmor: 3500
+  ArmorPoints: 3500
+  RightArmSocket: {fileID: 0}
+  LeftArmSocket: {fileID: 0}
+  HeadSocket: {fileID: 0}
+  ThrusterSocket: {fileID: 0}
+  CameraAnchor: {fileID: 0}
+  thruster: {fileID: 0}
+  Energy: 0
+  EnergyCapacity: 0
+  MaxEnergy: 0
+  RechargeRate: 0
+  RechargeCooldown: 2
+  TimeSinceLastEnergyUsed: 0
+  Weight: 2000
+--- !u!114 &114755925706170688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504265132739686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9214dc208415144ba6d2bbc138f482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 114692415404572056}
 --- !u!136 &136567547433437220
 CapsuleCollider:
   m_ObjectHideFlags: 1

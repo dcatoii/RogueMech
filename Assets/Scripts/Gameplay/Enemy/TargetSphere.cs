@@ -24,6 +24,7 @@ public class TargetSphere : Mob {
         Mission.instance.BroadcastMessage("OnEnemyDestroyed", MobID, SendMessageOptions.DontRequireReceiver);
         Object.Destroy(this.gameObject);
         GameObject.Instantiate(DeathParticles, transform.position, transform.rotation);
+        ApplicationContext.AIManager.UnregisterMob(this);
     }
 
 }
