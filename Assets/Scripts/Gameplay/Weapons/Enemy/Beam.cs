@@ -15,6 +15,8 @@ public class Beam : Projectile {
     public float innerFalloff = 1.1f;
     public float outerFalloff = 1.2f;
 
+
+  
     protected override void FixedUpdate()
     {
         Damage = (int)(DamagePerSecond * Time.fixedDeltaTime);
@@ -37,7 +39,7 @@ public class Beam : Projectile {
         foreach(KeyValuePair<Collider, FrameComponent> mobCollider in UnitsInDamageArea)
         {
             if (mobCollider.Value == null)
-                return;
+                continue;
 
             Mob target = mobCollider.Value.GetComponentInParent<Mob>();
             if (target == null)
@@ -74,7 +76,10 @@ public class Beam : Projectile {
         if (MobCollider != null && MobCollider.GetComponentInParent<Mob>() != Source)
         {
             if (!UnitsInDamageArea.ContainsKey(other))
+            {
                 UnitsInDamageArea.Add(other, MobCollider.component);
+                Debug.Log("Beam hitting " + MobCollider.GetComponentInParent<Mob>().name);
+            }
         }
     }
 
