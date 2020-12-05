@@ -74,7 +74,7 @@ public class  Nightmare : Weapon
         //Raycast
         Vector3 target = Camera.main.transform.position + (Camera.main.transform.forward * FunctionalRange);
 
-        target = GetTargetWithCameraRay(target);
+        target = GetTargetWithCameraRay(target, false);
 
         //create and fire projectile
         GameObject newProjectileObject = (GameObject.Instantiate(ProjectilePrefab, FirePoint.transform) as GameObject);

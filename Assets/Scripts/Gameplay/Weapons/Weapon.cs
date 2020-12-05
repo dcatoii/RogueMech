@@ -63,10 +63,11 @@ public class Weapon : FrameAccessory {
         return returnList;
     }
 
-    public Vector3 GetTargetWithCameraRay(Vector3 endPoint)
+    public Vector3 GetTargetWithCameraRay(Vector3 endPoint, bool includeTerrain = true)
     {
         Vector3 target = endPoint;
         RaycastHit[] TerrainRayInfo, UnitRayInfo, CameraRayInfo;
+        TerrainRayInfo = new RaycastHit[0];
 
         RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
 
@@ -80,17 +81,22 @@ public class Weapon : FrameAccessory {
         /////////////////////////TODO: Write and use my own RaycastAll function//////////////////////
 
         //////////////////unity raycast bug workaround/////////////////////////
-        TerrainRayInfo = Physics.RaycastAll(Camera.main.transform.position,
-                                            (target - Camera.main.transform.position).normalized,
-                                            FunctionalRange,
-                                            LayerMask.GetMask(new string[] { "Terrain" }));
+        if (includeTerrain)
+        {
+            TerrainRayInfo = Physics.RaycastAll(Camera.main.transform.position,
+                                                (target - Camera.main.transform.position).normalized,
+                                                FunctionalRange,
+                                                LayerMask.GetMask(new string[] { "Terrain" }));
+        }
 
         UnitRayInfo = Physics.RaycastAll(Camera.main.transform.position,
                                             (target - Camera.main.transform.position).normalized,
                                             FunctionalRange,
                                             LayerMask.GetMask(new string[] { "Units" }));
 
-        List<RaycastHit> AllHits = new List<RaycastHit>(TerrainRayInfo);
+        List<RaycastHit> AllHits = new List<RaycastHit>();
+        if (includeTerrain)
+            AllHits.AddRange(TerrainRayInfo);
         AllHits.AddRange(UnitRayInfo);
         CameraRayInfo = AllHits.ToArray();
         ////////////////////////END WORKAROUND/////////////////////
