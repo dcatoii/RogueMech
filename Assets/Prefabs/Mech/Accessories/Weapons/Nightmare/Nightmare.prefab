@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4233251994799618}
   - component: {fileID: 114748821319245528}
   m_Layer: 10
-  m_Name: Upgrade1_2
+  m_Name: Negaton Agitator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4696970981249076}
   - component: {fileID: 114918835535871098}
   m_Layer: 10
-  m_Name: Upgrade2_1
+  m_Name: 13 Capacirtor System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4892464988090840}
   - component: {fileID: 114749442456448372}
   m_Layer: 10
-  m_Name: Upgrade3_1
+  m_Name: Krueger Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4527160042916758}
   - component: {fileID: 114474460653473980}
   m_Layer: 10
-  m_Name: Upgrade3_2
+  m_Name: Longknight Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 4044640306723796}
   - component: {fileID: 114225056436921640}
   m_Layer: 10
-  m_Name: Upgrade1_1
+  m_Name: Negaton Acceleratior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 4446346611363222}
   - component: {fileID: 114799669019839018}
   m_Layer: 10
-  m_Name: Upgrade2_2
+  m_Name: Hypercharger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1325,10 +1325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 25000
+  Cost: 50000
   Options:
   - {fileID: 114918835535871098}
-  - {fileID: 114918835535871098}
+  - {fileID: 114799669019839018}
 --- !u!114 &114225056436921640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1341,10 +1341,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 66b538f2af8621f4a898c93639fad0ed, type: 3}
-  StoreDescription: 
+  StoreDescription: Increases beam damage
   Weight: 0
   EnergyCost: 0
-  damage: 0
+  damage: 125
   FunctionalRange: 0
   RefireTime: 0
   EnergyRate: 0
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 50000
+  Cost: 100000
   Options:
   - {fileID: 114749442456448372}
   - {fileID: 114474460653473980}
@@ -1376,14 +1376,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 2262f408278271248889a3ea3c7e75bf, type: 3}
-  StoreDescription: 
+  StoreDescription: Lower particle density gives this projector a long reach and low
+    charge time at the cost of damage. Works like a dream.
   Weight: 0
   EnergyCost: 0
-  damage: 0
-  FunctionalRange: 0
+  damage: -150
+  FunctionalRange: 35
   RefireTime: 0
   EnergyRate: 0
-  ChargeDelay: 0
+  ChargeDelay: -0.5
 --- !u!114 &114748821319245528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1396,11 +1397,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: b106ac71369ff4d4b82a81dc78ab725e, type: 3}
-  StoreDescription: 
+  StoreDescription: Particle agitator increase beam length
   Weight: 0
   EnergyCost: 0
   damage: 0
-  FunctionalRange: 0
+  FunctionalRange: 15
   RefireTime: 0
   EnergyRate: 0
   ChargeDelay: 0
@@ -1416,13 +1417,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 434993171fa91504c8c0197f21477c3d, type: 3}
-  StoreDescription: 
+  StoreDescription: Concentrates the beam, reducing leghth and dramatically boosting
+    damage and energy use. Don't sleep on it.
   Weight: 0
   EnergyCost: 0
-  damage: 0
-  FunctionalRange: 0
+  damage: 500
+  FunctionalRange: -25
   RefireTime: 0
-  EnergyRate: 0
+  EnergyRate: -75
   ChargeDelay: 0
 --- !u!114 &114754587494732202
 MonoBehaviour:
@@ -1435,7 +1437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1140c3ad633b04f8548abea985c734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 0
+  Cost: 15000
   StoreImage: {fileID: 21300000, guid: fdd2c921c62d2cd43b815fa60199d5de, type: 3}
   Manufacturer: AmeriCorp
   PartID: Nightmare
@@ -1452,7 +1454,7 @@ MonoBehaviour:
   RefireTime: 1
   TimeSinceLastFire: 0
   Weight: 1500
-  EnergyCost: 400
+  EnergyCost: 450
   damage: 1250
   HUDPrefab: {fileID: 114228907008033978, guid: 2a488ff5e8e1f1240a092d443ac1abce,
     type: 2}
@@ -1473,14 +1475,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300018, guid: 393021b790fe7bd4484e9f84c76ad03e, type: 3}
-  StoreDescription: 
+  StoreDescription: Quick charging system reduces charge time but requires extra cooldown
+    between firings
   Weight: 0
   EnergyCost: 0
   damage: 0
   FunctionalRange: 0
-  RefireTime: 0
+  RefireTime: 1
   EnergyRate: 0
-  ChargeDelay: 0
+  ChargeDelay: -0.75
 --- !u!114 &114846231927883942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1492,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee90a957c18315647be8e3f7a68ccf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 10000
+  Cost: 25000
   Options:
   - {fileID: 114225056436921640}
   - {fileID: 114748821319245528}
@@ -1508,11 +1511,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StoreImage: {fileID: 21300000, guid: 631559a710b49244ebcace100e0dc254, type: 3}
-  StoreDescription: 
+  StoreDescription: Additional capacitors improve total output by trading raw power
+    for longer projection time
   Weight: 0
   EnergyCost: 0
-  damage: 0
+  damage: -100
   FunctionalRange: 0
   RefireTime: 0
-  EnergyRate: 0
+  EnergyRate: -125
   ChargeDelay: 0
