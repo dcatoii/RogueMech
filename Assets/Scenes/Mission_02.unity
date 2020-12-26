@@ -553,8 +553,7 @@ MonoBehaviour:
   isMissionActive: 0
   failOnComplete: 1
   MissionTextFormat: 'Bonus: Clear mission quickly: {0}'
-  SecondaryObjectives:
-  - {fileID: 0}
+  SecondaryObjectives: []
   ObjectiveStartTriggers: []
   TimeLimit: 420
 --- !u!1 &170076733
