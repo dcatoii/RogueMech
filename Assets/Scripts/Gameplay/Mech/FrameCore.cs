@@ -57,13 +57,13 @@ public class FrameCore : FrameComponent {
     public override void OnHit(Projectile projectile)
     {
         base.OnHit(projectile);
-        Mech.BroadcastMessage("CoreDamaged", projectile.Damage);
+        mech.BroadcastMessage("CoreDamaged", projectile.Damage);
     }
 
     protected override void OnPartBroken()
     {
         base.OnPartBroken();
-        Mech.BroadcastMessage("CoreBroken");
+        mech.BroadcastMessage("CoreBroken");
     }
 
     public override List<string> GetAttributeNamesForStore()

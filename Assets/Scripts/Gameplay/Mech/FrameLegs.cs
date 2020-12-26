@@ -14,13 +14,13 @@ public class FrameLegs : FrameComponent {
     public override void OnHit(Projectile projectile)
     {
         base.OnHit(projectile);
-        Mech.BroadcastMessage("LegsDamaged", projectile.Damage);
+        mech.BroadcastMessage("LegsDamaged", projectile.Damage);
     }
 
     protected override void OnPartBroken()
     {
         base.OnPartBroken();
-        Mech.BroadcastMessage("LegsBroken");
+        mech.BroadcastMessage("LegsBroken");
     }
 
     public override List<string> GetAttributeNamesForStore()

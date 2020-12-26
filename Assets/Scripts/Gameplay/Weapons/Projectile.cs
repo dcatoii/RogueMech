@@ -27,6 +27,11 @@ public class Projectile : MonoBehaviour {
 
         // Calculate the desired movement vector
         Vector3 move = transform.forward * Time.fixedDeltaTime * speed;
+
+        //checked if we are hitting the terrain
+        HandleCollision(move);
+
+        //update position
         transform.position += move;
 
     }
@@ -35,13 +40,12 @@ public class Projectile : MonoBehaviour {
     {
         transform.LookAt(target);
     }
-
+    /*
     protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
         {
-            Object.Destroy(this.gameObject);
-            GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Die();
         }
         else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Units") && Source != collision.collider.GetComponentInParent<Mob>())
         {
@@ -53,9 +57,49 @@ public class Projectile : MonoBehaviour {
             {
                 frameCollision.component.OnHit(this);
             }
-            Object.Destroy(this.gameObject);
-            GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Die();
         }       
             
+    }*/
+
+    protected void HandleCollision(Vector3 move)
+    {
+        Vector3 start = transform.position;
+        Vector3 end = start + move;
+        RaycastHit hitInfo;
+        if(Physics.SphereCast(start, transform.localScale.z, move.normalized, out hitInfo, move.magnitude))
+        {
+            if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
+            {
+                OnTerrainHit();
+            }
+            else if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Units"))
+            {
+                OnMobHit(hitInfo.collider.GetComponent<MechComponentCollisionDetector>());
+            }
+        }
+    }
+
+    protected virtual void OnTerrainHit()
+    {
+        Die();
+    }
+
+    protected virtual void OnMobHit(MechComponentCollisionDetector frameCollision)
+    {
+        if (frameCollision == null) //we collided with a mech
+            return;
+
+        if (frameCollision.component.Mech != Source)
+        {
+            frameCollision.component.TakeDamage(Damage);
+            Die();
+        }
+    }
+
+    protected virtual void Die()
+    {
+        Object.Destroy(this.gameObject);
+        GameObject deathFX = GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);
     }
 }

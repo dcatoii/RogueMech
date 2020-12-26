@@ -28,7 +28,7 @@ public class ExplodingDamageArea : Projectile {
         }
     }
 
-    protected override void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Units") && Source != collision.collider.GetComponentInParent<Mob>())
         {

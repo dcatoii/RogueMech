@@ -11,28 +11,7 @@ public class LongbowArrow : Projectile {
         explosionDamage = value;
     }
 
-    protected override void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
-        {
-            Object.Destroy(this.gameObject);
-            Explode();
-        }
-        else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Units") && Source != collision.collider.GetComponentInParent<Mob>())
-        {
-            if (collision.collider.tag == "Player")
-                return;
-
-            MechComponentCollisionDetector frameCollision = collision.collider.GetComponent<MechComponentCollisionDetector>();
-            if (frameCollision != null) //we collided with a mech
-            {
-                frameCollision.component.OnHit(this);
-            }
-            Explode();
-        }
-    }
-
-    void Explode()
+    protected override void Die()
     {
         Object.Destroy(this.gameObject);
         GameObject explosionObj = GameObject.Instantiate(deathEffect, transform.position, Quaternion.identity);

@@ -13,11 +13,13 @@ public class FramePart : MonoBehaviour {
 
     public List<PartUpgrade> AppliedUpgrades = new List<PartUpgrade>();
 
-    protected Mob Mech;
+    protected Mob mech;
+    public Mob Mech {  get { return mech; } }
+    
 
     protected virtual void Start()
     {
-        Mech = GetComponentInParent<Mob>();
+        mech = GetComponentInParent<Mob>();
     }
 
     public virtual List<string> GetAttributeNamesForStore()

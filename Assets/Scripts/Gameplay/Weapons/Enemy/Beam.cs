@@ -64,11 +64,6 @@ public class Beam : Projectile {
 
     }
 
-    protected override void OnCollisionEnter(Collision collision)
-    {
-
-    }
-
     protected virtual void OnTriggerEnter(Collider other)
     {
         //if the unit is a mob collider, add it to the damage area list

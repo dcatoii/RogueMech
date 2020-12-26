@@ -46,7 +46,7 @@ public class  Nightmare : Weapon
         base.FixedUpdate();
         if(isFiring)
         {
-            if (Mech.Core.ConsumeEnergy(EnergyRate * Time.fixedDeltaTime) == false)
+            if (mech.Core.ConsumeEnergy(EnergyRate * Time.fixedDeltaTime) == false)
                 OnFireUp(Vector3.zero);
             else
             {

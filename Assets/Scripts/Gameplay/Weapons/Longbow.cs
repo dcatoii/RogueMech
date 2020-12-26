@@ -25,7 +25,7 @@ public class Longbow : Weapon {
 
     public override void OnFireDown(Vector3 target)
     {
-        if (TimeSinceLastFire < RefireTime || Mech.Core.Energy < BaseEnergyPerShot)
+        if (TimeSinceLastFire < RefireTime || mech.Core.Energy < BaseEnergyPerShot)
             return;
 
         isCharging = true;
@@ -34,7 +34,7 @@ public class Longbow : Weapon {
 
         GenerateProjectile(ProjectilePrefab, damage);
    
-        if (Mech.Core.ConsumeEnergy(BaseEnergyPerShot) == false)
+        if (mech.Core.ConsumeEnergy(BaseEnergyPerShot) == false)
             OnFireUp(Vector3.zero);
 
 
@@ -49,7 +49,7 @@ public class Longbow : Weapon {
         target = GetTargetWithCameraRay(Camera.main.transform.position + (Camera.main.transform.forward * FunctionalRange));
 
         chargeProjectile.transform.parent = null;
-        chargeProjectile.Source = Mech;
+        chargeProjectile.Source = mech;
         chargeProjectile.SetTarget(target);
         chargeProjectile.enabled = true;
         chargeProjectile.GetComponent<Collider>().enabled = true;
@@ -89,7 +89,7 @@ public class Longbow : Weapon {
                 chargeLevel = 2;
                 energyLevel -= Level3Charge;
             }
-            if (Mech.Core.ConsumeEnergy(chargeAmount) == false)
+            if (mech.Core.ConsumeEnergy(chargeAmount) == false)
                 OnFireUp(Vector3.zero);
         }
     }
@@ -100,7 +100,7 @@ public class Longbow : Weapon {
             GameObject.Destroy(chargeProjectile.gameObject);
 
         chargeProjectile = GameObject.Instantiate(prefab, FirePoint.transform).GetComponent<Projectile>();
-        chargeProjectile.Source = Mech;
+        chargeProjectile.Source = mech;
         chargeProjectile.enabled = false;
         chargeProjectile.GetComponent<Collider>().enabled = false;
         chargeProjectile.transform.localPosition = Vector3.zero;

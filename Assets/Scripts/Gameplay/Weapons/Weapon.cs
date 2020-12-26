@@ -69,7 +69,7 @@ public class Weapon : FrameAccessory {
         RaycastHit[] TerrainRayInfo, UnitRayInfo, CameraRayInfo;
         TerrainRayInfo = new RaycastHit[0];
 
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
+        RogueMechUtils.SetChildLayerRecursively(mech.MechRoot.gameObject, LayerMask.NameToLayer("Ignore Raycast"));
 
         //The correct way, but we cannot use this due to a unity-level bug for now
         /*CameraRayInfo = Physics.RaycastAll(Camera.main.transform.position,
@@ -114,7 +114,7 @@ public class Weapon : FrameAccessory {
                 }
             }
         }
-        RogueMechUtils.SetChildLayerRecursively(Mech.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
+        RogueMechUtils.SetChildLayerRecursively(mech.MechRoot.gameObject, LayerMask.NameToLayer("Units"));
 
         return target;
     }

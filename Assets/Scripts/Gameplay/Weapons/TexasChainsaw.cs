@@ -91,7 +91,7 @@ public class TexasChainsaw : Weapon
         newProjectileObject.GetComponent<Projectile>().SetTarget(target);
         newProjectileObject.GetComponent<Projectile>().SetDamage((int)(damage * LeanTween.easeInQuad(MinHeatMultiplier, MaxHeatMultiplier, heat/MaxHeat)));
 
-        Mech.GetComponent<FrameController>().Aim(0.0f, RecoilPerBullet);
+        mech.GetComponent<FrameController>().Aim(0.0f, RecoilPerBullet);
 
         TimeSinceLastFire = 0.0f;
     }
